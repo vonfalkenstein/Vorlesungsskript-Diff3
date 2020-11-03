@@ -1,0 +1,116 @@
+\chapter{Mannigfaltigkeiten}\lecture
+
+\begin{defn}[$n$-dimensionale topologische Mannigfaltigkeit]\label{def1_1}
+	Eine \emph{$n$-dimensionale topologische Mannigfaltigkeit $M$} ist ein topologischer Hausdorff-Raum mit abzählbarer Basis der Topologie, der lokal euklidisch ist.
+	\begin{itemize}
+		\item lokal euklidisch:\\
+			$ \forall\, p \in M\ \exists\, U $ offene Umgebung von $p$, die homöomorph zu einer offenen Teilmenge des $\R^n$ ist, das heißt es gibt eine stetige, injektive Abbildung $ \varphi: U \to \R^n $ mit $ \varphi(U) $ offen in $\R^n$ (mit der Standardtopologie) und mit stetiger Umkehrfunktion $\varphi^{-1}: \varphi(U) \to M$.
+			\image{1_1 homoeo}{12cm}
+			\begin{rem*}
+				$\varphi$ und auch $\varphi^{-1}$ sind offene Abbildungen, denn Bilder offener Mengen $ \tilde{U} \subset U $ (bezüglich $\varphi$), also $ \varphi(\tilde{U}) \subset \varphi(U) = \im(\varphi) $, sind Urbilder (bezüglich $\varphi^{-1}$) offener Mengen $\tilde{U}$ und somit offen (wegen der Stetigkeit von $\varphi^{-1}$)
+				\image{1_1 offen}{8cm}
+				Das heißt $U$ und $\varphi(U)$ sind als topologische Räume äquivalent (weil ihre offenen Mengen in $1-1$-Beziehung zueinander stehen).
+			\end{rem*}
+		\item Hausdorff-Raum:\\
+			$ \forall\, p \neq q \in M \ \exists\, U,V \subset M $ offen, sodass $ U \cap V = \emptyset,\ p \in U, q \in V $
+			\image{1_1 hausdorff}{6cm}
+			Erinnerung: In topologischen Räumen mit Hausdorff-Eigenschaft sind z.B. Grenzwerte von konvergenten Folgen eindeutig.
+		\item Abzählbare Basis der Topologie:\\
+			Es gibt ein höchstens abzählbares System $ \{U_1,U_2,U_3,\dots\} $ von offenen Mengen $ U_j \subset M $, sodass $ \forall\, p \in M \ \forall $ Umgebungen $V$ von $p$ gibt es einen Index $j$, sodass $ p \in U_j \subset V $.
+			\begin{rem*}
+				Warum man dies fordert werden wir später bei der Existenz einer Teilung der Eins erkennen.
+			\end{rem*}
+	\end{itemize}
+	\begin{notat*}
+		Ist $M$ eine topologische Mannigfaltigkeit, $p \in M$, so nennt man einen Homöomorphismus $\varphi: U \to \tilde{U}$, $U$ offen in $M$, $\tilde{U} = \varphi(U)$ offen in $\R^n$, $p \in U$, eine \emph{(lokale) Karte} bei $p$. Gilt $ \varphi(p) = 0 $, sagt man, die Karte sei zentriert bei $p$.\\
+		$U$ heißt \emph{Koordinatenbereich} von $\varphi$ und die Komponenten von $\varphi(q) = (x_1(q),\dots,x_n(q))$ (für $q \in U$) heißen \emph{lokale Koordinaten} von $q$.
+		\begin{rem*}
+			Ist $\varphi$ eine beliebige Karte bei $p$, so ist $\psi(q) = \varphi(q) - \varphi(p)$ eine bei $p$ zentrierte Karte.
+		\end{rem*}
+	\end{notat*}
+	Ein System von Karten $ \set{(\varphi_\alpha,U_\alpha)}{\alpha \in A} $ heißt \emph{Atlas} von $M$, falls gilt $ M = \bigcup\limits_{\alpha \in A} U_\alpha $.
+\end{defn}
+
+\begin{exmp}
+	\begin{enumerate}[label= {\roman*})]
+		\item $M = \R^n$, versehen mit der Standardtopologie, denn $ \varphi: \R^n \to \R^n,\ \varphi(x) = x $ ist ein Homöomorphismus. $\R^n$ ist ein Hausdorff-Raum (vlg. Diff 2) und verfügt über eine abzählbare Basis: $ \set{\dot{B_r}(q) \ \text{offener Ball}}{r \in \Q, p \in \Q^n}. $
+		\item Graphen von stetigen Funktionen:\\
+			$ U \subset \R^n $ offen, $f: U \to \R^k$ stetig. Der \emph{Graph} $ \Gamma(f) = \set{(x,f(x))}{x \in U} \subset \R^n \times \R^k $, versehen mit der \emph{Teilraumtopologie}\footnote{
+				Eine Teilmenge $M\subset \R^m$ ist mit der Teilraumtopologie versehen, falls $ U \subset M $ ist offen $ \iff \ \exists\, V \subset \R^m $ offen, sodass $ U = V \cap M $}
+			ist eine $n$-dimensionale topologische Mannigfaltigkeit, denn $$ \varphi: \Gamma(f) \to \R^n, \varphi(x,y) = x,\ (x,y) \in \Gamma(f) \subset \R^n \times \R^k $$ bildet $\Gamma(f)$ homöomorph auf $U$ ab (die Umkehrfunktion ist die stetige Funktion $ \varphi^{-1}: U \to \R^n \times \R^k, \varphi^{-1}(x) = (x,f(x)) $). Die Hausdorff-Eigenschaft und die Abzählbarkeit einer Basis der Topologie übertragen sich direkt
+			\begin{rem*}
+				Wird nichts anders explizit gesagt, werden wir Teilräume stets als mit der Teilraumtopologie versehen ansehen.
+			\end{rem*}
+		\item Da (vgl. Diff2) jede Untermannigfaltigkeit $N$ sich lokal als Graph schreiben lässt und da die von uns betrachteten offenen Mengen in $N$ gerade die durch die Teilraumtopologie gegebenen sind folgt, dass eine Untermannigfaltigkeit im Sinne der Diff 2 eine topologische Mannigfaltigkeit im Sinne von \ref{def1_1} ist, explizit zum Beispiel:
+		\item $\mathbb{S} := \{ x \in \R^{n+1} \mid \|x\|_E = 1 \} $
+			\image{1_2 sphere}{3cm}
+			Wir konstruieren $2n+2$ Karten:\\
+			Betrachte $ U_i^\pm = \{ x \in \R^{n+1} \mid x_i \gtrless 0 \} $. Sei $ \dot{\mathbb{B}}^n = \{y \in \R^n \mid \|y\|_E < 1 \} $ und $ f: \dot{\mathbb{B}}^n \to \R, f(y) = \sqrt{1-\|y\|_E^2}. $ Notiere für $ i = 1,\dotsc,n+1: x(\hat{i}) = (x_1,\dots, x_{i-1},x_{i+1},\dotsc,x_{n+1}) = (x_1,\dotsc,\hat{x_i},\dotsc,x_{n+1}) $.\\
+			Es ist dann: $ U_i^\pm \cap \mathbb{S}^n = \{ (x_1,\dotsc,x_{i-1}, \pm f(x(\hat{i})), x_{i+1},\dotsc,x_n \mid x(\hat{i}) \in \dot{\mathbb{B}}^n \}, $ also nach Umsortieren gleich dem Graphen der Funktion $f$ beziehungsweise $-f$.\\
+			Nach ii) sind also Karten durch
+			\begin{gather*}
+				\varphi_i^\pm : U_i^\pm \cap \mathbb{S}^n \to \R^n,\ \varphi_i^\pm(U_i^\pm \cap \mathbb{S}^n) = \dot{\mathbb{B}}^n \\
+				\varphi_i^\pm(x_1,\dotsc,x_{n+1}) = (x_1,\dotsc,\hat{x_i},\dotsc,x_{i+1} 
+			\end{gather*} gegeben. Also ist $\mathbb{S}^n$  eine $n$-dimensionale Mannigfaltigkeit. Wegen $\mathbb{S}^n = \bigcup_{i=1}^{n+1} (U_i^+ \cap \mathbb{S}^n \cup (U_i^- \cap \mathbb{S}^n)$ liegt ein Atlas vor.
+			\image{1_2 abbng}{12cm}
+	\end{enumerate}
+\end{exmp}
+
+
+
+\begin{lem}
+	Sind $ M_1, \dotsc, M_k $ topologische Mannigfaltigkeiten mit Dimensionen $ n_1,\dotsc,n_k $, so ist das kartesische Produkt $ M_1 \times \dots \times M_k $ eine $ (n_1 + \dots + n_k) $-dimensionale topologische Mannigfaltigkeit.
+\end{lem}
+
+\begin{exmp*}
+	Tori $ M = \underbrace{\mathbb{S}^1 \times \dotsm \times \mathbb{S}^1}_{k-\text{fach}} $ sind $k$-dimensionale Mannigfaltigkeiten, zum Beispiel $\mathbb{S}^1 \times \mathbb{S}^1$ eine 2-dimensionale:
+	\image{1_3 exmp}{6cm}
+\end{exmp*}
+
+\begin{rem*}
+	Die Hausdorff-Eigenschaft folgt nicht aus der lokalen Homöomorphie zu $\R^n$.
+\end{rem*}
+	
+\begin{exmp*}
+	$ M = (\R \setminus \{0\}) \times \{0\} \cup \{ (0,1)^T, (0,-1)^T \} \subset \R^2 $
+	\image{1_3 counter1}{12cm}
+	Wähle die Topologie auf $M$ so, dass $\varphi$ und $\psi$ homöomorph auf $\R$ abbilden. Dazu erklären wir die offenen Umgebungen von $ (0,\pm 1)^T $ als $ (I \setminus \{0\} \times \{0\}) \cup \{(0,\pm 1)\}$, wobei $I$ ein offenes Intervall um 0 ist. Sei dann $U$ eine offene Umgebung von $(0,1) $ und $\tilde{U}$ eine offene Umgebung von $(0,-1)$. Dann ist $U \cap \tilde{U} \neq \emptyset$ (da $I \setminus \{0\} \cap \tilde{I}\setminus\{0\} \neq \emptyset).$
+	\image{1_3 counter2}{6cm}
+\end{exmp*}
+
+\begin{defn}[Kartenwechsel]
+	Seien $ (\varphi_\alpha,U_\alpha), (\varphi_\beta,U_\beta) $ lokale Karten einer Mannigfaltigkeit $M$. Dann nennt man die Abbildung
+	\[ \Phi_{\alpha\beta}: \varphi_\alpha(U_\alpha \cap U_\beta) \to \varphi_\beta(U_\alpha \cap U_\beta),\quad \Phi_{\alpha\beta} = \varphi_\beta \circ \varphi_\alpha^{-1} \]
+	\image{1_4}{10cm}
+	\emph{Kartenwechsel} (von $ \varphi_\alpha $ zu $\varphi_\beta$). Kartenwechsel sind also auf offene Teilmenge des $\R^n$ definierte Homöomorphismen.\\
+	Ein Atlas heißt \emph{differenzierbar}, falls alle seine Kartenwechsel glatt, also $C^\infty$-Abbildungen, sind.
+\end{defn}
+
+\begin{rem*}
+	In diesem Fall sind die Kartenwechsel Diffeomorphismen, das heißt auch die Umkehrabbildung ist wieder $C^\infty$, denn
+	\[ \Phi_{\alpha\beta}^{-1} = \left(\varphi_\beta \circ \varphi_\alpha^{-1}\right)^{-1} = \varphi_\alpha \circ \varphi_\beta^{-1} = \Phi_{\beta\alpha} \]
+	auf dem Definitionsbereich, wo die Abbildung definiert ist: $ \varphi_\beta(U_\alpha \cap U_\beta). $
+\end{rem*}
+
+\begin{defn}[Differenzierbare Struktur]
+	Sei $\mathcal{A}$ ein differenzierbarer Atlas (von $M$), dann bezeichnet man $\mathcal{D} = \mathcal{D}(\mathcal{A})$ die Menge \emph{aller} Karten von $M$, die mit allen Karten aus $\mathcal{A}$ glatte Kartenwechsel haben,
+	\[ \mathcal{D}(\mathcal{A}) = \set{(\psi,U) \ \text{Karten}}{\bound{\psi \circ \varphi^{-1}}{\varphi(V \cap U)}, \bound{\varphi \circ \psi^{-1}}{\varphi(V \cap U)} \in C^\infty \ \text{für alle } (\varphi,V) \in \mathcal{A}}. \]
+	\begin{rem*}
+		$\mathcal{D}(\mathcal{A})$ ist \emph{maximal} in dem Sinn, dass es keine weiteren Karten gibt, die $C^\infty$-Kartenwechsel mit den Karten aus $\mathcal{A}$ hätten, die nicht schon in $\mathcal{D}(\mathcal{A})$ liegen. $\mathcal{D}(\mathcal{A})$ ist also der größte differenzierbare Atlas, der $\mathcal{A}$ enthält.
+	\end{rem*}
+	\begin{notat*}
+		Ein maximaler, differenzierbarer Atlas auf einer Mannigfaltigkeit $M$ heißt \emph{differenzierbare Struktur} (auf $M$). Eine Mannigfaltigkeit zusammen mit einer differenzierbaren Struktur heißt \emph{differenzierbare Mannigfaltigkeit}.
+	\end{notat*}
+\end{defn}
+
+\begin{rem*}
+	\begin{enumerate}[label = {\roman*})]
+		\item Es genügt, einen möglichst kleinen Atlas anzugeben, da dieser die differenzierbare Struktur festlegt.
+		\item ACHTUNG: Zwei Atlanten $ \mathcal{A}_1,\mathcal{A}_2 $ einer Mannigfaltigkeit $M$ führen nur dann zur selben differenzierbaren Struktur, wenn für alle $ (\varphi,U) \in \mathcal{A}_1 $ und $ (\psi,V) \in \mathcal{A}_2 $ die Kartenwechsel glatt sind.
+	\end{enumerate}
+\end{rem*}
+
+\begin{exmp*}
+	$ \mathbb{S}^n $ mit den oben eingeführten Karten ist eine glatte Mannigfaltigkeit.
+\end{exmp*}
+	

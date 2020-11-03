@@ -1,0 +1,36 @@
+\documentclass{jvfscript-de}
+\usepackage{diff3style}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+%\usepackage{showframe}
+
+\begin{document}
+	\frontmatter
+	\maketitle
+	
+%	\setcounter{page}{1}
+\tableofcontents
+\newpage
+%	\setcounter{page}{1}
+\thispagestyle{plain}
+Dieses Skript stellt keinen Ersatz für die Vorlesungsnotizen von Prof. Bahns dar und wird nicht nochmals von ihr durchgesehen, im Grunde sind das hier nur meine persönlichen Mitschriften. Beweise werde ich i.d.R. nicht übernehmen (weil das in \LaTeX{} einfach keinen Spaß macht). \hspace{\fill} glhf
+\newpage
+\mainmatter
+\setstretch{1.15}			%Zeilenabstand. Kann man auch später nochmal reinhämmern, falls man es ändern will
+	
+	
+	
+	
+	
+	\input{./lectures/lec01}
+	
+	
+	
+	
+	
+	
+	\listoftheorems[ignoreall,show={defn,defn*}]
+%	\renewcommand{\listtheoremname}{Liste der Sätze mit Namen}
+%	\listoftheorems[ignoreall,show={thmn,corn,thmn*,corn*}]
+\end{document}
