@@ -1,0 +1,78 @@
+\addtocounter{thm}{1}
+\begin{defn}[Differenzierbare Abbildung zwischen Mannigfaltigkeiten]\lecture
+	Seien $M,N$ differenzierbare Mannigfaltigkeiten, $M$ $m$-dimensional, $N\ n$-dimensional. Sei $ f: M \to N $  stetig. $f$ heißt \emph{(stetig) differenzierbar/glatt} im Punkt $p \in M$, falls für eine (und damit für jede!) Karte $ (\varphi,U) $ bei $p$ und eine (und damit für jede) Karte $ (\psi,V) $ bei $f(p)$ gilt
+	\[ \psi \circ f \circ \varphi^{-1}: \varphi \left( f^{-1}(V) \cap U \right) \to \R^n \]
+	ist (stetig) differenzierbar/glatt in $\varphi(p).$
+	\image{1_7}{14cm}
+\end{defn}
+
+Diese Eigenschaft ist tatsächlich unabhängig von der Wahl der Karten $\varphi$ und $\psi$: Seien $ \varphi' $ und $\psi'$ weitere Karten bei $p$ beziehungsweise $f(p)$, dann ist 
+\[ \psi \circ f \circ \varphi^{-1} = \psi' \circ \left( \psi'^{-1} \circ \psi \right) \circ f \circ \left( \varphi^{-1} \circ \varphi' \right) \circ \varphi'^{-1} \]
+genau dann (stetig) differenzierbar/glatt in $p$, wenn $\psi' \circ f \circ \varphi'^{-1}$ (stetig) differenzierbar/glatt in $p$ ist, denn die Kartenwechsel $\psi'^{-1} \circ \psi, \varphi^{-1} \circ \varphi'$ sind glatt.
+
+\begin{rem*}
+	$ C^\infty (M,N) := \{ f: M \to N \ \text{glatt}\} $\\
+	Die differenzierbaren Mannigfaltigkeiten mit $C^\infty$-Abbildungen bilden eine Kategorie, die unter Verknüpfungen abgeschlossen ist, das heißt $ f, g \in C^\infty \implies f \circ g \in C^\infty. $
+\end{rem*}
+
+\begin{defn}[Diffeomorphismus]
+	Eine Abbildung $ f: M \to N $ nennt man \emph{Diffeomorphismus}, falls $ f \in C^\infty $ umkehrbar ist mit $ f(M)=N $ und die Umkehrfunktion wieder $C^\infty$ ist. Gibt es einen Diffeomorphismus $ M \to N $ (somit auch einen Diffeomorphismus $N \to M$) nennt man $M$ und $N$ diffeomorph, $M \simeq N$.
+\end{defn}
+
+\begin{rem}
+	\begin{enumerate}[label = {\roman*})]
+		\item Aufgabe 3 Blatt 1: Verschiedene differenzierbare Strukturen auf $\R$: Atlanten $ \{\id_\R\}, \{\varphi: x \mapsto x^3\} $, aber $ (\R,\{\id_\R\}) \overset{\simeq}{\longrightarrow} (\R,\{\varphi\}) $ diffeomorph.\\
+			Allgemeiner: $ U \subset \R^n $ offen, Atlas $ \mathcal{A} = \{\id_U\} \rightarrow $ "Standard-Differenzierbare-Struktur". Jeder Homöomorphismus $ \varphi:  U \to V \in \R^n $ gibt auch einen Atlas und eine differenzierbare Struktur. Sie ist genau dann die Standard differenzierbare Struktur, wenn $\varphi$ als Abbildung $ U \subset \R^n \to \tilde{U} \subset \R^n $ ein Diffeomorphismus ist.\\
+			ACHTUNG! Als differenzierbare Mannigfaltigkeiten sind $ (U,\{\id_U\}) $ und $(U,\{\varphi\})$ aber auch dann diffeomorph, wenn $\varphi: U \to \tilde{U}$ kein Diffeomorphismus ist! Denn $ \varphi: (U,\{\varphi\}) \to (U,\{\id_U\}) $ ist ein Diffeomorphismus differenzierbarer Mannigfaltigkeiten: $ \id_U \circ \varphi \circ \varphi^{-1} = \id_U $ ist ein Diffeomorphismus $ U \to U $.
+		\item Sehr viele Sätze befassen sich damit, ob es auf einer Mannigfaltigkeit verschiedene differenzierbare Strukturen gibt, sodass die entstehenden differenzierbaren Mannigfaltigkeiten nicht diffeomorph sind. Auf $ \mathbb{S}^7 $ gibt es genau 15 verschiedene differenzierbare Strukturen, die nicht diffeomorph zueinander sind (Milnor + Kervaire 1963, "exotische Sphären", erstes Beispiel Milnor 1956).
+		\item Unser Thema hier: Strukturen, die unter der Anwendung von Diffeomorphismen invariant sind. Daher können wir lokale Eigenschaften immer auf offenen Mengen im $\R^n$ untersuchen (also mit Hilfe von Karten und Koordinaten). Das heißt konkret: Statt $ f : U \subset M \to N $ zu betrachten mit $M$ und $N$ als differenzierbare Mannigfaltigkeiten betrachten wir $ \psi \circ f \circ \varphi^{-1} $ mit $ (\varphi,\tilde{U}), \tilde{U} \subset U, $ Karte von $M$ und $ (\psi,V) $ Karte von $N$ mit $ f(\tilde{U})\subset V $, also eine Abbildung von einer offenen Menge $\subset \R^m$ in eine offene Menge $\subset \R^n$.
+		\item Es ist keine Einschränkung, Glattheit der Kartenwechsel zu fordern. Denn es gilt: Ist $\mathcal{A}$ ein Atlas von $M$ mit $C^1$-Kartenwechseln, so gibt es zu jedem $l,\ 1 \leq l \leq \infty,$ einen Atlas $ \tilde{\mathcal{A}} $ von $M$, sodass die Kartenwechsel von $\tilde{\mathcal{A}}$ $C^l$-Abbildungen sind und so, dass die Kartenwechsel von $\tilde{\mathcal{A}} \cup \mathcal{A}$ $C^1$ sind [Whitney, 1936], das heißt für $l = \infty$ ist $ (M,\mathcal{D}(\tilde{\mathcal{A}})) $ eine differenzierbare Mannigfaltigkeit im Sinne unserer Definitionen.
+		\item Es gibt topologische Mannigfaltigkeiten, die keinen Atlas besitzen, der $C^1$-Kartenwechsel hat (somit auch keine differenzierbare Struktur in unserem Sinn).
+	\end{enumerate}
+\end{rem}
+
+\begin{defn}[Topologische Untermannigfaltigkeit]
+	$ N \subset M, \dim(M) = n+k, $ heißt \emph{$n$-dimensionale (topologische) Untermannigfaltigkeit} der (topologischen) Mannigfaltigkeit $M$, falls es zu jedem Punkt $p \in N$ eine Karte $ \varphi,U$ von $M$ bei $p$, $ \varphi: U \to \R^n \times \R^k $, gibt, sodass $ \varphi(U \cap N) = \varphi(U) \cap (\R^n \times \{0\}). $ Eine Karte von $M$ mit dieser Eigenschaft heißt \emph{$N$ angepasst}.\\
+	Ist $M$ differenzierbar, so heißt $N$ \emph{differenzierbare Untermannigfaltigkeit} von $M$, falls es zu jedem $p \in N$ angepasste Karten aus der differenzierbaren Struktur von $M$ gibt Die Gesamtheit der Karten 
+	$$ \big\{ \varphi: U \cap N \to \varphi(U) \cap \vertarrowbox[1ex]{\R^n}{$ \R^n \simeq \R^n \times \{0\} $} \mid \varphi\ \text{angepasste Karte aus der diff'baren Struktur von } M \big\} $$
+	ist ein differenzierbarer Atlas für $N$.
+	\image{1_10}{12cm}
+	\begin{exmp*}
+		$ \mathbb{S}^n $ ist eine Untermannigfaltigkeit des $\R^{n+1}$. Angepasste Karten:
+		\[ \psi_{\pm i}: U_i^\pm \to \R^{n+1},\ \psi_{\pm i}(x) = \left( x \left( \hat{i} \right),x_i \right) \]
+	\end{exmp*}
+	Man nennt eine glatte Abbildung $ f: \tilde{M} \to M $ eine \emph{glatte Einbettung}, falls $ f\left( \tilde{M} \right) \subset M $ eine differenzierbare Untermannigfaltigkeit von $M$ ist und $ f: \tilde{M} \to f\left( \tilde{M} \right) $ ein Diffeomorphismus.
+\end{defn}
+
+\begin{thm}
+	Sei $M$ eine $(n+k)$-dimensionale differenzierbare Mannigfaltigkeit, $ N \subset M$ eine Teilmenge. Dann ist $N$ eine $n$-dimensionale differenzierbare Untermannigfaltigkeit $ \iff \ \forall\, p \in N \ \exists $ Umgebung $U$ von $p$ in $M$ und eine glatte Abbildung $ f: U \to \R^k$, mit $ Df(q) $ von maximalem Rang $k\ \forall\, q \in U$, sodass $ U \cap N = f^{-1}(0). $
+\end{thm}
+\addtocounter{lecture}{1}
+\begin{exmp*}
+	Betrachte den Torus $ \pi = \mathbb{S}^1 \times \mathbb{S}^1 $.Diese Mannigfaltigkeit lässt sich als differenzierbare Untermannigfaltigkeit des $\R^3$ realisieren: Sei $ 0 < r < R $. Rotiere den Kreis von Radius $r$ um $ (R,0) $ in der $(x,z)$-Ebene um die $z$-Achse, so entsteht eine zu $ \mathbb{S}^1 \times \mathbb{S}^1 $ diffeomorphe Untermannigfaltigkeit. Dazu zunächst folgende Beobachtung:
+	\begin{rem}
+		Differenzierbare Struktur auf Produkt-Mannigfaltigkeiten:\\
+		Die Kartenwechsel der Karten aus Lemma \ref{lem1_3} 
+		\[ \varphi_1 \times \dotsm \times \varphi_k: \underset{\subset M_1}{U_1} \times \dotsm \times \underset{\subset M_k}{U_k} \to \R^{n_1} \times \dotsm \times \R^{n_k} \]
+		sind glatt, wenn die $M_j$ differenzierbare Mannigfaltigkeiten sind, denn 
+		\[ \psi_1 \dotsm \psi_k \circ (\varphi_1 \times \dotsm \times \varphi_k)^{-1} = \psi_1 \circ \varphi_1^{-1} \times \dotsm \psi_k \circ \varphi_k^{-1}. \]
+	\end{rem}
+	Die Tori $ \mathbb{S}^1 \times \dotsm \times \mathbb{S}^1 $ sind somit (kanonisch) mit einer differenzierbaren Struktur versehen. Die Homöomorphie von $\pi$ mit der Rotationsfläche ist tatsächlich ein Diffeomorphismus.
+\end{exmp*}
+
+\begin{rem*}
+	Bisher haben wir topologische Mannigfaltigkeiten betrachtet und diese dann mit einer differenzierbaren Struktur versehen.\\
+	Gegeben eine Familie von Karten, die gewisse Eigenschaften haben, kann man direkt eine Topologie und eine differenzierbare Struktur auf einer Mannigfaltigkeit in einem Schritt definieren, wie das folgende Lemma zeigt:
+\end{rem*}
+
+\begin{lem}
+	Sei $M$ eine Menge und $ \{\varphi_\alpha: U_\alpha \to \R^n \mid \alpha \in A\}, U_\alpha \subset M, $ eine Familie von Abbildungen mit folgenden Eigenschaften:
+	\begin{enumerate}[label={\roman*})]
+		\item Es gibt eine abzählbare Menge $ I \subset A $, sodass $ M = \bigcup\limits_{\alpha \in I}U_\alpha. $
+		\item Für $ p,q \in M, p \neq q, $ gibt es ein $ U_\alpha $, sodass $ p,q \in U_\alpha $ oder es gibt $ U_\alpha,U_\beta, U_\alpha \cap U_\beta = \emptyset, $ mit $ p \in U_\alpha, q \in U_\beta. $
+		\item Für jedes $ \alpha \in A $ ist $ \varphi_\alpha $ eine Bijektion von $ U\alpha $ auf eine \emph{offene} Teilmenge $ \varphi_\alpha(U_\alpha) \subset \R^n $.
+		\item Für alle $ \alpha,\beta \in A $ sind $ \varphi_\alpha(U_\alpha \cap U_\beta) $ und $ \varphi_\beta(U_\alpha \cap U_\beta) $ offen in $\R^n$.
+		\item F+r alle $ \alpha,\beta \in A $ ist die Abbildung $ \varphi_\beta \circ \varphi_\alpha^{-1}: \varphi_\alpha( \underset{\subset \R^n}{U_\alpha \cap U_\beta} ) \to \varphi_\beta( \underset{\subset \R^n}{U_\alpha \cap U_\beta} ) $ glatt.
+	\end{enumerate}
+	Dann ist $M$ eine differenzierbare Mannigfaltigkeit, deren differenzierbare Struktur eindeutig durch die Forderung festgelegt ist, dass die $ (\varphi_\alpha,U_\alpha) $ glatte Karten sind, das heißt dass alle Kartenwechsel glatt sind.
+\end{lem}
