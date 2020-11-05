@@ -1,5 +1,5 @@
 \addtocounter{thm}{1}
-\begin{defn}[Differenzierbare Abbildung zwischen Mannigfaltigkeiten]\lecture
+\begin{defn}[Differenzierbare Abbildung zwischen Mannigfaltigkeiten]\index{Differenzierbare Abbildung zwischen Mannigfaltigkeiten}\lecture
 	Seien $M,N$ differenzierbare Mannigfaltigkeiten, $M$ $m$-dimensional, $N\ n$-dimensional. Sei $ f: M \to N $  stetig. $f$ heißt \emph{(stetig) differenzierbar/glatt} im Punkt $p \in M$, falls für eine (und damit für jede!) Karte $ (\varphi,U) $ bei $p$ und eine (und damit für jede) Karte $ (\psi,V) $ bei $f(p)$ gilt
 	\[ \psi \circ f \circ \varphi^{-1}: \varphi \left( f^{-1}(V) \cap U \right) \to \R^n \]
 	ist (stetig) differenzierbar/glatt in $\varphi(p).$
@@ -15,7 +15,7 @@ genau dann (stetig) differenzierbar/glatt in $p$, wenn $\psi' \circ f \circ \var
 	Die differenzierbaren Mannigfaltigkeiten mit $C^\infty$-Abbildungen bilden eine Kategorie, die unter Verknüpfungen abgeschlossen ist, das heißt $ f, g \in C^\infty \implies f \circ g \in C^\infty. $
 \end{rem*}
 
-\begin{defn}[Diffeomorphismus]
+\begin{defn}[Diffeomorphismus]\index{Diffeomorphismus}
 	Eine Abbildung $ f: M \to N $ nennt man \emph{Diffeomorphismus}, falls $ f \in C^\infty $ umkehrbar ist mit $ f(M)=N $ und die Umkehrfunktion wieder $C^\infty$ ist. Gibt es einen Diffeomorphismus $ M \to N $ (somit auch einen Diffeomorphismus $N \to M$) nennt man $M$ und $N$ diffeomorph, $M \simeq N$.
 \end{defn}
 
@@ -31,7 +31,9 @@ genau dann (stetig) differenzierbar/glatt in $p$, wenn $\psi' \circ f \circ \var
 	\end{enumerate}
 \end{rem}
 
-\begin{defn}[Topologische Untermannigfaltigkeit]
+\section{Untermannigfaltigkeiten}
+
+\begin{defn}[Topologische Untermannigfaltigkeit]\index{Topologische Untermannigfaltigkeit}
 	$ N \subset M, \dim(M) = n+k, $ heißt \emph{$n$-dimensionale (topologische) Untermannigfaltigkeit} der (topologischen) Mannigfaltigkeit $M$, falls es zu jedem Punkt $p \in N$ eine Karte $ \varphi,U$ von $M$ bei $p$, $ \varphi: U \to \R^n \times \R^k $, gibt, sodass $ \varphi(U \cap N) = \varphi(U) \cap (\R^n \times \{0\}). $ Eine Karte von $M$ mit dieser Eigenschaft heißt \emph{$N$ angepasst}.\\
 	Ist $M$ differenzierbar, so heißt $N$ \emph{differenzierbare Untermannigfaltigkeit} von $M$, falls es zu jedem $p \in N$ angepasste Karten aus der differenzierbaren Struktur von $M$ gibt Die Gesamtheit der Karten 
 	$$ \big\{ \varphi: U \cap N \to \varphi(U) \cap \vertarrowbox[1ex]{\R^n}{$ \R^n \simeq \R^n \times \{0\} $} \mid \varphi\ \text{angepasste Karte aus der diff'baren Struktur von } M \big\} $$
@@ -47,7 +49,9 @@ genau dann (stetig) differenzierbar/glatt in $p$, wenn $\psi' \circ f \circ \var
 \begin{thm}
 	Sei $M$ eine $(n+k)$-dimensionale differenzierbare Mannigfaltigkeit, $ N \subset M$ eine Teilmenge. Dann ist $N$ eine $n$-dimensionale differenzierbare Untermannigfaltigkeit $ \iff \ \forall\, p \in N \ \exists $ Umgebung $U$ von $p$ in $M$ und eine glatte Abbildung $ f: U \to \R^k$, mit $ Df(q) $ von maximalem Rang $k\ \forall\, q \in U$, sodass $ U \cap N = f^{-1}(0). $
 \end{thm}
+
 \addtocounter{lecture}{1}
+
 \begin{exmp*}
 	Betrachte den Torus $ \pi = \mathbb{S}^1 \times \mathbb{S}^1 $.Diese Mannigfaltigkeit lässt sich als differenzierbare Untermannigfaltigkeit des $\R^3$ realisieren: Sei $ 0 < r < R $. Rotiere den Kreis von Radius $r$ um $ (R,0) $ in der $(x,z)$-Ebene um die $z$-Achse, so entsteht eine zu $ \mathbb{S}^1 \times \mathbb{S}^1 $ diffeomorphe Untermannigfaltigkeit. Dazu zunächst folgende Beobachtung:
 	\begin{rem}
