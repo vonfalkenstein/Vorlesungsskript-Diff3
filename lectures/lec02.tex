@@ -34,8 +34,8 @@ genau dann (stetig) differenzierbar/glatt in $p$, wenn $\psi' \circ f \circ \var
 \section{Untermannigfaltigkeiten}
 
 \begin{defn}[Topologische Untermannigfaltigkeit]\index{Topologische Untermannigfaltigkeit}
-	$ N \subset M, \dim(M) = n+k, $ heißt \emph{$n$-dimensionale (topologische) Untermannigfaltigkeit} der (topologischen) Mannigfaltigkeit $M$, falls es zu jedem Punkt $p \in N$ eine Karte $ \varphi,U$ von $M$ bei $p$, $ \varphi: U \to \R^n \times \R^k $, gibt, sodass $ \varphi(U \cap N) = \varphi(U) \cap (\R^n \times \{0\}). $ Eine Karte von $M$ mit dieser Eigenschaft heißt \emph{$N$ angepasst}.\\
-	Ist $M$ differenzierbar, so heißt $N$ \emph{differenzierbare Untermannigfaltigkeit} von $M$, falls es zu jedem $p \in N$ angepasste Karten aus der differenzierbaren Struktur von $M$ gibt Die Gesamtheit der Karten 
+	$ N \subset M, \dim(M) = n+k, $ heißt \emph{$n$-dimensionale (topologische) Untermannigfaltigkeit} der (topologischen) Mannigfaltigkeit $M$, falls es zu jedem Punkt $p \in N$ eine Karte $ (\varphi,U)$ von $M$ bei $p$, $ \varphi: U \to \R^n \times \R^k $, gibt, sodass $ \varphi(U \cap N) = \varphi(U) \cap (\R^n \times \{0\}). $ Eine Karte von $M$ mit dieser Eigenschaft heißt \emph{$N$ angepasst}.\\
+	Ist $M$ differenzierbar, so heißt $N$ \emph{differenzierbare Untermannigfaltigkeit} von $M$, falls es zu jedem $p \in N$ angepasste Karten aus der differenzierbaren Struktur von $M$ gibt. Die Gesamtheit der Karten 
 	$$ \big\{ \varphi: U \cap N \to \varphi(U) \cap \vertarrowbox[1ex]{\R^n}{$ \R^n \simeq \R^n \times \{0\} $} \mid \varphi\ \text{angepasste Karte aus der diff'baren Struktur von } M \big\} $$
 	ist ein differenzierbarer Atlas für $N$.
 	\image{1_10}{12cm}
@@ -53,7 +53,7 @@ genau dann (stetig) differenzierbar/glatt in $p$, wenn $\psi' \circ f \circ \var
 \addtocounter{lecture}{1}
 
 \begin{exmp*}
-	Betrachte den Torus $ \pi = \mathbb{S}^1 \times \mathbb{S}^1 $.Diese Mannigfaltigkeit lässt sich als differenzierbare Untermannigfaltigkeit des $\R^3$ realisieren: Sei $ 0 < r < R $. Rotiere den Kreis von Radius $r$ um $ (R,0) $ in der $(x,z)$-Ebene um die $z$-Achse, so entsteht eine zu $ \mathbb{S}^1 \times \mathbb{S}^1 $ diffeomorphe Untermannigfaltigkeit. Dazu zunächst folgende Beobachtung:
+	Betrachte den Torus $ \pi = \mathbb{S}^1 \times \mathbb{S}^1 $. Diese Mannigfaltigkeit lässt sich als differenzierbare Untermannigfaltigkeit des $\R^3$ realisieren: Sei $ 0 < r < R $. Rotiere den Kreis von Radius $r$ um $ (R,0) $ in der $(x,z)$-Ebene um die $z$-Achse, so entsteht eine zu $ \mathbb{S}^1 \times \mathbb{S}^1 $ diffeomorphe Untermannigfaltigkeit. Dazu zunächst folgende Beobachtung:
 	\begin{rem}
 		Differenzierbare Struktur auf Produkt-Mannigfaltigkeiten:\\
 		Die Kartenwechsel der Karten aus Lemma \ref{lem1_3} 
@@ -76,7 +76,7 @@ genau dann (stetig) differenzierbar/glatt in $p$, wenn $\psi' \circ f \circ \var
 		\item Für $ p,q \in M, p \neq q, $ gibt es ein $ U_\alpha $, sodass $ p,q \in U_\alpha $ oder es gibt $ U_\alpha,U_\beta, U_\alpha \cap U_\beta = \emptyset, $ mit $ p \in U_\alpha, q \in U_\beta. $
 		\item Für jedes $ \alpha \in A $ ist $ \varphi_\alpha $ eine Bijektion von $ U\alpha $ auf eine \emph{offene} Teilmenge $ \varphi_\alpha(U_\alpha) \subset \R^n $.
 		\item Für alle $ \alpha,\beta \in A $ sind $ \varphi_\alpha(U_\alpha \cap U_\beta) $ und $ \varphi_\beta(U_\alpha \cap U_\beta) $ offen in $\R^n$.
-		\item F+r alle $ \alpha,\beta \in A $ ist die Abbildung $ \varphi_\beta \circ \varphi_\alpha^{-1}: \varphi_\alpha( \underset{\subset \R^n}{U_\alpha \cap U_\beta} ) \to \varphi_\beta( \underset{\subset \R^n}{U_\alpha \cap U_\beta} ) $ glatt.
+		\item Für alle $ \alpha,\beta \in A $ ist die Abbildung $ \varphi_\beta \circ \varphi_\alpha^{-1}: \varphi_\alpha( \underset{\subset \R^n}{U_\alpha \cap U_\beta} ) \to \varphi_\beta( \underset{\subset \R^n}{U_\alpha \cap U_\beta} ) $ glatt.
 	\end{enumerate}
 	Dann ist $M$ eine differenzierbare Mannigfaltigkeit, deren differenzierbare Struktur eindeutig durch die Forderung festgelegt ist, dass die $ (\varphi_\alpha,U_\alpha) $ glatte Karten sind, das heißt dass alle Kartenwechsel glatt sind.
 \end{lem}
