@@ -1,10 +1,10 @@
 \chapter{Mannigfaltigkeiten}\lecture
 
-\begin{defn}[Topologische Mannigfaltigkeit]\label{def1_1}\index{Topologische Mannigfaltigkeit}
+\begin{defn}[Topologische Mannigfaltigkeit]\label{def1_1}\index{Mannigfaltigkeit}
 	Eine \emph{$n$-dimensionale topologische Mannigfaltigkeit $M$} ist ein topologischer Hausdorff-Raum mit abzählbarer Basis der Topologie, der lokal euklidisch ist.
 	\begin{itemize}
 		\item lokal euklidisch:\\
-			$ \forall\, p \in M\ \exists\, U $ offene Umgebung von $p$, die homöomorph zu einer offenen Teilmenge des $\R^n$ ist, das heißt es gibt eine stetige, injektive Abbildung $ \varphi: U \to \R^n $ mit $ \varphi(U) $ offen in $\R^n$ (mit der Standardtopologie) und mit stetiger Umkehrfunktion $\varphi^{-1}: \varphi(U) \to M$.
+			$ \foralll p \in M\ \existss U $ offene Umgebung von $p$, die homöomorph zu einer offenen Teilmenge des $\R^n$ ist, das heißt es gibt eine stetige, injektive Abbildung $ \varphi: U \to \R^n $ mit $ \varphi(U) $ offen in $\R^n$ (mit der Standardtopologie) und mit stetiger Umkehrfunktion $\varphi^{-1}: \varphi(U) \to M$.
 			\image{1_1 homoeo}{12cm}
 			\begin{rem*}
 				$\varphi$ und auch $\varphi^{-1}$ sind offene Abbildungen, denn Bilder offener Mengen $ \tilde{U} \subset U $ (bezüglich $\varphi$), also $ \varphi(\tilde{U}) \subset \varphi(U) = \im(\varphi) $, sind Urbilder (bezüglich $\varphi^{-1}$) offener Mengen $\tilde{U}$ und somit offen (wegen der Stetigkeit von $\varphi^{-1}$)
@@ -12,11 +12,11 @@
 				Das heißt $U$ und $\varphi(U)$ sind als topologische Räume äquivalent (weil ihre offenen Mengen in $1-1$-Beziehung zueinander stehen).
 			\end{rem*}
 		\item Hausdorff-Raum:\\
-			$ \forall\, p \neq q \in M \ \exists\, U,V \subset M $ offen, sodass $ U \cap V = \emptyset,\ p \in U, q \in V $
+			$ \foralll p \neq q \in M \ \existss U,V \subset M $ offen, sodass $ U \cap V = \emptyset,\ p \in U, q \in V $
 			\image{1_1 hausdorff}{6cm}
 			Erinnerung: In topologischen Räumen mit Hausdorff-Eigenschaft sind z.B. Grenzwerte von konvergenten Folgen eindeutig.
 		\item Abzählbare Basis der Topologie:\\
-			Es gibt ein höchstens abzählbares System $ \{U_1,U_2,U_3,\dots\} $ von offenen Mengen $ U_j \subset M $, sodass $ \forall\, p \in M \ \forall $ Umgebungen $V$ von $p$ gibt es einen Index $j$, sodass $ p \in U_j \subset V $.
+			Es gibt ein höchstens abzählbares System $ \{U_1,U_2,U_3,\dots\} $ von offenen Mengen $ U_j \subset M $, sodass $ \foralll p \in M \ \forall $ Umgebungen $V$ von $p$ gibt es einen Index $j$, sodass $ p \in U_j \subset V $.
 			\begin{rem*}
 				Warum man dies fordert werden wir später bei der Existenz einer Teilung der Eins erkennen.
 			\end{rem*}
@@ -36,7 +36,7 @@
 		\item $M = \R^n$, versehen mit der Standardtopologie, denn $ \varphi: \R^n \to \R^n,\ \varphi(x) = x $ ist ein Homöomorphismus. $\R^n$ ist ein Hausdorff-Raum (vlg. Diff 2) und verfügt über eine abzählbare Basis: $ \set{\dot{B_r}(q) \ \text{offener Ball}}{r \in \Q, p \in \Q^n}. $
 		\item Graphen von stetigen Funktionen:\\
 			$ U \subset \R^n $ offen, $f: U \to \R^k$ stetig. Der \emph{Graph} $ \Gamma(f) = \set{(x,f(x))}{x \in U} \subset \R^n \times \R^k $, versehen mit der \emph{Teilraumtopologie}\footnote{
-				Eine Teilmenge $M\subset \R^m$ ist mit der Teilraumtopologie versehen, falls $ U \subset M $ ist offen $ \iff \ \exists\, V \subset \R^m $ offen, sodass $ U = V \cap M $}
+				Eine Teilmenge $M\subset \R^m$ ist mit der Teilraumtopologie versehen, falls $ U \subset M $ ist offen $ \iff \ \existss V \subset \R^m $ offen, sodass $ U = V \cap M $}
 			ist eine $n$-dimensionale topologische Mannigfaltigkeit, denn $$ \varphi: \Gamma(f) \to \R^n, \varphi(x,y) = x,\ (x,y) \in \Gamma(f) \subset \R^n \times \R^k $$ bildet $\Gamma(f)$ homöomorph auf $U$ ab (die Umkehrfunktion ist die stetige Funktion $ \varphi^{-1}: U \to \R^n \times \R^k, \varphi^{-1}(x) = (x,f(x)) $). Die Hausdorff-Eigenschaft und die Abzählbarkeit einer Basis der Topologie übertragen sich direkt
 			\begin{rem*}
 				Wird nichts anders explizit gesagt, werden wir Teilräume stets als mit der Teilraumtopologie versehen ansehen.
@@ -78,7 +78,7 @@
 	\image{1_3 counter2}{6cm}
 \end{exmp*}
 
-\begin{defn}[Kartenwechsel]\index{Kartenwechsel}
+\begin{defn}[Kartenwechsel]\index{Mannigfaltigkeit!Kartenwechsel}
 	Seien $ (\varphi_\alpha,U_\alpha), (\varphi_\beta,U_\beta) $ lokale Karten einer Mannigfaltigkeit $M$. Dann nennt man die Abbildung
 	\[ \Phi_{\alpha\beta}: \varphi_\alpha(U_\alpha \cap U_\beta) \to \varphi_\beta(U_\alpha \cap U_\beta),\quad \Phi_{\alpha\beta} = \varphi_\beta \circ \varphi_\alpha^{-1} \]
 	\image{1_4}{10cm}
@@ -92,7 +92,7 @@
 	auf dem Definitionsbereich, wo die Abbildung definiert ist: $ \varphi_\beta(U_\alpha \cap U_\beta). $
 \end{rem*}
 
-\begin{defn}[Differenzierbare Struktur]\index{Differenzierbare Struktur}
+\begin{defn}[Differenzierbare Struktur]\index{Mannigfaltigkeit!Differenzierbare Struktur}
 	Sei $\mathcal{A}$ ein differenzierbarer Atlas (von $M$), dann bezeichnet man $\mathcal{D} = \mathcal{D}(\mathcal{A})$ die Menge \emph{aller} Karten von $M$, die mit allen Karten aus $\mathcal{A}$ glatte Kartenwechsel haben,
 	\[ \mathcal{D}(\mathcal{A}) = \set{(\psi,U) \ \text{Karten}}{\bound{\psi \circ \varphi^{-1}}{\varphi(V \cap U)}, \bound{\varphi \circ \psi^{-1}}{\varphi(V \cap U)} \in C^\infty \ \text{für alle } (\varphi,V) \in \mathcal{A}}. \]
 	\begin{rem*}
