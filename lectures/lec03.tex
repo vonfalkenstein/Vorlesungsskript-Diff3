@@ -15,7 +15,7 @@ Zur Verallgemeinerung auf Mannigfaltigkeiten\footnote{von nun an betrachten wir 
 
 \begin{defn}[Keime]\index{Keime}
 	Auf $ \{f \mid f: U \to N,\ U $offene Umgebung von $p \in M\} $ definiert 
-	$$ f \sim g \iff \existss \text{offene Umgebung } U \ \text{von } p \text{, sodass } \bound{f}{V} = \bound{g}{V} $$
+	$$ f \sim g \iff \existss \text{offene Umgebung } V \ \text{von } p \text{, sodass } \bound{f}{V} = \bound{g}{V} $$
 	eine Äquivalenzrelation. Eine Äquivalenzklasse bezüglich $\sim$ nennt man \emph{Keim} einer Abbildung $M \to N$ bei $p$. Ist $ f $ $C^1$/glatt bei $p$, so auch alle Elemente der von $f$ repräsentierten Klasse $\bar{f}$. Man spricht in dem Fall von $C^1$/glatten Keimen. Wir schreiben $ \E^1(p) $ bzw. $\E^\infty(p)$ für die Menge aller $C^1$ bzw. glatten Keime bei $p \in M$ mit Werten in $\R$ ("Funktionskeime") $ (M,p) \to \R $.
 \end{defn}
 
@@ -23,7 +23,7 @@ Zur Verallgemeinerung auf Mannigfaltigkeiten\footnote{von nun an betrachten wir 
 	\begin{enumerate}[label={\roman*})]
 		\item $\E^1(p)$ und $E^\infty(p)$ bilden eine Algebra (denn die Bildung von Äquivalenzklassen ist mit der punktweisen Addition und Multiplikation verträglich).
 		\item Ist $ \bar{f}: (M,p)\to N $ ein $C^1$/glatter Keim bei $p \in M$, so definiert er einen Homomorphismus von Algebren \big($\E(f(p))$ Keime $(N,f(p)) \to \R$\big)
-		\[ f^*: \E^{1/\infty} (f(p)) \to E^{1/\infty} (p) \ \text{vermöge } f^* \left( \bar{h} \right) = \bar{h} \circ \bar{f} \qquad \text{"pullback", "Zurückziehung"} \]
+		\[ f^*: \E^{1/\infty} (f(p)) \to \E^{1/\infty} (p) \ \text{vermöge } f^* \left( \bar{h} \right) = \bar{h} \circ \bar{f} \quad \text{"pullback", "Zurückziehung"} \]
 		Offensichtlich ist das unabhängig von der Wahl des Repräsentanten.
 		\image{2_2.png}{14cm}
 		Es gilt $\id^* = \id$ und $(f \circ g)^* = g^* \circ f^*$. Insbesondere induziert ein bezüglich Komposition integrierbarer Keim $\bar{f}$ ($ \bar{f} \circ \bar{f}^{-1} = \bar{f} \circ \overbar{f^{-1}} = \id $) einen Isomorphismus $f^*, f^{-1 *} \circ f^* = \id$.
@@ -64,8 +64,8 @@ Zur Verallgemeinerung auf Mannigfaltigkeiten\footnote{von nun an betrachten wir 
 \end{rem*}
 
 \begin{thm}
-	Seien $ (x_1,\dotsc,x_n),(y_1,\dotsc,y_n) $ lokale Koordinaten bei $p \in M, q \in N$, gegeben durch bei $p$ bzw. $q$ zentrierte Karten $ \varphi,\psi $ (das heißt $ x_i(\tilde{p}) = \varphi_i (\tilde{p}) $ mit $(\varphi,U)$ lokale Karte bei $p \in M, \tilde{p} \in Um \varphi(p) = 0$. Analog für $y_j$.)\\
-	Dann sind $ \{ \bound{\frac{\del}{\del x_1}}{0}, \dotsc, \bound{\frac{\del}{\del x_n}}{0} \} $ bzw. $ \{ \bound{\frac{\del}{\del y_1}}{0}, \dotsc, \bound{\frac{\del}{\del y_n}}{0} \} $ Basen von $ R_0\R^m \cong T_pM $ bzw. $ T_0\R^n \cong T_qM $.\\
+	Seien $ (x_1,\dotsc,x_m),(y_1,\dotsc,y_n) $ lokale Koordinaten bei $p \in M, q \in N$, gegeben durch bei $p$ bzw. $q$ zentrierte Karten $ \varphi,\psi $ (das heißt $ x_i(\tilde{p}) = \varphi_i (\tilde{p}) $ mit $(\varphi,U)$ lokale Karte bei $p \in M, \tilde{p} \in U, \varphi(p) = 0$. Analog für $y_j$.)\\
+	Dann sind $ \left\{ \bound{\frac{\del}{\del x_1}}{0}, \dotsc, \bound{\frac{\del}{\del x_m}}{0} \right\} $ bzw. $ \left\{ \bound{\frac{\del}{\del y_1}}{0}, \dotsc, \bound{\frac{\del}{\del y_n}}{0} \right\} $ Basen von $ T_0\R^m \cong T_pM $ bzw. $ T_0\R^n \cong T_qN $.\\
 	Die Tangentialabbildung eines $C^\infty$-Keimes $\bar{f}: (M,p) \to N$ ist bezüglich dieser Basen durch die Jacobimatrix $ D( \vertarrowbox[1ex]{\psi \circ f \circ \varphi^{-1}}{Keim $ (\R^m,0) \to \R^n $} ) (0): \R^m \to \R^n $ gegeben.
 	\[ \begin{tikzcd}
 		T_pM \arrow{r}{Df} \arrow{d}{\varphi} & T_{f(p)}N \arrow{d}{\psi}\\
