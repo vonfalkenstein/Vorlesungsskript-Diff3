@@ -22,11 +22,11 @@ genau dann (stetig) differenzierbar/glatt in $p$, wenn $\psi' \circ f \circ \var
 \begin{rem}
 	\begin{enumerate}[label = {\roman*})]
 		\item Aufgabe 3 Blatt 1: Verschiedene differenzierbare Strukturen auf $\R$: Atlanten $ \{\id_\R\}, \{\varphi: x \mapsto x^3\} $, aber $ (\R,\{\id_\R\}) \overset{\cong}{\longrightarrow} (\R,\{\varphi\}) $ diffeomorph.\\
-			Allgemeiner: $ U \subset \R^n $ offen, Atlas $ \mathcal{A} = \{\id_U\} \rightarrow $ "Standard-Differenzierbare-Struktur". Jeder Homöomorphismus $ \varphi:  U \to V \in \R^n $ gibt auch einen Atlas und eine differenzierbare Struktur. Sie ist genau dann die Standard differenzierbare Struktur, wenn $\varphi$ als Abbildung $ U \subset \R^n \to \tilde{U} \subset \R^n $ ein Diffeomorphismus ist.\\
+			Allgemeiner: $ U \subset \R^n $ offen, Atlas $ \Acal = \{\id_U\} \rightarrow $ "Standard-Differenzierbare-Struktur". Jeder Homöomorphismus $ \varphi:  U \to V \in \R^n $ gibt auch einen Atlas und eine differenzierbare Struktur. Sie ist genau dann die Standard differenzierbare Struktur, wenn $\varphi$ als Abbildung $ U \subset \R^n \to \tilde{U} \subset \R^n $ ein Diffeomorphismus ist.\\
 			ACHTUNG! Als differenzierbare Mannigfaltigkeiten sind $ (U,\{\id_U\}) $ und $(U,\{\varphi\})$ aber auch dann diffeomorph, wenn $\varphi: U \to \tilde{U}$ kein Diffeomorphismus ist! Denn $ \varphi: (U,\{\varphi\}) \to (U,\{\id_U\}) $ ist ein Diffeomorphismus differenzierbarer Mannigfaltigkeiten: $ \id_U \circ \varphi \circ \varphi^{-1} = \id_U $ ist ein Diffeomorphismus $ U \to U $.
-		\item Sehr viele Sätze befassen sich damit, ob es auf einer Mannigfaltigkeit verschiedene differenzierbare Strukturen gibt, sodass die entstehenden differenzierbaren Mannigfaltigkeiten nicht diffeomorph sind. Auf $ \mathbb{S}^7 $ gibt es genau 15 verschiedene differenzierbare Strukturen, die nicht diffeomorph zueinander sind (Milnor + Kervaire 1963, "exotische Sphären", erstes Beispiel Milnor 1956).
+		\item Sehr viele Sätze befassen sich damit, ob es auf einer Mannigfaltigkeit verschiedene differenzierbare Strukturen gibt, sodass die entstehenden differenzierbaren Mannigfaltigkeiten nicht diffeomorph sind. Auf $ \Sbb^7 $ gibt es genau 15 verschiedene differenzierbare Strukturen, die nicht diffeomorph zueinander sind (Milnor + Kervaire 1963, "exotische Sphären", erstes Beispiel Milnor 1956).
 		\item Unser Thema hier: Strukturen, die unter der Anwendung von Diffeomorphismen invariant sind. Daher können wir lokale Eigenschaften immer auf offenen Mengen im $\R^n$ untersuchen (also mit Hilfe von Karten und Koordinaten). Das heißt konkret: Statt $ f : U \subset M \to N $ zu betrachten mit $M$ und $N$ als differenzierbare Mannigfaltigkeiten betrachten wir $ \psi \circ f \circ \varphi^{-1} $ mit $ (\varphi,\tilde{U}), \tilde{U} \subset U, $ Karte von $M$ und $ (\psi,V) $ Karte von $N$ mit $ f(\tilde{U})\subset V $, also eine Abbildung von einer offenen Menge $\subset \R^m$ in eine offene Menge $\subset \R^n$.
-		\item Es ist keine Einschränkung, Glattheit der Kartenwechsel zu fordern. Denn es gilt: Ist $\mathcal{A}$ ein Atlas von $M$ mit $C^1$-Kartenwechseln, so gibt es zu jedem $l,\ 1 \leq l \leq \infty,$ einen Atlas $ \tilde{\mathcal{A}} $ von $M$, sodass die Kartenwechsel von $\tilde{\mathcal{A}}$ $C^l$-Abbildungen sind und so, dass die Kartenwechsel von $\tilde{\mathcal{A}} \cup \mathcal{A}$ $C^1$ sind [Whitney, 1936], das heißt für $l = \infty$ ist $ (M,\mathcal{D}(\tilde{\mathcal{A}})) $ eine differenzierbare Mannigfaltigkeit im Sinne unserer Definitionen.
+		\item Es ist keine Einschränkung, Glattheit der Kartenwechsel zu fordern. Denn es gilt: Ist $\Acal$ ein Atlas von $M$ mit $C^1$-Kartenwechseln, so gibt es zu jedem $l,\ 1 \leq l \leq \infty,$ einen Atlas $ \tilde{\Acal} $ von $M$, sodass die Kartenwechsel von $\tilde{\Acal}$ $C^l$-Abbildungen sind und so, dass die Kartenwechsel von $\tilde{\Acal} \cup \Acal$ $C^1$ sind [Whitney, 1936], das heißt für $l = \infty$ ist $ (M,\Dcal(\tilde{\Acal})) $ eine differenzierbare Mannigfaltigkeit im Sinne unserer Definitionen.
 		\item Es gibt topologische Mannigfaltigkeiten, die keinen Atlas besitzen, der $C^1$-Kartenwechsel hat (somit auch keine differenzierbare Struktur in unserem Sinn).
 	\end{enumerate}
 \end{rem}
@@ -40,7 +40,7 @@ genau dann (stetig) differenzierbar/glatt in $p$, wenn $\psi' \circ f \circ \var
 	ist ein differenzierbarer Atlas für $N$.
 	\image{1_10}{12cm}
 	\begin{exmp*}
-		$ \mathbb{S}^n $ ist eine Untermannigfaltigkeit des $\R^{n+1}$. Angepasste Karten:
+		$ \Sbb^n $ ist eine Untermannigfaltigkeit des $\R^{n+1}$. Angepasste Karten:
 		\[ \psi_{\pm i}: U_i^\pm \to \R^{n+1},\ \psi_{\pm i}(x) = \left( x \left( \hat{i} \right),x_i \right) \]
 	\end{exmp*}
 	Man nennt eine glatte Abbildung $ f: \tilde{M} \to M $ eine \emph{glatte Einbettung}, falls $ f\left( \tilde{M} \right) \subset M $ eine differenzierbare Untermannigfaltigkeit von $M$ ist und $ f: \tilde{M} \to f\left( \tilde{M} \right) $ ein Diffeomorphismus.
@@ -51,7 +51,8 @@ genau dann (stetig) differenzierbar/glatt in $p$, wenn $\psi' \circ f \circ \var
 \end{thm}
 
 \begin{exmp*}
-	Betrachte den Torus $ \pi = \mathbb{S}^1 \times \mathbb{S}^1 $. Diese Mannigfaltigkeit lässt sich als differenzierbare Untermannigfaltigkeit des $\R^3$ realisieren: Sei $ 0 < r < R $. Rotiere den Kreis von Radius $r$ um $ (R,0) $ in der $(x,z)$-Ebene um die $z$-Achse, so entsteht eine zu $ \mathbb{S}^1 \times \mathbb{S}^1 $ diffeomorphe Untermannigfaltigkeit. Dazu zunächst folgende Beobachtung:
+	Betrachte den Torus $ \pi = \Sbb^1 \times \Sbb^1 $. Diese Mannigfaltigkeit lässt sich als differenzierbare Untermannigfaltigkeit des $\R^3$ realisieren: Sei $ 0 < r < R $. Rotiere den Kreis von Radius $r$ um $ (R,0) $ in der $(x,z)$-Ebene um die $z$-Achse, so entsteht eine zu $ \Sbb^1 \times \Sbb^1 $ diffeomorphe Untermannigfaltigkeit. Dazu zunächst folgende Beobachtung:
+	\addtocounter{thm}{1}
 	\begin{rem}
 		Differenzierbare Struktur auf Produkt-Mannigfaltigkeiten:\\
 		Die Kartenwechsel der Karten aus Lemma \ref{lem1_3} 
@@ -59,7 +60,7 @@ genau dann (stetig) differenzierbar/glatt in $p$, wenn $\psi' \circ f \circ \var
 		sind glatt, wenn die $M_j$ differenzierbare Mannigfaltigkeiten sind, denn 
 		\[ \psi_1 \dotsm \psi_k \circ (\varphi_1 \times \dotsm \times \varphi_k)^{-1} = \psi_1 \circ \varphi_1^{-1} \times \dotsm \psi_k \circ \varphi_k^{-1}. \]
 	\end{rem}
-	Die Tori $ \mathbb{S}^1 \times \dotsm \times \mathbb{S}^1 $ sind somit (kanonisch) mit einer differenzierbaren Struktur versehen. Die Homöomorphie von $\pi$ mit der Rotationsfläche ist tatsächlich ein Diffeomorphismus.
+	Die Tori $ \Sbb^1 \times \dotsm \times \Sbb^1 $ sind somit (kanonisch) mit einer differenzierbaren Struktur versehen. Die Homöomorphie von $\pi$ mit der Rotationsfläche ist tatsächlich ein Diffeomorphismus.
 \end{exmp*}
 
 \begin{rem*}
@@ -67,7 +68,7 @@ genau dann (stetig) differenzierbar/glatt in $p$, wenn $\psi' \circ f \circ \var
 	Gegeben eine Familie von Karten, die gewisse Eigenschaften haben, kann man direkt eine Topologie und eine differenzierbare Struktur auf einer Mannigfaltigkeit in einem Schritt definieren, wie das folgende Lemma zeigt:
 \end{rem*}
 
-\begin{lem}
+\begin{lem}\label{1.14}
 	Sei $M$ eine Menge und $ \{\varphi_\alpha: U_\alpha \to \R^n \mid \alpha \in A\}, U_\alpha \subset M, $ eine Familie von Abbildungen mit folgenden Eigenschaften:
 	\begin{enumerate}[label={\roman*})]
 		\item Es gibt eine abzählbare Menge $ I \subset A $, sodass $ M = \bigcup\limits_{\alpha \in I}U_\alpha. $

@@ -7,7 +7,7 @@ Erinnerung (Diff 2): Sei $ M \subset \R^n $ eine Untermannigfaltigkeit, $p \in M
 \end{itemize}
 
 \begin{exmp*}
-	$ \mathbb{S}^2 \subset \R^3,\ T_pM = p^\bot $, denn $ f: \R^n \to \R, f(x) = 1-\|x\|^2 $ für $ p \in \S^2 $, sodass $p_i > 0$ oder $<0$ beschreibt $ \mathbb{S}^2 \cap U_i \ni p, U_i = \{x \in \R^3 \mid x_i > 0 $ oder $ < 0\} $ als Nullstellengebilde und $ Df(p) = -2p. $
+	$ \Sbb^2 \subset \R^3,\ T_pM = p^\bot $, denn $ f: \R^n \to \R, f(x) = 1-\|x\|^2 $ für $ p \in \S^2 $, sodass $p_i > 0$ oder $<0$ beschreibt $ \Sbb^2 \cap U_i \ni p, U_i = \{x \in \R^3 \mid x_i > 0 $ oder $ < 0\} $ als Nullstellengebilde und $ Df(p) = -2p. $
 	\image{2.png}{14cm}
 \end{exmp*}
 
@@ -16,44 +16,46 @@ Zur Verallgemeinerung auf Mannigfaltigkeiten\footnote{von nun an betrachten wir 
 \begin{defn}[Keime]\index{Keime}
 	Auf $ \{f \mid f: U \to N,\ U $offene Umgebung von $p \in M\} $ definiert 
 	$$ f \sim g \iff \existss \text{offene Umgebung } V \ \text{von } p \text{, sodass } \bound{f}{V} = \bound{g}{V} $$
-	eine Äquivalenzrelation. Eine Äquivalenzklasse bezüglich $\sim$ nennt man \emph{Keim} einer Abbildung $M \to N$ bei $p$. Ist $ f $ $C^1$/glatt bei $p$, so auch alle Elemente der von $f$ repräsentierten Klasse $\bar{f}$. Man spricht in dem Fall von $C^1$/glatten Keimen. Wir schreiben $ \E^1(p) $ bzw. $\E^\infty(p)$ für die Menge aller $C^1$ bzw. glatten Keime bei $p \in M$ mit Werten in $\R$ ("Funktionskeime") $ (M,p) \to \R $.
+	eine Äquivalenzrelation. Eine Äquivalenzklasse bezüglich $\sim$ nennt man \emph{Keim} einer Abbildung $M \to N$ bei $p$. Ist $ f $ $C^1$/glatt bei $p$, so auch alle Elemente der von $f$ repräsentierten Klasse $\bar{f}$. Man spricht in dem Fall von $C^1$/glatten Keimen. Wir schreiben $ \Ecal^1(p) $ bzw. $\Ecal^\infty(p)$ für die Menge aller $C^1$ bzw. glatten Keime bei $p \in M$ mit Werten in $\R$ ("Funktionskeime") $ (M,p) \to \R $.
 \end{defn}
 
 \begin{rem}
 	\begin{enumerate}[label={\roman*})]
-		\item $\E^1(p)$ und $E^\infty(p)$ bilden eine Algebra (denn die Bildung von Äquivalenzklassen ist mit der punktweisen Addition und Multiplikation verträglich).
-		\item Ist $ \bar{f}: (M,p)\to N $ ein $C^1$/glatter Keim bei $p \in M$, so definiert er einen Homomorphismus von Algebren \big($\E(f(p))$ Keime $(N,f(p)) \to \R$\big)
-		\[ f^*: \E^{1/\infty} (f(p)) \to \E^{1/\infty} (p) \ \text{vermöge } f^* \left( \bar{h} \right) = \bar{h} \circ \bar{f} \quad \text{"pullback", "Zurückziehung"} \]
+		\item $\Ecal^1(p)$ und $E^\infty(p)$ bilden eine Algebra (denn die Bildung von Äquivalenzklassen ist mit der punktweisen Addition und Multiplikation verträglich).
+		\item Ist $ \bar{f}: (M,p)\to N $ ein $C^1$/glatter Keim bei $p \in M$, so definiert er einen Homomorphismus von Algebren \big($\Ecal(f(p))$ Keime $(N,f(p)) \to \R$\big)
+		\[ f^*: \Ecal^{1/\infty} (f(p)) \to \Ecal^{1/\infty} (p) \ \text{vermöge } f^* \left( \bar{h} \right) = \bar{h} \circ \bar{f} \quad \text{"pullback", "Zurückziehung"} \]
 		Offensichtlich ist das unabhängig von der Wahl des Repräsentanten.
 		\image{2_2.png}{14cm}
 		Es gilt $\id^* = \id$ und $(f \circ g)^* = g^* \circ f^*$. Insbesondere induziert ein bezüglich Komposition integrierbarer Keim $\bar{f}$ ($ \bar{f} \circ \bar{f}^{-1} = \bar{f} \circ \overbar{f^{-1}} = \id $) einen Isomorphismus $f^*, f^{-1 *} \circ f^* = \id$.
-		\item Spezialfall: Ist $\varphi$ eine um $p \in M$ zentrierte Karte, so definiert $\varphi$ einen invertierbaren Keim $ \overbar{\varphi}: (M,p) \to \R^n $ mit $\varphi(p)=0$ und somit einen Isomorphismus $ \varphi^*: \E^{1/\infty}_n \to \E^{1/\infty} (p) $, wobei $ \E_n = \{$Funktionskeime bei $0 \}, $ das heißt man kann sich auf Keime aus $\E_n$ beschränken.
+		\item Spezialfall: Ist $\varphi$ eine um $p \in M$ zentrierte Karte, so definiert $\varphi$ einen invertierbaren Keim $ \overbar{\varphi}: (M,p) \to \R^n $ mit $\varphi(p)=0$ und somit einen Isomorphismus $ \varphi^*: \Ecal^{1/\infty}_n \to \Ecal^{1/\infty} (p) $, wobei $ \Ecal_n = \{$Funktionskeime bei $0 \}, $ das heißt man kann sich auf Keime aus $\Ecal_n$ beschränken.
 	\end{enumerate}
 \end{rem}
 
 \section{3 Definitionen des Tangentialraums}
 
 \begin{defn}[algebraische Definition]\index{Tangentialraum}\index{Derivation}
-	Eine \emph{Derivation} von $\E^\infty(p)$ ist eine lineare Abbildung $X: \E^\infty(p) \to \R$, die der folgenden Leibniz-Regel genügt:
+	Eine \emph{Derivation} von $\Ecal^\infty(p)$ ist eine lineare Abbildung $X: \Ecal^\infty(p) \to \R$, die der folgenden Leibniz-Regel genügt:
 	\[ X(\bar{f} \cdot \bar{g}) = X(\bar{f}) \cdot g(p) + f(p) \cdot X(\bar{g}). \]
-	Der \emph{Tangentialraum} $T_pM$ in $p$ ist der Vektorraum der Derivationen von $\E^\infty(p)$.\\
-	Ein glatter Keim $ \bar{f}: (M,p) \to N $ induziert einen Algebra-Homomorphismus $ f^*: \E^\infty (f(p)) \to \E^\infty (p) $ und somit eine (lineare) Abbildung, die \emph{Tangentialabbildung} (oder Differential) $ T_pf: T_pM \to T_{f(p)}N, X \mapsto X \circ f^*. $
+	Der \emph{Tangentialraum} $T_pM$ in $p$ ist der Vektorraum der Derivationen von $\Ecal^\infty(p)$.\\
+	Ein glatter Keim $ \bar{f}: (M,p) \to N $ induziert einen Algebra-Homomorphismus $ f^*: \Ecal^\infty (f(p)) \to \Ecal^\infty (p) $ und somit eine (lineare) Abbildung, die \emph{Tangentialabbildung} (oder Differential) $ T_pf: T_pM \to T_{f(p)}N, X \mapsto X \circ f^*. $
 \end{defn}
 
 \begin{rem*}
 	\begin{enumerate}[label={\roman*})]
 		\item Es gilt 
 		$$ T_p \left( \bar{g} \circ \bar{f} \right) = T_{f(p)} \bar{g} \circ T_p\bar{f}\quad \foralll \bar{f}: (M,p) \to N, \bar{g}: (N,f(p)) \to \tilde{N} \in C^\infty, $$
-		denn für $\bar{h} \in \E^\infty (g(f(p)))$ gilt
+		denn für $\bar{h} \in \Ecal^\infty (g(f(p)))$ gilt
 		\begin{align*}
 			X \circ \left( \left( \bar{g} \circ \bar{f} \right)^* \right) \left( \bar{h} \right) &= X \left( \bar{h} \circ \left( \bar{g} \circ \bar{f} \right) \right)\\
 			&= \left( X \circ f^* \right) \left( \bar{h} \circ \bar{g} \right)\\
 			&= T_{f(p)}\bar{g} \left( X \circ f^* \right)(h)\\
 			\text{und } \left( T_{f(p)} \bar{g} \circ T_p\bar{f} \right) &= T_{f(p)}\bar{g} \left( X \circ \bar{f}^* \right)\left( \bar{h} \right)
 		\end{align*}
-		\item Ist $\bar{\varphi}: (M,p) \to \R^n$ ein Keim einer bei $p$ zentrierten Karte, so ist $ \E_n^\infty \overset{\cong}{\underset{\varphi^*}{\longrightarrow}} \E^\infty(p) $ isomorph und $ T_pM \overset{\cong}{\underset{T_p \varphi}{\longrightarrow}} T_0\R^n $. $T_0\R^n$ hat eine besonders einfache Beschreibung:
+		\item Ist $\bar{\varphi}: (M,p) \to \R^n$ ein Keim einer bei $p$ zentrierten Karte, so ist $ \Ecal_n^\infty \overset{\cong}{\underset{\varphi^*}{\longrightarrow}} \Ecal^\infty(p) $ isomorph und $ T_pM \overset{\cong}{\underset{T_p \varphi}{\longrightarrow}} T_0\R^n $. 
 	\end{enumerate}
 \end{rem*}
+
+$T_0\R^n$ hat eine besonders einfache Beschreibung:
 
 \begin{lem}
 	Die partiellen Ableitungen $ \del_j $ in 0 bilden eine Basis von $ T_0\R^n. $
@@ -80,19 +82,19 @@ Zur Verallgemeinerung auf Mannigfaltigkeiten\footnote{von nun an betrachten wir 
 \begin{exmp*}
 	\begin{minipage}{\linewidth}
 		\begin{wrapfigure}{R}{0.3\textwidth}
-			\centering
+%			\centering
 			\includegraphics[width=0.1\textwidth]{2_5_1.png}
 		\end{wrapfigure}
-		$ M = \mathbb{S}^1, p = (0,1,0)^T, \begin{aligned}[t]
-			&\varphi: U_2^+ \cap \mathbb{S}^2 \to \R^2, \\&\varphi(x) = (x_1,x_3)
+		$ M = \Sbb^1, p = (0,1,0)^T, \begin{aligned}[t]
+			&\varphi: U_2^+ \cap \Sbb^2 \to \R^2, \\&\varphi(x) = (x_1,x_3)
 		\end{aligned} $
 	\end{minipage}
 		
 		Basis des Tangentialraums $ T_0\R^2 $ $ \bound{\del_1}{0},\bound{\del_2}{0} $\\
-		$ f_{1,2}: \mathbb{S}^2 \to \mathbb{S}^2, \begin{aligned}[t]
+		$ f_{1,2}: \Sbb^2 \to \Sbb^2, \begin{aligned}[t]
 			&f_1(x) = (x_1,-x_2,x_3),\\ &f_2(x) = (x_1,x_2,-x_3)
 		\end{aligned} $\\
-		$ \overbar{g_1} = \psi_1 \circ \overbar{f_1} \circ \varphi^{-1}: (\R^2,0) \to \R^2,\ \psi_1: U_2^- \cap \mathbb{S}^2 \to \R^2, \psi_1 (x_1,x_2,x_3) = (x_1,x_3) $\\
+		$ \overbar{g_1} = \psi_1 \circ \overbar{f_1} \circ \varphi^{-1}: (\R^2,0) \to \R^2,\ \psi_1: U_2^- \cap \Sbb^2 \to \R^2, \psi_1 (x_1,x_2,x_3) = (x_1,x_3) $\\
 		$ \overbar{g_2} = \psi_2 \circ \overbar{f_2} \circ \varphi^{-1}: (\R^2,0) \to \R^2,\ \psi_2 = \varphi $\\
 		\begin{align*}
 			Dg_j(0,0) &= D\psi_j (f_j(\overbrace{\varphi(0,0)}^{=p})) \circ Df_j(p) \circ D\varphi^{-1}(0,0)\\
@@ -125,13 +127,13 @@ Zur Verallgemeinerung auf Mannigfaltigkeiten\footnote{von nun an betrachten wir 
 
 \subsection*{Verhalten unter Kartenwechseln}
 	
-	Seien $ \bar{\varphi},\bar{\psi}: (M,p) \to (\R^n,0) $ Kartenkeime. Dann ist der Kartenwechsel $ \Phi = \bar{\psi} \circ \bar{\varphi}^{-1}: (\R^m,0) \to \R^m $ ein glatter invertierbarer Keim und $\Phi$ ist eindeutig durch $ \psi,\varphi $ festgelegt. Solche $\Phi$ bilden eine Gruppe $\G$ (bezüglich Komposition $\circ$). Durch die Zuordnung $ \Phi \mapsto D\Phi(0) $ erhält man einen Gruppenhomomorphismus $ \G \to GL(m,\R) $.
+	Seien $ \bar{\varphi},\bar{\psi}: (M,p) \to (\R^n,0) $ Kartenkeime. Dann ist der Kartenwechsel $ \Phi = \bar{\psi} \circ \bar{\varphi}^{-1}: (\R^m,0) \to \R^m $ ein glatter invertierbarer Keim und $\Phi$ ist eindeutig durch $ \psi,\varphi $ festgelegt. Solche $\Phi$ bilden eine Gruppe $\Gcal$ (bezüglich Komposition $\circ$). Durch die Zuordnung $ \Phi \mapsto D\Phi(0) $ erhält man einen Gruppenhomomorphismus $ \Gcal \to GL(m,\R) $.
 
 \begin{defn}[physikalische Definition]\index{Tangentialraum}
 	Ein \emph{Tangentialvektor} an $p \in M$ ($m$-dimensionale differenzierbare Mannigfaltigkeit) ist eine Zuordnung, die einem Kartenkeim $ \bar{\varphi}: (M,p) \to \R^m $ (einer bei $p$ zentrierten Karte) einen Vektor $v \in \R^m$ zuordnet, sodass $ \underbrace{(\overbar{\psi \circ \varphi^{-1}})}_{=\Phi} \circ \bar{\varphi} $ ($\psi$ weitere bei $p$ zentrierte Karte) der Vektor $D\Phi(0) \cdot v$ zugeordnet wird.
 \end{defn}
 
-\begin{lem}
+\begin{lem}\label{2.7}
 	$ (T_pM)_{phys} \cong T_pM $ (als Vektorräume)
 \end{lem}
 
@@ -139,7 +141,7 @@ Schließlich die anschaulichste Definition:
 
 \begin{defn}[geometrische Definition]\index{Tangentialraum}
 	Sei $ \Gamma_p $ die Menge der glatten Keime $ \bar{\gamma}: (\R,0) \to M $ mit $\gamma(0) = p$. Wir definieren auf $\Gamma_p$ eine Äquivalenzrelation 
-	\[ \overbar{\gamma_1} \sim \overbar{\gamma_2} \iff \frac{d}{d t}\left( \bar{f} \circ \overbar{\gamma_1} \right)(0) = \frac{d}{d t}\left( \bar{f} \circ \overbar{\gamma_2} \right)(0) \qquad \foralll \bar{f} \in \E^\infty(p). \]
+	\[ \overbar{\gamma_1} \sim \overbar{\gamma_2} \iff \frac{d}{d t}\left( \bar{f} \circ \overbar{\gamma_1} \right)(0) = \frac{d}{d t}\left( \bar{f} \circ \overbar{\gamma_2} \right)(0) \qquad \foralll \bar{f} \in \Ecal^\infty(p). \]
 	Eine Äquivalenzklasse $[\gamma]$ ist ein Tangentialvektor $ \in (T_pM)_{geom} $.
 	\image{2_8}{12cm}
 \end{defn}
@@ -156,8 +158,8 @@ Schließlich die anschaulichste Definition:
 		 X_{f \circ \gamma}(\bar{h}) &= \frac{d}{d t} (\bar{h} \circ \bar{f} \circ \bar{\gamma}) (0)\\
 		 &= X_\gamma (\bar{h}\circ\bar{f})\\
 		 &= T_pf(X_\gamma)(\bar{h}) 
-	\end{aligned} \ \foralll \bar{h} \in \E^\infty_{f(p)} $
-	\image{2_8 rem}{12cm}
+	\end{aligned} \ \foralll \bar{h} \in \Ecal^\infty_{f(p)} $
+	\image{2_8 rem}{14cm}
 \end{rem*}
 
 Wir werden im Folgenden die drei Definitionen des Tangentialraums je nach Praktikabilität verwenden und in der Notation nicht unterscheiden.

@@ -42,16 +42,16 @@
 				Wird nichts anders explizit gesagt, werden wir Teilräume stets als mit der Teilraumtopologie versehen ansehen.
 			\end{rem*}
 		\item Da (vgl. Diff2) jede Untermannigfaltigkeit $N$ sich lokal als Graph schreiben lässt und da die von uns betrachteten offenen Mengen in $N$ gerade die durch die Teilraumtopologie gegebenen sind folgt, dass eine Untermannigfaltigkeit im Sinne der Diff 2 eine topologische Mannigfaltigkeit im Sinne von \ref{def1_1} ist, explizit zum Beispiel:
-		\item $\mathbb{S} := \{ x \in \R^{n+1} \mid \|x\|_E = 1 \} $
+		\item $\Sbb := \{ x \in \R^{n+1} \mid \|x\|_E = 1 \} $
 			\image{1_2 sphere}{3cm}
 			Wir konstruieren $2n+2$ Karten:\\
-			Betrachte $ U_i^\pm = \{ x \in \R^{n+1} \mid x_i \gtrless 0 \} $. Sei $ \dot{\mathbb{B}}^n = \{y \in \R^n \mid \|y\|_E < 1 \} $ und $ f: \dot{\mathbb{B}}^n \to \R, f(y) = \sqrt{1-\|y\|_E^2}. $ Notiere für $ i = 1,\dotsc,n+1: x(\hat{i}) = (x_1,\dots, x_{i-1},x_{i+1},\dotsc,x_{n+1}) = (x_1,\dotsc,\hat{x_i},\dotsc,x_{n+1}) $.\\
-			Es ist dann: $ U_i^\pm \cap \mathbb{S}^n = \{ (x_1,\dotsc,x_{i-1}, \pm f(x(\hat{i})), x_{i+1},\dotsc,x_n \mid x(\hat{i}) \in \dot{\mathbb{B}}^n \}, $ also nach Umsortieren gleich dem Graphen der Funktion $f$ beziehungsweise $-f$.\\
+			Betrachte $ U_i^\pm = \{ x \in \R^{n+1} \mid x_i \gtrless 0 \} $. Sei $ \dot{\Bbb}^n = \{y \in \R^n \mid \|y\|_E < 1 \} $ und $ f: \dot{\Bbb}^n \to \R, f(y) = \sqrt{1-\|y\|_E^2}. $ Notiere für $ i = 1,\dotsc,n+1: x(\hat{i}) = (x_1,\dots, x_{i-1},x_{i+1},\dotsc,x_{n+1}) = (x_1,\dotsc,\hat{x_i},\dotsc,x_{n+1}) $.\\
+			Es ist dann: $ U_i^\pm \cap \Sbb^n = \{ (x_1,\dotsc,x_{i-1}, \pm f(x(\hat{i})), x_{i+1},\dotsc,x_n \mid x(\hat{i}) \in \dot{\Bbb}^n \}, $ also nach Umsortieren gleich dem Graphen der Funktion $f$ beziehungsweise $-f$.\\
 			Nach ii) sind also Karten durch
 			\begin{gather*}
-				\varphi_i^\pm : U_i^\pm \cap \mathbb{S}^n \to \R^n,\ \varphi_i^\pm(U_i^\pm \cap \mathbb{S}^n) = \dot{\mathbb{B}}^n \\
+				\varphi_i^\pm : U_i^\pm \cap \Sbb^n \to \R^n,\ \varphi_i^\pm(U_i^\pm \cap \Sbb^n) = \dot{\Bbb}^n \\
 				\varphi_i^\pm(x_1,\dotsc,x_{n+1}) = (x_1,\dotsc,\hat{x_i},\dotsc,x_{i+1} 
-			\end{gather*} gegeben. Also ist $\mathbb{S}^n$  eine $n$-dimensionale Mannigfaltigkeit. Wegen $\mathbb{S}^n = \bigcup_{i=1}^{n+1} (U_i^+ \cap \mathbb{S}^n \cup (U_i^- \cap \mathbb{S}^n)$ liegt ein Atlas vor.
+			\end{gather*} gegeben. Also ist $\Sbb^n$  eine $n$-dimensionale Mannigfaltigkeit. Wegen $\Sbb^n = \bigcup_{i=1}^{n+1} (U_i^+ \cap \Sbb^n \cup (U_i^- \cap \Sbb^n)$ liegt ein Atlas vor.
 			\image{1_2 abbng}{12cm}
 	\end{enumerate}
 \end{exmp}
@@ -63,7 +63,7 @@
 \end{lem}
 
 \begin{exmp*}
-	Tori $ M = \underbrace{\mathbb{S}^1 \times \dotsm \times \mathbb{S}^1}_{k-\text{fach}} $ sind $k$-dimensionale Mannigfaltigkeiten, zum Beispiel $\mathbb{S}^1 \times \mathbb{S}^1$ eine 2-dimensionale:
+	Tori $ M = \underbrace{\Sbb^1 \times \dotsm \times \Sbb^1}_{k-\text{fach}} $ sind $k$-dimensionale Mannigfaltigkeiten, zum Beispiel $\Sbb^1 \times \Sbb^1$ eine 2-dimensionale:
 	\image{1_3 exmp}{6cm}
 \end{exmp*}
 
@@ -93,10 +93,10 @@
 \end{rem*}
 
 \begin{defn}[Differenzierbare Struktur]\index{Mannigfaltigkeit!Differenzierbare Struktur}
-	Sei $\mathcal{A}$ ein differenzierbarer Atlas (von $M$), dann bezeichnet man $\mathcal{D} = \mathcal{D}(\mathcal{A})$ die Menge \emph{aller} Karten von $M$, die mit allen Karten aus $\mathcal{A}$ glatte Kartenwechsel haben,
-	\[ \mathcal{D}(\mathcal{A}) = \set{(\psi,U) \ \text{Karten}}{\bound{\psi \circ \varphi^{-1}}{\varphi(V \cap U)}, \bound{\varphi \circ \psi^{-1}}{\varphi(V \cap U)} \in C^\infty \ \text{für alle } (\varphi,V) \in \mathcal{A}}. \]
+	Sei $\Acal$ ein differenzierbarer Atlas (von $M$), dann bezeichnet man $\Dcal = \Dcal(\Acal)$ die Menge \emph{aller} Karten von $M$, die mit allen Karten aus $\Acal$ glatte Kartenwechsel haben,
+	\[ \Dcal(\Acal) = \set{(\psi,U) \ \text{Karten}}{\bound{\psi \circ \varphi^{-1}}{\varphi(V \cap U)}, \bound{\varphi \circ \psi^{-1}}{\varphi(V \cap U)} \in C^\infty \ \text{für alle } (\varphi,V) \in \Acal}. \]
 	\begin{rem*}
-		$\mathcal{D}(\mathcal{A})$ ist \emph{maximal} in dem Sinn, dass es keine weiteren Karten gibt, die $C^\infty$-Kartenwechsel mit den Karten aus $\mathcal{A}$ hätten, die nicht schon in $\mathcal{D}(\mathcal{A})$ liegen. $\mathcal{D}(\mathcal{A})$ ist also der größte differenzierbare Atlas, der $\mathcal{A}$ enthält.
+		$\Dcal(\Acal)$ ist \emph{maximal} in dem Sinn, dass es keine weiteren Karten gibt, die $C^\infty$-Kartenwechsel mit den Karten aus $\Acal$ hätten, die nicht schon in $\Dcal(\Acal)$ liegen. $\Dcal(\Acal)$ ist also der größte differenzierbare Atlas, der $\Acal$ enthält.
 	\end{rem*}
 	\begin{notat*}
 		Ein maximaler, differenzierbarer Atlas auf einer Mannigfaltigkeit $M$ heißt \emph{differenzierbare Struktur} (auf $M$). Eine Mannigfaltigkeit zusammen mit einer differenzierbaren Struktur heißt \emph{differenzierbare Mannigfaltigkeit}.
@@ -106,11 +106,11 @@
 \begin{rem*}
 	\begin{enumerate}[label = {\roman*})]
 		\item Es genügt, einen möglichst kleinen Atlas anzugeben, da dieser die differenzierbare Struktur festlegt.
-		\item ACHTUNG: Zwei Atlanten $ \mathcal{A}_1,\mathcal{A}_2 $ einer Mannigfaltigkeit $M$ führen nur dann zur selben differenzierbaren Struktur, wenn für alle $ (\varphi,U) \in \mathcal{A}_1 $ und $ (\psi,V) \in \mathcal{A}_2 $ die Kartenwechsel glatt sind.
+		\item ACHTUNG: Zwei Atlanten $ \Acal_1,\Acal_2 $ einer Mannigfaltigkeit $M$ führen nur dann zur selben differenzierbaren Struktur, wenn für alle $ (\varphi,U) \in \Acal_1 $ und $ (\psi,V) \in \Acal_2 $ die Kartenwechsel glatt sind.
 	\end{enumerate}
 \end{rem*}
 
 \begin{exmp*}
-	$ \mathbb{S}^n $ mit den oben eingeführten Karten ist eine glatte Mannigfaltigkeit.
+	$ \Sbb^n $ mit den oben eingeführten Karten ist eine glatte Mannigfaltigkeit.
 \end{exmp*}
 	
