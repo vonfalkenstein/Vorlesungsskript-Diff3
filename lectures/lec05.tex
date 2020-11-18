@@ -1,0 +1,87 @@
+\section{Konstruktionen mit Vektorbündeln}
+
+\begin{rem}\lecture
+	Die folgenden Konstruktionen werden für topologische Vektorbündel formuliert, gelten jedoch \emph{mutatis mutandis} (dies ändert, was zu ändern ist) auch für differenzierbare Vektorbündel (ersetze "stetig" durch "glatt" etc.)
+\end{rem}
+
+\begin{defn}[Bündel-Homomorphismus]\index{Vektorraumbündel!Bündel-Homomorphismus}\label{3.10}
+	Seien $ (E,\pi,B),(\tilde{E},\tilde{\pi},\tilde{B}) $ Vektorraumbündel. Ein \emph{Bündel-Homomorphismus} ist ein Paar von stetigen Abbildungen $f: E \to \tilde{E}$ und $g: B \to \tilde{B}$, sodass
+	\[ \begin{tikzcd}
+		E \arrow{r}{f} \arrow{d}{\pi} & \tilde{E} \arrow{d}{\tilde{\pi}}\\
+		B \arrow{r}{g} & \tilde{B}
+	\end{tikzcd} \]
+	kommutiert, also $g \circ \pi = \tilde{\pi} \circ f$, und $ f_x := \bound{f}{E_x}: E_x \to \tilde{E}_{g(x)} $ linear ist für alle $x \in B$.
+\end{defn}
+
+Sind $f$ und $g$ wie oben sogar Homöomorphismen und $f_x$ ein Vektorraum-Isomorphismus, so liegt ein \emph{Vektorbündel-Isomorphismus} vor.
+
+\begin{exmp*}
+	Der Isomorphismus $ T\Sbb^1 \cong \Sbb^1\times \R $ ist ein Vektorbündel-Isomorphismus.
+\end{exmp*}
+
+\begin{defn}[Unterbündel]\index{Vektorraumbündel!Unterbündel}
+	Ist $ (E,\pi,B) $ ein Vektorbündel von Rang $n$ und $\tilde{E} \subset E$ eine Teilmenge, sodass es um jedes $x \in B$ eine Bündelkarte $(\varphi,U)$ gibt, sodass
+	\[ \varphi \left(\pi^{-1}(U) \cap \tilde{E} \right) = U \times \R^k \subset U \times \R^n, \]
+	so ist $ \left( \tilde{E}, \bound{\pi}{\tilde{E}},B \right) $ ein Vektorbündel von Rang $k$, ein sogenanntes \emph{Unterbündel}.
+\end{defn}
+
+\begin{lem}
+	Sei $f: E \to \tilde{E}$ ein Bündel-Homomorphismus von Vektorbündeln über $B$ ($g = \id_B$ in Definition \ref{3.10}). Sei der Rang $f_x = m$ konstant für alle $x \in B$. Dann ist
+	\begin{itemize}
+		\item $ \ker f := \bigcup_{x \in B} \ker f_x $ ein Unterbündel von $E$ von Rang $n-m$ ($n = $ Rang von $E$),
+		\item $ \im f := \bigcup_{x \in B} \im f_x $ ein Unterbündel von $\tilde{E}$ von Rang $m$.
+	\end{itemize}
+	\image{3_12}{14cm}
+\end{lem}
+
+\begin{defn}[Einschränkungen]\index{Vektorraumbündel!Einschränkungen}
+	Ist $ (E,\pi,B) $ ein Vektorbündel und $\tilde{B} \subset B$ eine Teilmenge, so ist
+	\[ \left( \pi^{-1} \left( \tilde{B} \right), \bound{\pi}{\pi^{-1} \left( \tilde{B} \right)}, \tilde{B} \right) \]
+	ein Vektorbündel ("Einschränkung von $E$ auf $\tilde{B}$").
+	\image{3_13}{8cm}
+\end{defn}
+
+\begin{defn}[Pullback-Bündel]\index{Vektorraumbündel!Pullback-Bündel}
+	Sei $ (E ,\pi,B) $ ein Vektorbündel über $B$ und $f: B_0 \to B$ stetig. Dann ist durch
+	\[ f^*E := \{(x,e) \in B_0 \times E \mid f(x) = \underbrace{\pi(e)}_{\in B}\} \subset B_0 \times E \]
+	ein Bündel über $B_0$ erklärt mit $ \pi_0(x,e) = \pi(x), $ das \emph{von $f$ induzierte Bündel} bzw. das \emph{Pullback-Bündel entlang $f$}.
+	\image{3_14}{14cm}
+\end{defn}
+
+\begin{rem}
+	Die Konstruktion ist so gewählt, dass wenn $\pi_2: f^*E \to E$ die Projektion auf den 2. Faktor bezeichnet, das Diagramm
+	\[ \begin{tikzcd}
+		f^*E \arrow{r}{\pi_2} \arrow{d}{\pi_0} & E \arrow{d}{\pi}\\
+		B_0 \arrow{r}{f} & B
+	\end{tikzcd} \]
+	kommutiert.\\
+	Lokale Trivialisierung: Sei $ (\varphi,U) $ eine Trivialisierung von $E$ bei $f(x)$. Dann ist $ (\psi,f^{-1}(U)) $ eine lokale Trivialisierung von $f^*E$ bei $x$, wobei $ \psi(y,e) = (y,\pi_2(\underbrace{\varphi(e)}_{\in U \times \R^n})). $
+\end{rem}
+
+\begin{defn}[Lineare Abbildung, Bündelabbildung]\index{Vektorraumbündel!lineare Abbildung}\index{Vektorraumbündel!Bündelabbildung}
+	Seien $ (E,\pi,B) $ und $ (\tilde{E},\tilde{\pi}\tilde{B}) $ Vektorbündel über $B$ bzw. $\tilde{B}$. Sei $f: B \to \tilde{B}$ stetig. Dann heißt eine stetige Abbildung $\tilde{f}: E \to \tilde{E}$ \emph{lineare Abbildung über $f$}, falls $ \bound{\tilde{f}}{E_x}: E_x \to \tilde{E}_{f(x)} $ linear ist für alle $x \in B$. Sind alle $ \bound{\tilde{f}}{E_x} $ Vektorraum-Isomorphismen, so heißt $\tilde{f}$ \emph{Bündelabbildung über $f$}.
+\end{defn}
+	
+\begin{exmp*}
+	\[ \begin{aligned}
+		\tilde{f}:& f^*E \to E\\
+		\tilde{f}:& B_0 \times E \to E
+	\end{aligned},\ f:B_0 \to B \ \text{stetig} \]
+	ist eine Bündelabbildung über $f$. ("kanonische Bündelabbildung")
+\end{exmp*}
+
+\begin{lem}
+	Ist $ g: E \to \tilde{E} $ eine lineare Abbildung von Vektorbündeln $(E,\pi,B), (\tilde{E}, \tilde{\pi},\tilde{B})$ über $f: B \to \tilde{B}$, so gibt es einen eindeutigen Bündel-Homomorphismus $h: E \to f^*\tilde{E}$, sodass $g = \tilde{f} \circ h$ ist, wobei $ \tilde{f}: f^*\tilde{E} \to \tilde{E} $ die kanonische Bündelabbildung ist:
+	\[ \begin{tikzcd}
+		E \arrow{r}{\exists !h} \arrow{dr}{\pi} \arrow[bend left=35]{rr}{g} & f^*\tilde{E} \arrow{r}{\tilde{f}} \arrow{d}{\pi_1} & \tilde{E} \arrow{d}{\tilde{\pi}} \\
+			& B\arrow{r}{f} & \tilde{B}
+		\end{tikzcd} \]
+\end{lem}
+
+\begin{exmp*}
+	Die Differentiale $ T_pf: T_pM \to T_{f(p)}N $, für $f:M \to N$ glatt, definieren das Differential $Tf: TM \to TN$. Es gibt genau einen Bündel-Homomorphismus $h: TM \to f^TN$, sodass
+	\[ \begin{tikzcd}
+		TM \arrow{rr}{Tf} \arrow{dr}{h}&&TN\\
+		& f^*TN \arrow{ur}{\tilde{f}}
+	\end{tikzcd} \qquad \text{kommutiert.} \]
+\end{exmp*}

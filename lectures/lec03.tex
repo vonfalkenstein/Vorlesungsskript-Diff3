@@ -1,13 +1,13 @@
 \chapter{Der Tangentialraum}\lecture
 
-Erinnerung (Diff 2): Sei $ M \subset \R^n $ eine Untermannigfaltigkeit, $p \in M$. Ein Tangentialvektor $v \in \R^n$ an $M$ in $p$ ist von der Form $ v = \gamma'(0) $, wobei $ \gamma: (-\epsilon,\epsilon) \to M $ mit $\gamma(0) = p$ eine in $M$ verlaufende $C^1$-Kurve ist. Der \emph{Tangentialraum} $T_aM$ (an $M$ in $p$) ist die Menge aller Tangentialvektoren. 
+Erinnerung (Diff 2): Sei $ M \subset \R^n $ eine Untermannigfaltigkeit, $p \in M$. Ein Tangentialvektor $v \in \R^n$ an $M$ in $p$ ist von der Form $ v = \gamma'(0) $, wobei $ \gamma: (-\epsilon,\epsilon) \to M $ mit $\gamma(0) = p$ eine in $M$ verlaufende $C^1$-Kurve ist. Der \emph{Tangentialraum} $T_pM$ (an $M$ in $p$) ist die Menge aller Tangentialvektoren. 
 \begin{itemize}
-	\item Ist $ U \subset \R^n $ offen, $p in U$, $f: U \to \R^{n-m}$ $C^1$ mit $ M \cap U = \{x \in U \mid f(x) = 0\} $ und $rang(Df(p)) = n-m.$ Dann ist der Tangentialraum in $p$ an $M$ $ T_pM = \ker(Df(p)) \subset \R^n $ ($m$-dim. Unterraum).
+	\item Ist $ U \subset \R^n $ offen, $p \in U$, $f: U \to \R^{n-m}$ $C^1$ mit $ M \cap U = \{x \in U \mid f(x) = 0\} $ und $rang(Df(p)) = n-m.$ Dann ist der Tangentialraum in $p$ an $M$ $ T_pM = \ker(Df(p)) \subset \R^n $ ($m$-dim. Unterraum).
 	\item Ist $ \psi: V \to \R^n $ eine lokale Parametrisierung von $M$ bei $p$, so sind $ \del_j\psi,\ d=1,\dotsc,m$, Basisvektoren $ V \subset \R^n $ für $ T_pM $.
 \end{itemize}
 
 \begin{exmp*}
-	$ \Sbb^2 \subset \R^3,\ T_pM = p^\bot $, denn $ f: \R^n \to \R, f(x) = 1-\|x\|^2 $ für $ p \in \S^2 $, sodass $p_i > 0$ oder $<0$ beschreibt $ \Sbb^2 \cap U_i \ni p, U_i = \{x \in \R^3 \mid x_i > 0 $ oder $ < 0\} $ als Nullstellengebilde und $ Df(p) = -2p. $
+	$ \Sbb^2 \subset \R^3,\ T_pM = p^\bot $, denn $ f: \R^n \to \R, f(x) = 1-\|x\|^2 $ für $ p \in \Sbb^2 $, sodass $p_i > 0$ oder $<0$ beschreibt $ \Sbb^2 \cap U_i \ni p, U_i = \{x \in \R^3 \mid x_i > 0 $ oder $ < 0\} $ als Nullstellengebilde und $ Df(p) = -2p. $
 	\image{2.png}{14cm}
 \end{exmp*}
 
@@ -21,12 +21,12 @@ Zur Verallgemeinerung auf Mannigfaltigkeiten\footnote{von nun an betrachten wir 
 
 \begin{rem}
 	\begin{enumerate}[label={\roman*})]
-		\item $\Ecal^1(p)$ und $E^\infty(p)$ bilden eine Algebra (denn die Bildung von Äquivalenzklassen ist mit der punktweisen Addition und Multiplikation verträglich).
+		\item $\Ecal^1(p)$ und $\Ecal^\infty(p)$ bilden eine Algebra (denn die Bildung von Äquivalenzklassen ist mit der punktweisen Addition und Multiplikation verträglich).
 		\item Ist $ \bar{f}: (M,p)\to N $ ein $C^1$/glatter Keim bei $p \in M$, so definiert er einen Homomorphismus von Algebren \big($\Ecal(f(p))$ Keime $(N,f(p)) \to \R$\big)
 		\[ f^*: \Ecal^{1/\infty} (f(p)) \to \Ecal^{1/\infty} (p) \ \text{vermöge } f^* \left( \bar{h} \right) = \bar{h} \circ \bar{f} \quad \text{"pullback", "Zurückziehung"} \]
 		Offensichtlich ist das unabhängig von der Wahl des Repräsentanten.
 		\image{2_2.png}{14cm}
-		Es gilt $\id^* = \id$ und $(f \circ g)^* = g^* \circ f^*$. Insbesondere induziert ein bezüglich Komposition integrierbarer Keim $\bar{f}$ ($ \bar{f} \circ \bar{f}^{-1} = \bar{f} \circ \overbar{f^{-1}} = \id $) einen Isomorphismus $f^*, f^{-1 *} \circ f^* = \id$.
+		Es gilt $\id^* = \id$ und $(f \circ g)^* = g^* \circ f^*$. Insbesondere induziert ein bezüglich Komposition invertierbarer Keim $\bar{f}$ ($ \bar{f} \circ \bar{f}^{-1} = \bar{f} \circ \overbar{f^{-1}} = \id $) einen Isomorphismus $f^*, f^{-1 *} \circ f^* = \id$.
 		\item Spezialfall: Ist $\varphi$ eine um $p \in M$ zentrierte Karte, so definiert $\varphi$ einen invertierbaren Keim $ \overbar{\varphi}: (M,p) \to \R^n $ mit $\varphi(p)=0$ und somit einen Isomorphismus $ \varphi^*: \Ecal^{1/\infty}_n \to \Ecal^{1/\infty} (p) $, wobei $ \Ecal_n = \{$Funktionskeime bei $0 \}, $ das heißt man kann sich auf Keime aus $\Ecal_n$ beschränken.
 	\end{enumerate}
 \end{rem}

@@ -3,10 +3,10 @@
 \image{3}{14cm}
 
 \begin{defn}[Vektorraumbündel]\index{Vektorraumbündel}
-	Ein (reelles topologisches) \emph{Vektor(raum)bündel} von Rang $n$ über $B$ ist ein Tripel $(E,pi,B)$, wobei $E$ ("Totalraum") und $B$ ("Basis") topologische Räume sind und $\pi: E \to B$ stetig, surjektiv und so ist, dass gilt:
+	Ein (reelles topologisches) \emph{Vektor(raum)bündel} von Rang $n$ über $B$ ist ein Tripel $(E,\pi,B)$, wobei $E$ ("Totalraum") und $B$ ("Basis") topologische Räume sind und $\pi: E \to B$ stetig, surjektiv und so ist, dass gilt:
 	\begin{enumerate}[label={\roman*})]
 		\item $\foralll x \in B$ ist das Urbild $\pi^{-1}(x) =: E_x$ ("Faser über $x$") ein $n$-dimensionaler Vektorraum (über $\R$)
-		\item $\foralll x \in B \ \exists$ offene Umgebung $U$ von $x$ und ein Homöomorphismus $\psi: \underset{\in \bound{E}{U}}{\pi^{-1} (U)} \to U \times \R^n$, sodass $\pi = pr_1 \circ \psi$ ($pr_1 =$ Projektion auf den ersten Faktor, also $U$) und sodass $\psi_y = \bound{\psi}{E_y} : E_y \to \{y\} \times \R^n \ \foralll y \in U$ ein Vektorraum-Isomorphismus ist ("lokale Trivialität"). $(\psi,U)$ heißt "lokale Trivialisierung" oder "\emph{Bündelkarte}".
+		\item $\foralll x \in B \ \exists$ offene Umgebung $U$ von $x$ und ein Homöomorphismus $\psi: \overbrace{\pi^{-1} (U)}^{\in \bound{E}{U}} \to U \times \R^n$, sodass $\pi = pr_1 \circ \psi$ ($pr_1 =$ Projektion auf den ersten Faktor, also $U$) und sodass $\psi_y = \bound{\psi}{E_y} : E_y \to \{y\} \times \R^n \ \foralll y \in U$ ein Vektorraum-Isomorphismus ist ("lokale Trivialität"). $(\psi,U)$ heißt "lokale Trivialisierung" oder "\emph{Bündelkarte}".
 	\end{enumerate}
 \end{defn}
 
@@ -21,14 +21,8 @@
 
 \begin{exmp*}
 	\begin{enumerate}[label = {\roman*})]
-		\item \begin{minipage}{\linewidth}
-			\begin{wrapfigure}{R}{2cm}
-				\centering
-				\includegraphics[width=2cm]{3_1 zylinder}
-			\end{wrapfigure}
-			
-			Zylinder: $ \Sbb^1 \times \R \to \Sbb^1 $ ist trivial
-		\end{minipage}
+		\item 	Zylinder: $ \Sbb^1 \times \R \to \Sbb^1 $ ist trivial
+			\image{3_1 zylinder}{2cm}
 		\item "Unendlich ausgedehntes" Möbiusband  $ \pi: E \to \Sbb^1 $ von Rang 1, ein nicht triviales Bündel über $\Sbb^1$ mit Faser $\cong \R$ (später mehr)
 			\image{3_1 moebius}{8cm}
 		\item $ N = \{(p,v) \in \Sbb^2 \times \R^3 \mid v \| p\}\ (\Sbb^2 \subset \R^3) $
@@ -49,7 +43,7 @@
 \end{exmp*}
 
 \begin{defn}[Schnitt]\index{Vektorraumbündel!Schnitt}
-	Ein \emph{Schnitt} eine Vektorraumbündels $ (E,\pi,B) $ ist eine stetige Abbildung $ z: B \to E $ mit $z(x) \in E_x\ \foralll x \in B$.
+	Ein \emph{Schnitt} eines Vektorraumbündels $ (E,\pi,B) $ ist eine stetige Abbildung $ z: B \to E $ mit $z(x) \in E_x\ \foralll x \in B$.
 	\image{3_2}{8cm}
 \end{defn}
 	
@@ -64,7 +58,7 @@
 \end{rem*}
 
 \begin{defn}[Bündelatlas, Übergangsfunktion]\index{Vektorraumbündel!Bündelatlas} \index{Vektorraumbündel!Übergangsfunktion}
-	Sei $ (E,\pi,B) $ ein Vektorraumbündel von Rang $n$. Eine Menge von Bündelkarten $ \{(\varphi_\alpha, U_\alpha) \mid \alpha \in A\}, $ heißt \emph{Bündelatlas} von $E$, wenn $ \bigcup_{\alpha \in A} U_\alpha = B. $
+	Sei $ (E,\pi,B) $ ein Vektorraumbündel von Rang $n$. Eine Menge von Bündelkarten $ \{(\varphi_\alpha, U_\alpha) \mid \alpha \in A\} $ heißt \emph{Bündelatlas} von $E$, wenn $ \bigcup_{\alpha \in A} U_\alpha = B. $
 	Die auf Überlappungen $ U_\alpha \cap U_\beta $ gegebenen stetigen Abbildungen 
 	$$ \Phi_{\alpha \beta}: U_\alpha \cap U_\beta \to GL(n,\R),\ x \mapsto \bound{\varphi_\beta}{E_x} \circ \left( \bound{\varphi_\alpha}{E_x} \right)^{-1} $$
 	heißen \emph{Übergangsfunktionen}.
@@ -103,12 +97,12 @@
 \end{exmp*}
 
 \begin{defn*}
-	Wie bei Mannigfaltigkeiten gilt: Ein Bündelatlas über eier differenzierbaren Mannigfaltigkeit heißt \emph{differenzierbar}, falls alle Übergangsfunktionen (als Funktionen von $p \in M = B$) glatt sind. Ein differenzierbares Vektorbündel ist ein Vektorbündel über $M$ mit einem maximalen differenzierbaren Bündelatlas.\\
+	Wie bei Mannigfaltigkeiten gilt: Ein Bündelatlas über einer differenzierbaren Mannigfaltigkeit heißt \emph{differenzierbar}, falls alle Übergangsfunktionen (als Funktionen von $p \in M = B$) glatt sind. Ein differenzierbares Vektorbündel ist ein Vektorbündel über $M$ mit einem maximalen differenzierbaren Bündelatlas.\\
 	Eine Funktion $ f: E \to \tilde{E}\ (E,\tilde{E}$ differenzierbare Bündel) heißt differenzierbar/glatt in $p \in \pi(E)$, wenn $ \tilde{\varphi} \circ f \circ \varphi^{-1} $ differenzierbar/glatt in $\varphi(p)$ ist, wobei $(\varphi,U)$ eine Bündelkarte bei $p$ ist und $(\tilde{\varphi},\tilde{U})$ eine Bündelkarte bei $f(p)$ ist (jeweils aus dem maximalen differenzierbaren Bündelatlas). 
 \end{defn*}
 
 \begin{defn}[Prä-Vektorraumbündel, Prä-Bündelatlas] \index{Vektorraumbündel!Prä-Vektorraumbündel} \index{Vektorraumbündel!Prä-Bündelatlas}
-	Ein \emph{Prä-Vektorraumbündel} ist ein Quadrupel $ (E,\pi,B,\Acal) $, wobei $E$ eine Menge ist, $B$ ein topologischer Raum, $\pi: E \to X$ surjektiv, sodass $E_x = \pi^{-1}(x)$ ein Vektorraum ist, und mit einem \emph{Prä-Bündelatlas} $\Acal$, das heißt einer Menge $ \{(\varphi_\alpha,U_\alpha) \mid \alpha \in A\} $, sodass $U_\alpha \subset X$ offen, $ X = \bigcup_{\alpha \in A} U_\alpha $ und $ \varphi_\alpha: \pi^{-1}(U) \to U \times \R^n $ bijektiv für alle $\alpha$, sodass $ \bound{\varphi_\alpha}{E_y}: E_y \to \{y\} \times \R^n $ ein Vektorraumisomorphismus ist und so, dass die Übergangsfunktionen 
+	Ein \emph{Prä-Vektorraumbündel} ist ein Quadrupel $ (E,\pi,B,\Acal) $, wobei $E$ eine Menge ist, $B$ ein topologischer Raum, $\pi: E \to B$ surjektiv, sodass $E_x = \pi^{-1}(x)$ ein Vektorraum ist, und mit einem \emph{Prä-Bündelatlas} $\Acal$, das heißt einer Menge $ \{(\varphi_\alpha,U_\alpha) \mid \alpha \in A\} $, sodass $U_\alpha \subset B$ offen, $ B = \bigcup_{\alpha \in A} U_\alpha $ und $ \varphi_\alpha: \pi^{-1}(U) \to U \times \R^n $ bijektiv für alle $\alpha$, sodass $ \bound{\varphi_\alpha}{E_y}: E_y \to \{y\} \times \R^n $ ein Vektorraum-Isomorphismus ist und so, dass die Übergangsfunktionen 
 	$ \begin{aligned}[t]
 		\Phi_{\alpha \beta}: &U_\alpha \cap U_\beta \to GL(n,\R),\\
 		 &x \mapsto \bound{\varphi_\beta}{E_x} \circ \left( \bound{\varphi_\alpha}{E_x} \right)^{-1}
@@ -178,8 +172,12 @@
  	Ist $M$ eine differenzierbare Mannigfaltigkeit, so nennt man einen differenzierbaren Schnitt $z: M \to TM$ ein \emph{Vektorfeld} auf $M$.
 \end{defn}
 
+\begin{rem*}
+	Das Tangentialbündel ist als Vektorbündel eine Mannigfaltigkeit. Dann ist ein glatter bzw. differenzierbarer Schnitt $z: M \to TM$ eine glatte Abbildung zwischen Mannigfaltigkeiten, sodass $\pi \circ z$ die Identität ist.
+\end{rem*}
+
 \begin{defn}[Differential]\index{Differential}
-	Ist $ f: M \to N $ glatt, os ist durch $ T_pf: T_pM \to T_{f(p)}N $ eine differenzierbare Abbildung
+	Ist $ f: M \to N $ glatt, so ist durch $ T_pf: T_pM \to T_{f(p)}N $ eine differenzierbare Abbildung
 	\[ Tf: TM \to TN \] gegeben. $Tf$ nennt man das \emph{Differential}.
 	\image{3_8}{14cm}
 \end{defn}
