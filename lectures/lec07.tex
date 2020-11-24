@@ -1,0 +1,132 @@
+\lecture
+\begin{rem*}[Eigenschaften des Differentials]
+	$ \lambda,\mu \in \R, f,g \in C^\infty(M) $. Dann gilt:
+	\begin{enumerate}[label={\roman*})]
+		\item $ d(\lambda f + \mu g)= \lambda df + \mu dg $
+		\item $ d(fg) = df \cdot g + f \cdot dg $
+		\item $ d(h \circ f) = (h' \circ f)df $ für $ h: I \to \R, h \in C^\infty, I \subset \R $
+		\item $ df=0 \iff f $ konstant auf den Zusammenhangskomponenten von $M$.
+	\end{enumerate}
+\end{rem*}
+
+\begin{rem*}
+	Wie in der Diff 2 überlegt man sich, dass $df$ eine lineare Approximation von $f$ ist.
+	\image{3_26a}{14cm}
+\end{rem*}
+
+\begin{defn}[Ableitung entlang einer Kurve]\index{Ableitung entlang einer Kurve}
+	Sei $ \gamma: I \to M $ eine glatte Kurve in $M$ ($M$ differenzierbar, $I \subset \R$ Intervall). Sei $f \in C^\infty(M)$. Dann ist
+	\[ (f \circ \gamma)'(t) = df_{\gamma(t)}(\gamma'(t)) \]
+	die "\emph{Ableitung von $f$ entlang der Kurve $\gamma$}".
+	\image{3_26b}{14cm}
+\end{defn}
+
+\begin{rem*}
+	$ \bound{df}{p}: T_pM \to \underbrace{T_{f(p)}\R}_{\cong \R} $, also $ \bound{df}{p} \in T_p^*M $\\
+	$ (f \circ \gamma)'(t) \in \underbrace{T_{(f \circ \gamma) (t)}\R}_{\cong \R} $, also ist $(f \circ \gamma)'(t)$ die übliche Ableitung.
+\end{rem*}
+
+\begin{defn}[Pullback]\index{pullback}
+	Sei $ f: M \to N $ (differenzierbare Mannigfaltigkeiten) glatt und $p \in M$. $ \bound{df}{p}: T_pM \to T_{f(p)}N $ legt eine duale Abbildung $ \bound{df}{p}^*: T_{f(p)}^*N \to T_p^*M $ eindeutig fest vermöge
+	\[ \bound{df}{p}^*(\underbrace{\omega}_{\in T_{f(p)}^*N})(\underbrace{v}_{\in T_pM}) := \omega(\underbrace{\bound{df}{p}(v)}_{\in T_{f(p)}N}), \]
+	$ \bound{df}{p}^* (\omega) \in T_p^*M $, der \emph{"pullback von $\omega$ entlang $f$ bei $p$"}.\\
+	Für $\omega \in \Omega^1(N)$ definiert dies einen Schnitt $ f^*\omega: M \to T^*M $ vermöge $ p \mapsto \bound{(f^*\omega)}{p} $ mit
+	\[ \bound{f^*\omega}{p} = \bound{df}{p}^* (\underbrace{\omega_{f(p)}}_{\in T_{f(p)}^*N}) \in T_p^*M. \]
+\end{defn}
+
+\begin{prop}[Eigenschaften des pullback]
+	Ist $ f: M \to N $ glatt, $h \in C(N)$, dann ist
+	\[ f^*(h\omega) = (h \circ f) \cdot f^*\omega\quad \foralll \omega \in \Omega^1(N) \]
+	Ist $h \in C^\infty(N)$, so ist
+	\[ f^*dh = d(h \circ f) \]
+\end{prop}
+
+\begin{cor*}
+	$ f: M \to N $ glatt, $\omega$ stetiger oder glatter Schnitt in $T^*N$, dann ist $f^*\omega$ ein stetiger oder glatter Schnitt in $T^*M$. Insbesondere also ist $f^*\omega \in \Omega^1(M)$ falls $\omega \in \Omega^1(N)$.
+\end{cor*}
+
+\begin{exmp*}
+	$ f: \R^3 \to \R^2, f(x_1,x_2,x_3) = \begin{pmatrix}
+		x_1x_2^2\\ x_2 \cos(x_3)
+	\end{pmatrix} $\\
+	$ \omega \in \Omega^1(\R), \omega = y_1dy_2 + y_2dy_1 $
+	\begin{align*}
+		f^*\omega &= (y_1 \circ f)d(y_2 \circ f) + (y_2 \circ f)d(y_1 \circ f)\\
+		&=(x_1x_2^2)d(x_2\cos(x_3)) + (x_2\cos(x_3))d(x_1x_2^2)\\
+		&= x_2^3\cos(x_3)dx_1 + 3x_1x_2^2\cos(x_3)dx_2 - x_1x_2^3\sin(x_3)dx_3
+	\end{align*}
+\end{exmp*}
+
+\begin{rem*}
+	Genauso kann man auch Koordinatenwechsel als pullback entlang der Identitätsabbildung $M \to M$ sehen, wobei einmal Koordinaten $(\varphi,U)$ und einmal Koordinaten $(\psi,V)$ bei $p \in M$ gewählt werden:
+\end{rem*}
+
+\begin{exmp*}
+	Polarkoordinaten in $\R^2$
+	\begin{align*}		
+		\omega &= xdy \ \text{(in kartesischen Koordinaten)}\\
+		&= \id^*(xdy) = r\cos\theta d(r\sin\theta)
+	\end{align*}
+\end{exmp*}
+
+Es ist kein Zufall, dass wir Differentialformen $dx_i$ notieren (in Koordinaten). Betrachte etwa $ \omega \in \Omega^1(\R), \bound{\omega}{t} = \omega_1(t)dt. $ Man definiert $ \int_{[a,b]}\omega := \int_a^b \omega_1(t)dt $ als das \emph{"Integral über $\omega$"}.\\
+Diese Definition ist sinnvoll, wenn wir zeigen, dass sie nicht von der Wahl der Koordinaten abhängt:
+
+\begin{lem}
+	Sei $ \omega \in \Omega^1([a,b]) $. Sei $ \varphi:[c,d] \to \R,\ \varphi([c,d]) = [a,b], $ ein Diffeomorphismus mit $\varphi' > 0$ auf $[c,d]$ (also monoton wachsend), dann ist
+	\[ \int_{[c,d]} \varphi^*\omega = \int_{[a,b]} \omega. \]
+	Ist $\varphi$ monoton fallend, so gilt
+	\[ \int_{[c,d]} \varphi^*\omega = - \int_{[a,b]} \omega. \]
+\end{lem}
+
+\begin{defn}[Kurvenintegral]\index{Kurvenintegral}
+	Sei $ \gamma: [a,b] \to M $ ein glattes Kurvenstück (Glattheit in $a,b$ wie in Diff 1) und $\omega \in \Omega^1(M)$. Dann definiert man das \emph{Kurvenintegral} von $\omega$ entlang $\gamma$ als
+	\[ \int_\gamma \omega = \int_{[a,b]} \gamma^*\omega. \]
+	Ist $\gamma$ stückweise glatt, gibt es also eine endliche Partition von $[a,b], a=a_0 < \dots < a_n = b,$ sodass $\bound{\gamma}{[a_i,a_{i+1}]}$ glatt ist, so definiert man es als 
+	$$ \int_{\gamma} \omega = \sum_{i=1}^{n} \int_{[a_{i-1},a_i]} \gamma^*\omega. $$
+\end{defn}
+
+\begin{lem}
+	Sei $M$ eine differenzierbare Mannigfaltigkeit und $\gamma: [a,b] \to M$ glatt. Dann gilt
+	\begin{enumerate}[label={\roman*})]
+		\item $ \int_\gamma (\lambda \omega + \mu \eta) = \lambda \int_\gamma \omega + \mu \int_\gamma \eta \quad \foralll \omega,\eta \in \Omega^1(M), \ \foralll \lambda,\mu \in \R $
+		\item Ist $\gamma$ konstant, so ist $ \int_\gamma \omega = 0 \quad \foralll \omega \in \Omega^1(M) $.
+		\item $ \gamma_1 = \bound{\gamma}{[a,c]}, \gamma_2 = \bound{\gamma}{[c,b]}, a \leq c \leq b $\\
+			$ \implies \int_\gamma \omega = \int_{\gamma_1} \omega + \int_{\gamma_2} \omega\quad \foralll \omega \in \Omega^1(M) $
+		\item Ist $ f: M \to N $ glatt und $\eta \in \Omega^1(N)$, so ist
+		\[ \int_\gamma \underbrace{f^*\eta}_{\in \Omega^1(M)} = \int_{f \circ \gamma} \eta. \]
+	\end{enumerate}
+\end{lem}
+
+\begin{exmp*}
+	$ M = \R^2 \setminus \{0\},\ \omega = \frac{1}{x^2+y^2}(xdy-ydx),\ \gamma: [0,2\pi] \to M, \gamma(t) = (\cos t,\sin t)^T $\\
+	\[ \int_\gamma \omega = \int_{[0,2\pi]} \Big( (\cos t)^2 dt - \left(-(\sin t)^2 \right) dt \Big) = \int_0^{2\pi} dt = 2\pi \]
+\end{exmp*}
+
+Das Kurvenintegral hängt nicht von der Parameter-Beschreibung der Kurve ab:
+
+\begin{lem}
+	Sei $ \gamma: [a,b] \to M $ eine stückweise glatte Kurve, dann heißt $ \tilde{\gamma}: [c,d] \to M $ \emph{Reparametrisierung} von $\gamma$ (unter Beibehaltung der Umlaufrichtung bzw. unter Umkehr der Umlaufrichtung), falls es einen Diffeomorphismus $\varphi: [a,b] \to [c,d]$ gibt (mit $\varphi' > 0$ bzw. $\varphi' < 0$ auf $(a,b)$). Ist $\omega \in \Omega^1(M)$, so gilt
+	\[ \int_\gamma \omega = \pm \int_{\tilde{\gamma}} \omega. \]
+	\begin{itemize}
+		\item[$+$] falls $\tilde{\gamma}$ Reparametrisierung von $\gamma$ der selben Umlaufrichtung ist,
+		\item[$-$] falls $\tilde{\gamma}$ Reparametrisierung von $\gamma$ der umgekehrten Umlaufrichtung ist.
+	\end{itemize}
+\end{lem}
+
+\begin{rem*}
+	Es gilt $ \int_\gamma \omega = \int_a^b \omega_{\gamma(t)} (\gamma'(t))dt, $ denn wenn $\gamma$ ganz in einem Kartenbereich verläuft gilt (für $\gamma$ glatt):
+	\begin{align*}
+		\omega_{\gamma(t)} (\gamma'(t)) &= \sum \omega_i (\gamma(t)) dx_i (\gamma'(t))
+			= \sum \omega_i(\gamma(t)) \gamma_i' (t)\\
+		\implies \bound{(\gamma^*\omega)}{t} &= \sum \omega_i (\gamma(t)) \bound{d\gamma_i}{t}
+			= \underbrace{\sum \omega_i (\gamma(t)) \gamma_i'(t)}_{\omega_{\gamma (t)}} dt
+	\end{align*}
+	Verläuft $\gamma$ nicht in einem einzigen Kartenbereich, so gibt es eine Partition $ a=\tilde{a}_0 < \dots < \tilde{a}_n = b $, sodass $ \bound{\gamma}{[\tilde{a}_i,\tilde{a}_{i+1}]} $ jeweils in einem Kartenbereich verläuft. Dann sei $ \gamma([a,b]) \subset \bigcup_{j \in J} U_j $, dann gibt es $ j_1,\dotsc,j_k$, sodass $ \underbrace{\gamma([a,b])}_{kompakt!} \subset U_{j_1} \cup \dots \cup U_{j_k}. $\\
+	Für stückweise glatte Kurven betrachtet man jeweils glatte Einschränkungen $ \bound{\gamma}{[a_{i-1},a_i]}. $
+\end{rem*}
+
+\begin{thm}
+	Sei $ f \in C^\infty(M) $ und $ \gamma:[a,b] \to M $ stückweise glatt. Dann gilt
+	\[ \int_\gamma df = f(\gamma(b)) - f(\gamma(a)). \]
+\end{thm}
