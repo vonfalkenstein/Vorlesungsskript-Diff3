@@ -1,0 +1,142 @@
+\chapter{Tensorfelder}
+\lecture
+
+\begin{rem}
+	Erinnerung an \ref{3.18}: Tensorprodukt zweier Bündel $ (E, \pi_E, B), (F, \pi_F,B)$, $E \otimes F = \bigcup_{x \in B} E_x \otimes F_x, (E \otimes F)_x := E_x \otimes F_x. $\\
+	Sind $ (\varphi_E,U) $ und $(\varphi_F,U)$ Bündelkarten, $ \varphi_E: \pi_E^{-1}(U) \to U \times \R^n, \varphi_F: \pi_F^{-1}(U) \to U \times \R^m, $ so ist
+	\[ \varphi_E \otimes \varphi_F: \underbrace{\pi_E^{-1}(U) \otimes \pi_F^{-1}(U)}_{= \pi^{-1}(U)} \to U \times (\R^n \otimes \R^m) \]
+	\[ \bound{\varphi_E \otimes \varphi_F}{x}(E_x \otimes F_x) = \{x\} \times (\R^n \otimes \R^m) \]
+	eine Bündelkarte für $E \otimes F$. Die Topologie auf $E \otimes F$ wählt man wieder so, dass $\varphi_E \otimes \varphi_F$ ein Homöomorphismus ist.
+\end{rem}
+
+\begin{rem*}
+	Hier ist wichtig, dass $ \bound{\varphi_E}{x} \otimes  \bound{\varphi_F}{x} $ stetig von $ \bound{\varphi_E}{x} $ und $ \bound{\varphi_F}{x} $ abhängt, denn nach Basiswechsel erhält man Matrizen, und
+	\[ A \otimes B = \begin{pmatrix}
+		a_{11}B & \cdots & a_{1n}B\\
+		a_{21}B & 		& \vdots\\
+		\vdots &	&\\
+		a_{n1}B & \cdots & a_{nn}B
+	\end{pmatrix} \]
+	(Bei der direkten Summe war das (hoffentlich) unmittelbar klar...)
+\end{rem*}
+
+\begin{defn}[Tensorprodukt, äußere Potenz]\index{Tensorprodukt}\index{äußere Potenz}
+	Das \emph{$k$-fache Tensorprodukt} von $ (E,\pi,B) $ ist
+	\[ E^{\otimes k} := \bigcup_{x \in B} (E_x)^{\otimes k}. \]
+	Mit Karten $(\varphi,U)$ von $E$ haben wir als Karten von $E^{\otimes k}$ $(\varphi^{\otimes k},U)$ mit
+	\[ \bound{\varphi^{\otimes k}}{x} (v_1 \otimes \dots \otimes v_k) = \bound{\varphi}{x}(v_1) \otimes \dots \otimes \bound{\varphi}{x}(v_k) \]
+	\[ \bound{\varphi^{\otimes k}}{x}: E_x^{\otimes k} \to \{x\} \times (\underbrace{R^n \otimes \dots \otimes \R^n}_{k\text{-fach}}) \]
+	Die \emph{$k$-fache äußere Potenz} von $(E,\pi,B)$ ist
+	\[ \Lambda^k E:= \bigcup_{x \in B} \Lambda^k(E_x) \]
+	\[ \Lambda^k(V) := V_1 \otimes \dots \otimes V_k / R, \]
+	\[ R = \Span\{v_1 \otimes \dots \otimes v_k - \sgn(\sigma) v_{\sigma(1)} \otimes \dots \otimes v_{\sigma(k)} \mid v_j \in V_j, \sigma \in \Sigma_k\} \]
+	Die Karten $(\Lambda^k\varphi,U)$ für Karten $(\varphi,U)$ von $E$ sind
+	\[ \Lambda^k\varphi = \varphi^{\otimes k}/R. \]
+\end{defn}
+
+\begin{rem*}
+	Das Tensorprodukt selbst kann man sehr abstrakt einführen, aber wir werden meist mit Basen arbeiten, da wir uns für folgende Situation interessieren:
+\end{rem*}
+
+\begin{defn}[Tensorbündel, Tensorfeld, $k$-Form]\index{Tensorbündel}\index{Tensorfeld}\index{Differentialform}
+	\begin{enumerate}[label= {\roman*})]
+		\item Das \emph{Tensorbündel} von Grad $(k,l)$ über einer differenzierbaren Mannigfaltigkeit $M$ ist das Bündel
+			\[ T^{(k,l)} TM := \bigcup_{p \in M} \big(T_pM\big)^{\otimes k} \otimes \big(T_p^*M\big)^{\otimes l}, \]
+			mit $k,l \in \N_0$. $(T_pM)^{\otimes k}$ nennt man "kontravariante Tensoren" $k$-ter Stufe, $(T_p^*M)^{\otimes l}$ "kovariante Tensoren" $l$-ter Stufe.\hspace{\fill} $ (V^{\otimes 0} = \R, \R \otimes W = W) $\\
+			Notation: $ T^{(k,0)} TM = T^k(TM), T^{(0,l)}TM = T^l(T^*M) $\\
+			Ein Schnitt in einem solchen Bündel heißt (kontra-/kovariantes oder gemischtes) \emph{Tensorfeld} auf $M$.
+		\item Ein glatter Schnitt in der $k$-fachen äußeren Potenz von $T^*M$,
+			\[ \Lambda^kT^*M = \bigcup_{p \in M} \Lambda^k \big(T_p^*M\big), \]
+			heißt \emph{Differentialform} vom Grad $k$ auf $M$.
+	\end{enumerate}
+\end{defn}
+
+\begin{rem*}
+	In lokalen Koordinaten:\\
+	$A$ Schnitt in $T^{(k,l)}TM:$
+	\[ \bound{A}{p} = \sum A_{i_1\dots i_l}^{j_1\dots j_k} \bound{\del{j_1}}{p} \otimes \dots \otimes \bound{\del{j_k}}{p} \otimes \bound{dx^{i_1}}{p} \otimes \dots \otimes \bound{dx^{i_l}}{p} \]
+	$\omega$ Differentialform von Grad $k$:
+	\[ \bound{\omega}{p} = \sum_{i_1 < \dots < i_k} \omega _{i_1\dots i_k} dx^{i_1} \wedge \dots \wedge dx^{i_k} \]
+	Jeweils mit \emph{glatten} Koeffizienten $ p \mapsto A_{i_1\dots i_l}^{j_1\dots j_k}(p) \in \R, p \mapsto \omega_{i_1\dots i_k}(p) $
+\end{rem*}
+
+\begin{lem}
+	Seien $ V_1,\dotsc,V_k $ endlich-dimensionale Vektorräume. Seien $ (v_{1,1}, \dotsc, v_{1,n_1})$, $(v_{2,1}, \dotsc, v_{2,n_2})$, $\dotsc, (v_{k,1}, \dotsc, v_{k,n_k}) $ Basen von $V_1,V_2,\dotsc,V_k$. Dann ist
+	\[ \big\{ v_{1,j_1} \otimes v_{2,j_2} \otimes \dots \otimes v_{k,j_k} \mid 1 \leq j_i \leq n_i \big\} \]
+	eine Basis von $V_1 \otimes \dots \otimes V_k$ mit Dimension $n_1 \dotsm n_k$. Ist $V$ ein endlich-dimensionaler Vektorraum, $ (v_1,\dotsc,v_n) $ eine Basis von $V$, so ist
+	\[ \big\{ v_{i_1} \wedge v_{i_2} \wedge \dots \wedge v_{i_k} \mid i_1 < \dots < i_k,\ i_1,\dotsc,i_k \in \{1,\dotsc,n\} \big\} \]
+	eine Basis von $\Lambda^kV$ mit Dimension $\binom{n}{k}$.
+\end{lem}
+
+Hierbei ist das Dachprodukt $\wedge$ wie folgt definiert:
+\[ \wedge: \Lambda^ V \times \Lambda^l V \to \Lambda^{k+l} V \]
+\[ a \wedge b = \frac{(k+l)!}{k!l!} Alt_{k+l} (a\otimes b),\ \text{wobei} \]
+\[ Alt_m (\underbrace{c_1 \otimes \dots \otimes c_m}_{\in T^mV}) = \frac{1}{m!} \sum_{\sigma \in \Sigma_m} \sgn(\sigma) (c_{\sigma(1)} \otimes \dots \otimes c_{\sigma(m)}) \]
+und lineare Fortsetzung auf beliebige $c \in T^m V$ ("Antisymmetrierungs-Abbildung")
+
+\begin{rem}
+	\begin{enumerate}[label={\roman*})]
+		\item Kovariante Tensoren $ \in T^l(T_p^*M) $ fassen wir auch als multilineare Abbildungen
+			\[ \underbrace{T_pM \times \dots \times T_pM}_{l\text{-fach}} \to \R \]
+			auf. Denn es gilt allgemein (für $\dim(V_j)<\infty$):
+			\[ V_1^* \otimes \dots \otimes V_l^* \cong \{ \text{Multilineare Abbildungen } V_1 \times \dots \times V_l \to \R \} =: \Lcal. \]
+		\item Somit gilt (wegen $V^{**} = V$ kanonisch)
+			\[ V_1 \otimes \dots \otimes V_k \cong \{ \text{Multilineare Abbildungen } V_1^* \times \dots \times V_k^* \to \R \}. \]
+	\end{enumerate}
+\end{rem}
+
+\begin{exmp*}
+	$ M = \R^4 $, kartesische Koordinaten
+	\[ \bound{A}{x} = A_{13}^2(x) \del{x_2} \otimes dx^1 \otimes dx^3 + A_{14}^2(x) \del{x_2} \otimes dx^1 \otimes dx^4 \]
+	\[ \bound{A}{x} : T_x^*\R^4 \otimes T_x\R^4 \otimes T_x\R^4 \to \R \]
+	\begin{align*}
+		\bound{A}{x} &\Big( \big(\alpha_1(x) dx^1 + \alpha_2(x) dx^2\big) \otimes \big(f^1(x)\del{x_1} + f^3(x)\del{x_3}\big) \otimes \big(g(x) \del{x_3}\big) \Big) \\&= A_{13}^2(x) \alpha_2(x) f^1(x) g(x) + 0
+	\end{align*}
+	$ \bound{\omega}{x} \in \Lambda^3 T_x^*\R^4 (\cong \Lambda^3 \R^4) $. Allgemeinste Form:
+	\begin{align*}
+		\bound{\omega}{x} &= \omega_{123} dx^1 \wedge dx^2 \wedge dx^3\\
+		&+ \omega_{124} dx^1 \wedge dx^2 \wedge dx^4\\
+		&+ \omega_{134} dx^1 \wedge dx^3 \wedge dx^4\\
+		&+ \omega_{234} dx^2 \wedge dx^3 \wedge dx^4
+	\end{align*}
+\end{exmp*}
+
+\begin{lem}
+	Sei $ A $ ein $C^\infty$-Schnitt in $T^{(k,l)}(TM)$, $B$ ein $C^\infty$-Schnitt in $T^{\left(\bar{k},\bar{l}\right)}(TM)$, $f \in C^\infty(M)$. Dann ist $ fA $ ein $C^\infty$-Schnitt in $T^{(k,l)}(TM)$ und $ A \otimes B $ ein $C^\infty$-Schnitt in $T^{\left(k + \bar{k},l + \bar{l}\right)}(TM)$ mit Komponentenfunktionen
+	\[ f(p)A_{j_1\dots j_l}^{i_1\dots i_k}(p) \quad \text{bzw.} \quad
+	(A \otimes B)_{j_1\dots j_{l+\bar{l}}}^{i_1\dots i_{k+\bar{k}}}(p) = A_{j_1\dots j_l}^{i_1\dots i_k} B_{j_{l+1}\dots j_{l+\hat{l}}}^{i_{k+1}\dots i_{k+\hat{k}}}(p) \]
+\end{lem}
+
+\begin{rem*}
+	Ein $C^\infty$-Schnitt in $T^k(T^*M)$ ($ = T^{(0,k)}(TM) $) $A$ induziert mit Vektorfeldern $\Xfrak$ ($\cong T^{(1,0)}(TM)$) eine multilineare Abbildung
+	\[ \Acal: \Xfrak(M) \times \dots \times \Xfrak(M) \to C^\infty(M) \]
+	(multilinear wegen der Definition des Tensorprodukts)\\
+	Diese Abbildung ist sogar $C^\infty (M)$-multilinear, also
+	\[ \Acal \big( X_1,\dotsc, fX_j + g\tilde{X}_j,\dotsc \big) = f\Acal (\dotsc,X_j,\dotsc) + g\Acal(\dotsc,\tilde{X}_j,\dotsc) \quad \foralll j,\ \foralll f,g \in C^\infty(M) \]
+	Es gilt auch die Umkehrung:
+\end{rem*}
+
+\begin{lem}
+	Eine Abbildung 
+	\[ \Acal: \underbrace{\Xfrak(M) \times \dots \times \Xfrak(M)}_{k\text{-mal}} \to C^\infty(M) \]
+	wird genau dann von einem Tensorfeld ($k$-ter Stufe) induziert, wenn $\Acal$ $C^\infty(M)$-multilinear ist.
+\end{lem}
+
+\subsection*{Einschub zum Tensorprodukt (Wiederholung AGLA)}
+	Ebenso wie die direkte Summe kann man auch das Tensorprodukt über eine universelle Eigenschaft charakterisieren. Zunächst seien $V_1,\dotsc,V_k$ endlich-dimensionale Vektorräume.
+	\begin{align*}
+		V_1 \otimes \dots \otimes V_k &= \vertarrowbox[1ex]{\Fcal}{freier Vektorraum} (V_1 \times \dots V_k)/\sim\\
+		&= \big\{ f: v_1 \times \dots \times v_k \to \R \mid f(x) = 0\ \text{nur für endlich viele } x \in V_1 \times \dots \times V_k \big\}\\
+		&= \Bigg\{ f = \sum_{j=1}^N \lambda_j \delta_{x_j} \mid N \in \N, \lambda_j \in \R, x_j \in V_1 \times \dots \times V_k \Bigg\}\\
+		\text{mit }\delta_{x_j}(x) &= \begin{cases}
+				1 \quad &x=x_j,\\0 \quad &\text{sonst.}
+			\end{cases}
+	\end{align*}
+	Man identifiziert $\delta_x$ mit $x$, sodass $V_1 \times \dots \times V_k \subset \Fcal$
+	\begin{prop*}
+		Ist $ L: V_1 \times \dots \times V_k \to W $ ($W$ Vektorraum) multilinear, das heißt linear in jedem Eintrag $V_j$, dann gibt es eine eindeutig bestimmte lineare Abbildung $ l: V_1 \otimes \dots \otimes V_k \to W $, sodass
+		\[ \begin{tikzcd}
+			V_1 \times \dots \times V_k \arrow{r}{L} \arrow{d}{Proj.} & W\\
+			V_1 \otimes \dots \otimes V_k \arrow{ur}{l}
+		\end{tikzcd} \quad \text{kommutiert.} \]
+	\end{prop*}

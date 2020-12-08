@@ -1,13 +1,13 @@
 \addtocounter{thm}{1}\lecture
 \begin{defn}[Differenzierbare Abbildung zwischen Mannigfaltigkeiten]\index{Mannigfaltigkeit!Differenzierbare Abbildung zwischen Mannigfaltigkeiten}
 	Seien $M,N$ differenzierbare Mannigfaltigkeiten, $M$ $m$-dimensional, $N\ n$-dimensional. Sei $ f: M \to N $  stetig. $f$ heißt \emph{(stetig) differenzierbar/glatt} im Punkt $p \in M$, falls für eine (und damit für jede!) Karte $ (\varphi,U) $ bei $p$ und eine (und damit für jede) Karte $ (\psi,V) $ bei $f(p)$ gilt
-	\[ \psi \circ f \circ \varphi^{-1}: \varphi \left( f^{-1}(V) \cap U \right) \to \R^n \]
+	\[ \psi \circ f \circ \varphi^{-1}: \varphi \big( f^{-1}(V) \cap U \big) \to \R^n \]
 	ist (stetig) differenzierbar/glatt in $\varphi(p).$
 	\image{1_7}{14cm}
 \end{defn}
 
 Diese Eigenschaft ist tatsächlich unabhängig von der Wahl der Karten $\varphi$ und $\psi$: Seien $ \varphi' $ und $\psi'$ weitere Karten bei $p$ beziehungsweise $f(p)$, dann ist 
-\[ \psi \circ f \circ \varphi^{-1} = \psi' \circ \left( \psi'^{-1} \circ \psi \right) \circ f \circ \left( \varphi^{-1} \circ \varphi' \right) \circ \varphi'^{-1} \]
+\[ \psi \circ f \circ \varphi^{-1} = \psi' \circ \big( \psi'^{-1} \circ \psi \big) \circ f \circ \big( \varphi^{-1} \circ \varphi' \big) \circ \varphi'^{-1} \]
 genau dann (stetig) differenzierbar/glatt in $p$, wenn $\psi' \circ f \circ \varphi'^{-1}$ (stetig) differenzierbar/glatt in $p$ ist, denn die Kartenwechsel $\psi'^{-1} \circ \psi, \varphi^{-1} \circ \varphi'$ sind glatt.
 
 \begin{rem*}
@@ -41,9 +41,9 @@ genau dann (stetig) differenzierbar/glatt in $p$, wenn $\psi' \circ f \circ \var
 	\image{1_10}{12cm}
 	\begin{exmp*}
 		$ \Sbb^n $ ist eine Untermannigfaltigkeit des $\R^{n+1}$. Angepasste Karten:
-		\[ \psi_{\pm i}: U_i^\pm \to \R^{n+1},\ \psi_{\pm i}(x) = \left( x \left( \hat{i} \right),x_i \right) \]
+		\[ \psi_{\pm i}: U_i^\pm \to \R^{n+1},\ \psi_{\pm i}(x) = \Big( x \big( \hat{i} \big),x_i \Big) \]
 	\end{exmp*}
-	Man nennt eine glatte Abbildung $ f: \tilde{M} \to M $ eine \emph{glatte Einbettung}, falls $ f\left( \tilde{M} \right) \subset M $ eine differenzierbare Untermannigfaltigkeit von $M$ ist und $ f: \tilde{M} \to f\left( \tilde{M} \right) $ ein Diffeomorphismus.
+	Man nennt eine glatte Abbildung $ f: \tilde{M} \to M $ eine \emph{glatte Einbettung}, falls $ f\big( \tilde{M} \big) \subset M $ eine differenzierbare Untermannigfaltigkeit von $M$ ist und $ f: \tilde{M} \to f\big( \tilde{M} \big) $ ein Diffeomorphismus.
 \end{defn}
 
 \begin{thm}

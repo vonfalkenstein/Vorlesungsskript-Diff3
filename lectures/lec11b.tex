@@ -1,0 +1,106 @@
+\chapter{Riemannsche Metrik}
+
+Ein spezielles Tensorfeld auf eine differenzierbaren Mannigfaltigkeit.
+
+\begin{defn*}[Riemannsche Metrik]\index{Riemannsche Metrik}
+	Eine \emph{Riemannsche Metrik} ist ein kovariantes Tensorfeld 2. Stufe $g$, das symmetrisch und positiv definit ist, also
+	\[ g_p(X_p,Y_p) = g_p(Y_p,X_p) \qquad \foralll p \in M,\ \foralll X_p,Y_p \in T_pM, \]
+	\[ g_p(X_p,X_p) > 0 \qquad \foralll p \in M,\ \foralll X_p \neq 0 \in T_pM. \]
+\end{defn*}
+
+\begin{rem*}
+	\begin{enumerate}[label= {\roman*})]
+		\item In lokalen Koordinaten gilt $ g = \sum g_{ij} dx^i \otimes dx^j $ mit $g_{ij}(p)$ symmetrisch.
+		\item $ dx^idx^j := \frac{1}{2}(dx^i \otimes dx^j + dx^j \otimes dx^i) $. Dann
+			\begin{align*}
+				g &= \sum g_{ij} dx^i \otimes dx^j\\
+				&= \frac{1}{2} \sum g_{ij} dx^i \otimes dx^j + \frac{1}{2} \sum g_{ji} dx^j \otimes dx^i\\
+				&= \sum g_{ij} dx^idx^j
+			\end{align*}
+		\item $ g_p(v,w) =: \bound{\langle v,w\rangle_g}{p} $ definiert eine innere, positiv definite Form $ T_pM \times T_pM \to \R $
+	\end{enumerate}
+\end{rem*}
+
+\begin{exmp*}
+	Euklidische Metrik: $M = \R^n$
+	$ g = (dx^1)^2 + \dots + (dx^n)^2 $
+	$ g_p(v,w) = \bound{\langle v,w\rangle_g}{p} = \sum v_jw_j $ wenn $ v = \sum v_j \bound{\del{j}}{p}, w = \sum w_j \bound{\del{j}}{p}$
+\end{exmp*}
+
+\begin{rem}
+	Positive Definitheit ist ein von der Wahl der Basis unabhängiges Konzept. Nach dem Trägheitssatz von Sylvester gibt es in $T_pM$ stets eine Basiswahl, sodass
+	\[ \bound{(g_{i,j})}{p} = \begin{pmatrix}
+		1 & &\\
+		& \ddots &\\
+		&&1
+	\end{pmatrix} \]
+\end{rem}
+
+\begin{defn}[Produkt-Metriken]\index{Riemannsche Mannigfaltigkeit}
+	Seien $ (M,g) $ und $ (\tilde{M},\tilde{g}) $ \emph{Riemannsche Mannigfaltigkeiten}, also differenzierbare Mannigfaltigkeiten, die mit einer Riemannschen Metrik versehen sind. Dann ist $g \oplus \tilde{g}$
+	\[ \bound{g \oplus \tilde{g}}{(p,q)}(v,\tilde{v};w,\tilde{w}) := g_p(v,w) \tilde{g}_q(\tilde{v},\tilde{w}) \]
+	eine Riemannsche Metrik auf $M \times \tilde{M}$.
+	\[ (v,\tilde{v}),(w,\tilde{w}) \in T_{(p,q)}(M \times \tilde{M}) \cong T_pM \oplus T_q\tilde{M} \]
+	In Koordinaten: Block-Diagonal-Gestalt $ \begin{pmatrix}
+		g_{ij} & \\ & \tilde{g}_{ij}
+	\end{pmatrix} $
+\end{defn}
+
+\begin{thm}
+	Jede differenzierbare Mannigfaltigkeit besitzt eine Riemannsche Metrik.
+\end{thm}
+
+\begin{rem*}
+	ACHTUNG: Diese Aussage ist nicht trivial. Eine sogenannte semi-Riemannsche Metrik der Signatur $(k,l)$ ($k$ positive Eigenwerte, $l$ negative) muss nicht global existieren!
+\end{rem*}
+
+\begin{defn*}[lokales/globales Vielbein]\index{Vielbein}
+	Sei $M$ eine differenzierbare Mannigfaltigkeit. Ein \emph{lokales Vielbein} (local frame) ist ein Tupel von auf $U \subset M$ definierten Vektorfeldern $ X_1,\dotsc,X_n $ ($n = \dim M$), sodass $ \bound{X_1}{p}, \dotsc, {X_n}{p} $ linear unabhängig sind für alle $p \in U$. Ein \emph{globales Vielbein} ist ein Vielbein mit $U = M$
+\end{defn*}
+
+\begin{exmp*}
+	$\R^2$ mit Polarkoordinaten. $ \del{r},\del{\varphi} $ ist ein Zweibein.
+\end{exmp*}
+
+\begin{rem}\label{6.4}
+	Es existieren stets \emph{lokale} Vielbeine:
+	\[ \begin{tikzcd}
+		\pi^{-1}(U) \arrow{rr}{\varphi} \arrow{ddr}{\pi} & & U \times \R^n \arrow{ddl}[swap]{proj_1}\\
+		&&\\
+		& U \arrow[bend left = 50, dotted]{luu}{\delta_i} \arrow[bend right=50]{uur}[swap]{\tilde{e}_i} &
+	\end{tikzcd} \]
+	\[ \tilde{e}_i(p) = (p,e_i),\quad \delta_i(p) = \varphi^{-1} (p,e_i) = \varphi^{-1} \circ \tilde{e}_i(p) \]
+	\emph{Globale} existieren nicht unbedingt $\rightarrow$ später
+\end{rem}
+
+\begin{defn*}
+	Ist $(M,g)$ eine Riemannsche Mannigfaltigkeit, so heißt ein lokales Vielbein \emph{orthogonal}, falls $ (\delta_1(p), \dotsc, \delta_n(p)) $ orthogonal sind bezüglich $g_p$ für alle $p \in U$, also
+	\[ \langle \delta_i (p), \delta_j(p) \rangle_{g_p} = 0 \qquad \foralll i \neq j, \]
+	und \emph{orthonormal}, falls zusätzlich gilt $ \langle \delta_i (p), \delta_i(p) \rangle_{g_p} = 1 \ \foralll i$.
+\end{defn*}
+
+\begin{exmp*}
+	\begin{itemize}
+		\item $ \del{i} $ auf $\R^n$
+		\item auf $\R^2 \setminus \{0\} $ (mit $r = \sqrt{x^2+y^2}$)\\
+			$ \delta_1 = \frac{x}{r} \del{x} + \frac{y}{r} \del{y},\ \delta_2 = -\frac{y}{r} \del{x} + \frac{x}{r} \del{y} $, denn
+			\begin{align*}
+				g_p(\delta_1,\delta_1) &= dx \Big(\frac{x}{r} \del{x} + \frac{y}{r} \del{y}\Big) dx \Big( \frac{x}{r} \del{x} + \frac{y}{r} \del{y} \Big)\\
+				&\ + dy \Big( \frac{x}{r} \del{x} + \frac{y}{r} \del{y} \Big) dy \Big( \frac{x}{r} \del{x} + \frac{y}{r} \del{y} \Big)\\
+				&= \Big(\frac{x}{r}\Big)^2 + \Big(\frac{y}{r}\Big)^2 = 1\\
+				g_p(\delta_1,\delta_2) &= dx \Big(\frac{x}{r} \del{x} + \frac{y}{r} \del{y}\Big) dx \Big(-\frac{y}{r} \del{x} + \frac{x}{r} \del{y}\Big)\\
+				&\ + dy \Big( \frac{x}{r} \del{x} + \frac{y}{r} \del{y} \Big) dy \Big( -\frac{y}{r} \del{x} + \frac{x}{r} \del{y} \Big)\\
+				&= \frac{x}{r}\Big(\frac{-y}{r}\Big) + \Big(\frac{x}{r}\Big)\Big(\frac{y}{r}\Big) = 0
+			\end{align*}
+			(Rest genauso)
+	\end{itemize}
+\end{exmp*}
+
+\begin{lem}
+	Sei $ (M,g) $ eine Riemannsche Mannigfaltigkeit und $ (\delta_1, \dotsc, \delta_n) $ ein lokales Vielbein. Dann gibt es ein lokales orthonormales Vielbein $ (X_1,\dotsc,X_n) $, sodass
+	\[ \Span \{\bound{X_1}{p},\dotsc,\bound{X_n}{p}\} = \Span\{ \bound{\delta_1}{p}, \dotsc, \bound{\delta_n}{p} \}\qquad \foralll p \in U. \]
+\end{lem}
+
+\begin{cor*}
+	Mit \ref{6.4} folgt: Es gibt lokal bei $p \in M$ stets ein orthonormales Vielbein.
+\end{cor*}

@@ -1,0 +1,52 @@
+\chapter{Topologisches, Teilung der Eins, Fortsetzungslemmata}
+\lecture
+
+\begin{lem}
+	Eine topologische Mannigfaltigkeit ist \emph{lokal kompakt}, das heißt $ \foralll p \in  M \ \existss $ offene Umgebung $U$, sodass $ U \subset K $, $K \subset M$ kompakt.
+\end{lem}
+
+\begin{rem}\label{5.2}
+	Es gibt sogar eine abzählbare Basis der Topologie durch solche präkompakten\footnote{d.h. der Abschluss ist kompakt}  "Koordinatenbälle" (Betrachte $ B_r(q) \ni \hat{q}, r \in \Q, q \in \Q^n $)
+\end{rem}
+
+\begin{lem}
+	Jeder lokal kompakte topologische Raum $X$ mit abzählbarer Basis der Topologie (insbesondere also eine topologische Mannigfaltigkeit) besitzt eine \emph{Ausschöpfung} durch kompakte Mengen. ($X = \bigcup K_j, K_j \subset \dot{K}_{j+1}, K_j$ kompakt)
+\end{lem}
+
+\begin{defn*}[lokal endlich]\index{lokal endlich}
+	Sei $\Lcal$ eine Familie von Teilmengen einer topologischen Mannigfaltigkeit $M$. $\Lcal$ heißt \emph{lokal endlich}, falls $ \foralll p \in M \ \existss $ offene Umgebung $U$, sodass $ U \cap L \neq \emptyset $ nur für endlich viele $L \in \Lcal$.
+\end{defn*}
+
+\emph{Nicht} lokal endlich: $ \Lcal = \{(-n,n) \subset \R \mid n \in \N_0\} $
+\image{5_3}{0.8\textwidth}
+
+\begin{defn*}[Verfeinerung]\index{Verfeinerung}
+	Seien $ M = \bigcup_{\alpha \in A} U_\alpha, M = \bigcup_{\beta \in B} V_\beta $ offene Überdeckungen. Dann heißt $ \Vcal = \{V_\beta \mid \beta \in B\} $ \emph{Verfeinerung} von $ \Ucal = \{U_\alpha \mid \alpha \in A\} $, falls $ \foralll V \in \Vcal \ \existss U \in \Ucal $ mit $ V \subset U $.
+	\image{5_3b}{0.25\textwidth}
+\end{defn*}
+
+\begin{thm}
+	Eine topologische Mannigfaltigkeit ist stets \emph{parakompakt}, das heißt jede offene Überdeckung von $M$ besitzt eine lokal endliche Verfeinerung.
+\end{thm}
+
+\begin{rem}
+	Wir betrachten im Folgenden differenzierbare Mannigfaltigkeiten. Aus Bemerkung \ref{5.2} erhält man:\\
+	Jede differenzierbare Mannigfaltigkeit besitzt einen abzählbaren glatten Atlas mit Koordinatenbällen $ \varphi^{-1}\big(B_r(q)\big) \subset M. $
+\end{rem}
+
+\begin{defn*}[Zerlegung der Eins]\index{Zerlegung der Eins}
+	Sei $ \Ucal $ eine offene Überdeckung von $M$, $M = \bigcup_{\alpha \in A} U_\alpha$. Eine \emph{$\Ucal$ untergeordnete glatte Zerlegung der Eins} ist eine Familie von Funktionen $ \{\psi_\alpha \mid \alpha \in A\}, $ $ \psi_\alpha: M \to \R $ glatt mit
+	\begin{enumerate}[label={\roman*})]
+		\item $ 0 \leq \psi_\alpha(p) \leq 1 \quad \foralll p \in M $
+		\item $ \supp \psi_\alpha \subset U_\alpha \quad \foralll \alpha \in A $
+		\item $ \{\supp \psi_\alpha \mid \alpha \in A\} $ ist lokal endlich
+		\item $ \sum_{\alpha \in A} \psi_\alpha (p) = 1 \quad \foralll p \in M $
+	\end{enumerate}
+	$ \sum_{\alpha \in A} $ ist dabei wohldefiniert, da wegen iii) nur endlich viele Beiträge zur Summe $\neq 0$ sind.
+	\image{5_4}{0.8\textwidth}
+\end{defn*}
+
+\begin{thm}
+	Ist $M$ eine differenzierbare Mannigfaltigkeit und $ \Ucal = \{U_\alpha \mid \alpha \in A\} $ eine offene Überdeckung von $M$, dann gibt es eine glatte, $\Ucal$ untergeordnete Zerlegung der Eins.
+\end{thm}
+

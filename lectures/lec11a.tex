@@ -1,0 +1,28 @@
+\lecture
+\begin{lem}
+	Ist $ A \subset M $ ($M$ differenzierbare Mannigfaltigkeit) abgeschlossen und $U \supset A$ offen, dann gibt es eine glatte Funktion $\psi: M \to \R$, sodass
+	\[ \supp \psi \subset U,\ \bound{\psi}{A} = 1,\ 0 \leq \psi(p) \leq 1 \quad \forall p \in M \]
+	("bump function (Höckerfunktion) für $A$ mit Träger in $U$")
+\end{lem}
+
+\begin{lem}[Fortsetzungslemma für glatte Funktionen]
+	Sei $A \subset M$ abgeschlossen, $ f: A \to \R $ glatt. Dann gibt es zu $U$ offen, $A \subset U$, eine glatte Funktion $\tilde{f}: M \to \R$ mit $ \supp \tilde{f} \subset U $ und $ \bound{\tilde{f}}{A} = f $. $\tilde{f}$ heißt dann eine \emph{"Fortsetzung"} von $f$.
+\end{lem}
+
+\begin{rem*}
+	\begin{enumerate}[label={\roman*})]
+		\item $f$ glatt auf $A$: wenn $\exists$ für jedes $p \in A$ eine offene Umgebung $W_p$ und eine glatte Fortsetzung $ \tilde{f}_p: W_p \to \R,\ \bound{\tilde{f}_p}{W_p \cap A} = \bound{f}{W_p\cap A} $
+		\item Ist $A$ nicht abgeschlossen gilt die Aussage nicht unbedingt. Z.B. $ f:(0,1) \to \R, f(x) = \frac{1}{x} $ besitzt keine glatte (nicht einmal eine stetige) Fortsetzung auf $U = (-\epsilon,1),\ \epsilon > 0$.
+	\end{enumerate}
+\end{rem*}
+
+\begin{rem*}
+	Achtung: $f$ wie oben muss Werten in $\R$ (bzw. $\R^k$) annehmen. Es kann sonst topologische Gründe geben, weshalb keine glatten (nicht einmal stetige) Fortsetzungen existieren:\\
+	$ A = \Sbb^1 \subset \R^2, f: \Sbb^1 \to \Sbb^1, f(x) = x \ \foralll x \in \Sbb^1 $\\
+	$f$ besitzt keine glatte Fortsetzung $ \tilde{f}: \R^2 \to \Sbb^1 $ (nicht einmal eine stetige)
+\end{rem*}
+
+\begin{lem}
+	Ist $ A \subset M $ abgeschlossen und $X$ ein glattes Vektorfeld entlang $A$, also $ X_p \in T_pM \ \foralll p \in A $ und $\foralll p \in A \ \existss V_p$ offene Umgebung und $ \bound{\tilde{X}}{V_p} $ Vektorfeld (insb. glatt) und $\bound{\tilde{X}}{A} = X$.\\
+	Dann $\exists$ Vektorfeld (insb. glatt) auf $M$, das auf $A$ mit $X$ übereinstimmt und so gewählt werden kann, dass es in $U$ getragen ist, $U \supset A$ offen.
+\end{lem}

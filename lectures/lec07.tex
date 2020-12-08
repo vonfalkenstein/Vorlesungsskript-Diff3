@@ -100,7 +100,7 @@ Diese Definition ist sinnvoll, wenn wir zeigen, dass sie nicht von der Wahl der 
 
 \begin{exmp*}
 	$ M = \R^2 \setminus \{0\},\ \omega = \frac{1}{x^2+y^2}(xdy-ydx),\ \gamma: [0,2\pi] \to M, \gamma(t) = (\cos t,\sin t)^T $\\
-	\[ \int_\gamma \omega = \int_{[0,2\pi]} \Big( (\cos t)^2 dt - \left(-(\sin t)^2 \right) dt \Big) = \int_0^{2\pi} dt = 2\pi \]
+	\[ \int_\gamma \omega = \int_{[0,2\pi]} \Big( (\cos t)^2 dt - \big(-(\sin t)^2 \big) dt \Big) = \int_0^{2\pi} dt = 2\pi \]
 \end{exmp*}
 
 Das Kurvenintegral hängt nicht von der Parameter-Beschreibung der Kurve ab:
@@ -126,7 +126,7 @@ Das Kurvenintegral hängt nicht von der Parameter-Beschreibung der Kurve ab:
 	Für stückweise glatte Kurven betrachtet man jeweils glatte Einschränkungen $ \bound{\gamma}{[a_{i-1},a_i]}. $
 \end{rem*}
 
-\begin{thm}
+\begin{thm}\label{3.33}
 	Sei $ f \in C^\infty(M) $ und $ \gamma:[a,b] \to M $ stückweise glatt. Dann gilt
 	\[ \int_\gamma df = f(\gamma(b)) - f(\gamma(a)). \]
 \end{thm}

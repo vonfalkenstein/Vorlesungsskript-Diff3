@@ -21,8 +21,8 @@ Sind $f$ und $g$ wie oben sogar Homöomorphismen und $f_x$ ein Vektorraum-Isomor
 
 \begin{defn}[Unterbündel]\index{Vektorraumbündel!Unterbündel}
 	Ist $ (E,\pi,B) $ ein Vektorbündel von Rang $n$ und $\tilde{E} \subset E$ eine Teilmenge, sodass es um jedes $x \in B$ eine Bündelkarte $(\varphi,U)$ gibt, sodass
-	\[ \varphi \left(\pi^{-1}(U) \cap \tilde{E} \right) = U \times \R^k \subset U \times \R^n, \]
-	so ist $ \left( \tilde{E}, \bound{\pi}{\tilde{E}},B \right) $ ein Vektorbündel von Rang $k$, ein sogenanntes \emph{Unterbündel}.
+	\[ \varphi \big(\pi^{-1}(U) \cap \tilde{E} \big) = U \times \R^k \subset U \times \R^n, \]
+	so ist $ \big( \tilde{E}, \bound{\pi}{\tilde{E}},B \big) $ ein Vektorbündel von Rang $k$, ein sogenanntes \emph{Unterbündel}.
 \end{defn}
 
 \begin{lem}
@@ -36,7 +36,7 @@ Sind $f$ und $g$ wie oben sogar Homöomorphismen und $f_x$ ein Vektorraum-Isomor
 
 \begin{defn}[Einschränkungen]\index{Vektorraumbündel!Einschränkungen}
 	Ist $ (E,\pi,B) $ ein Vektorbündel und $\tilde{B} \subset B$ eine Teilmenge, so ist
-	\[ \left( \pi^{-1} \left( \tilde{B} \right), \bound{\pi}{\pi^{-1} \left( \tilde{B} \right)}, \tilde{B} \right) \]
+	\[ \Big( \pi^{-1} \big( \tilde{B} \big), \bound{\pi}{\pi^{-1} ( \tilde{B} )}, \tilde{B} \Big) \]
 	ein Vektorbündel ("Einschränkung von $E$ auf $\tilde{B}$").
 	\image{3_13}{8cm}
 \end{defn}
@@ -79,9 +79,10 @@ Sind $f$ und $g$ wie oben sogar Homöomorphismen und $f_x$ ein Vektorraum-Isomor
 \end{lem}
 
 \begin{exmp*}
-	Die Differentiale $ T_pf: T_pM \to T_{f(p)}N $, für $f:M \to N$ glatt, definieren das Differential $Tf: TM \to TN$. Es gibt genau einen Bündel-Homomorphismus $h: TM \to f^TN$, sodass
+	Die Differentiale $ T_pf: T_pM \to T_{f(p)}N $, für $f:M \to N$ glatt, definieren das Differential $Tf: TM \to TN$. Es gibt genau einen Bündel-Homomorphismus $h: TM \to f^*TN$, sodass
 	\[ \begin{tikzcd}
-		TM \arrow{rr}{Tf} \arrow{dr}{h}&&TN\\
-		& f^*TN \arrow{ur}{\tilde{f}}
+		TM \arrow{rr}{Tf} \arrow{ddr}{h}&&TN\\
+		\\
+		& f^*TN \arrow{uur}{\tilde{f}}
 	\end{tikzcd} \qquad \text{kommutiert.} \]
 \end{exmp*}

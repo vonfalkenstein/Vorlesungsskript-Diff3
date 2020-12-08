@@ -60,14 +60,14 @@
 \begin{defn}[Bündelatlas, Übergangsfunktion]\index{Vektorraumbündel!Bündelatlas} \index{Vektorraumbündel!Übergangsfunktion}
 	Sei $ (E,\pi,B) $ ein Vektorraumbündel von Rang $n$. Eine Menge von Bündelkarten $ \{(\varphi_\alpha, U_\alpha) \mid \alpha \in A\} $ heißt \emph{Bündelatlas} von $E$, wenn $ \bigcup_{\alpha \in A} U_\alpha = B. $
 	Die auf Überlappungen $ U_\alpha \cap U_\beta $ gegebenen stetigen Abbildungen 
-	$$ \Phi_{\alpha \beta}: U_\alpha \cap U_\beta \to GL(n,\R),\ x \mapsto \bound{\varphi_\beta}{E_x} \circ \left( \bound{\varphi_\alpha}{E_x} \right)^{-1} $$
+	$$ \Phi_{\alpha \beta}: U_\alpha \cap U_\beta \to GL(n,\R),\ x \mapsto \bound{\varphi_\beta}{E_x} \circ \big( \bound{ \varphi_\alpha}{E_x} \big)^{-1} $$
 	heißen \emph{Übergangsfunktionen}.
 \end{defn}
 
 \begin{rem*}
 	$\Phi_{\alpha \beta}$ nehmen tatsächlich Werte in $GL(n,\R)$ an:
 	\image{3_3}{12cm}
-	$$ \bound{\varphi_\beta}{E_x} \circ \left( \bound{\varphi_\alpha}{E_x} \right)^{-1}: \underset{\cong \R^n}{\{x \times \R^n\}} \to \underset{\cong \R^n}{\{x \times \R^n\}} $$
+	$$ \bound{\varphi_\beta}{E_x} \circ \big( \bound{\varphi_\alpha}{E_x} \big)^{-1}: \underset{\cong \R^n}{\{x \times \R^n\}} \to \underset{\cong \R^n}{\{x \times \R^n\}} $$
 	ist ein Vektorraumisomorphismus für jedes $x$. (nach Definition Bündelkarte)
 \end{rem*}
 
@@ -84,7 +84,7 @@
 			\includegraphics[width=4cm]{3_3 circ}
 		\end{wrapfigure}
 		$ U_1 = \Sbb^1 \setminus \{p_1\},\ U_2 = \Sbb^1 \setminus \{p_2\} $ (offen in $\Sbb^1$)\\
-		überdeckt $\Sbb^1$: $ U_1 \cap U_2 = \left\{ \underset{V_+}{\bigcap}, \overset{V_-}{\bigcup} \right\} $\\
+		überdeckt $\Sbb^1$: $ U_1 \cap U_2 = \bigg\{ \underset{V_+}{\bigcap}, \overset{V_-}{\bigcup} \bigg\} $\\
 		Sind die Übergangsfunktionen $ \Phi_{21}(p) = \id_\R\ \foralll p \in U_1 \cap U_2 $, so ist das Bündel trivial. Denn dann kann man eine lokale Trivialisierung auf $ U \subset \Sbb^1 $ auf ganz $\Sbb^1$ fortsetzen. Man erhält den Zylinder.\\
 		Wählen wir als Übergangsfunktion
 		\begin{alignat*}{2}
@@ -105,7 +105,7 @@
 	Ein \emph{Prä-Vektorraumbündel} ist ein Quadrupel $ (E,\pi,B,\Acal) $, wobei $E$ eine Menge ist, $B$ ein topologischer Raum, $\pi: E \to B$ surjektiv, sodass $E_x = \pi^{-1}(x)$ ein Vektorraum ist, und mit einem \emph{Prä-Bündelatlas} $\Acal$, das heißt einer Menge $ \{(\varphi_\alpha,U_\alpha) \mid \alpha \in A\} $, sodass $U_\alpha \subset B$ offen, $ B = \bigcup_{\alpha \in A} U_\alpha $ und $ \varphi_\alpha: \pi^{-1}(U) \to U \times \R^n $ bijektiv für alle $\alpha$, sodass $ \bound{\varphi_\alpha}{E_y}: E_y \to \{y\} \times \R^n $ ein Vektorraum-Isomorphismus ist und so, dass die Übergangsfunktionen 
 	$ \begin{aligned}[t]
 		\Phi_{\alpha \beta}: &U_\alpha \cap U_\beta \to GL(n,\R),\\
-		 &x \mapsto \bound{\varphi_\beta}{E_x} \circ \left( \bound{\varphi_\alpha}{E_x} \right)^{-1}
+		 &x \mapsto \bound{\varphi_\beta}{E_x} \circ \big( \bound{\varphi_\alpha}{E_x} \big)^{-1}
 	\end{aligned} $ stetig sind.
 \end{defn}
 
@@ -121,10 +121,10 @@
 	\begin{align*}
 		TM &= \bigcup_{p \in M} T_pM\\
 		\pi&: TM \to M,\quad T_pM \mapsto p\\
-		\Acal&= \left\{ \begin{aligned}
+		\Acal&= \Bigg\{ \begin{aligned}
 			\varphi: \pi^{-1}(U) &\to U\times \R^n,\\
-			 T_pM \ni X_p &\mapsto \left( p, X_p(\overbar{\varphi_1}), \dotsc, X_p(\overbar{\varphi_n}) \right)
-		\end{aligned} \ \middle|\ (\varphi,U) \in \Acal \right\},
+			 T_pM \ni X_p &\mapsto \big( p, X_p(\overbar{\varphi_1}), \dotsc, X_p(\overbar{\varphi_n}) \big)
+		\end{aligned} \ \bigg|\ (\varphi,U) \in \Acal \Bigg\},
 	\end{align*}
 	wobei $ X_p (\overbar{\varphi_j}) = j $-te Koordinate von $X_p \in T_pM$ bezüglich $(\varphi,U)$ (vgl. Lemma \ref{2.7}),\\
 	ein Prä-Vektorraumbündel.\\
@@ -132,7 +132,7 @@
 \end{exmp}
 
 \begin{exmp*}
-	$ T\Sbb^1 = \{(x,v) \in \Sbb^1 \times \R^2 \subset \R^4 \mid x \bot v\} $\\
+	$ T\Sbb^1 = \big\{(x,v) \in \Sbb^1 \times \R^2 \subset \R^4 \mid x \bot v \big\} $\\
 	\begin{minipage}{\linewidth}
 		\begin{wrapfigure}{R}{4cm}
 			\centering
@@ -149,7 +149,7 @@
 \begin{rem*}
 	$ \varphi_2^+ : U_2^+ \cap \Sbb^1 \to \R,\ \varphi_2^+(x_1,x_2) = x_1 $
 	\begin{align*}
-		X_{\gamma,x}\left( \overbar{\varphi_2^+} \right) &= \frac{d}{dt} \left( \overbar{\varphi_2^+} \circ \overbar{\gamma} \right) (0)\ \text{mit} \begin{aligned}[t]
+		X_{\gamma,x}\big( \overbar{\varphi_2^+} \big) &= \frac{d}{dt} \big( \overbar{\varphi_2^+} \circ \overbar{\gamma} \big) (0)\ \text{mit} \begin{aligned}[t]
 			&\gamma: (-\epsilon,\epsilon) \to \Sbb^1\\
 			&\gamma(0) = x\\
 			&\gamma(t) = (\cos(t+\alpha),\sin(t+\alpha))
@@ -158,13 +158,13 @@
 			-\sin(\alpha) \\ \cos(\alpha)
 		\end{pmatrix}
 	\end{align*}
-	Bündelkarte: $\varphi_{2,+}: \pi^{-1}(U_2^+ \cap \Sbb^1) \to U_2^+ \cap \Sbb^1 \times \R,\ \varphi_{2,+}(\underbrace{X_{p,x}}_{\in Tx\Sbb^1}) = \left( x, X_{\gamma,x}\left( \overbar{\varphi_2^+} \right) \right)$\\
+	Bündelkarte: $\varphi_{2,+}: \pi^{-1}(U_2^+ \cap \Sbb^1) \to U_2^+ \cap \Sbb^1 \times \R,\ \varphi_{2,+}(\underbrace{X_{p,x}}_{\in Tx\Sbb^1}) = \big( x, X_{\gamma,x}\big( \overbar{\varphi_2^+} \big) \big)$\\
 	Für die anderen Koordinatenbereiche sieht die Karte ebenso aus.
-	$$ \varphi_{j,\pm} (\underbrace{\lambda X_{p,x}}_{\in T_xM}) = \left( \begin{pmatrix}
+	$$ \varphi_{j,\pm} (\underbrace{\lambda X_{p,x}}_{\in T_xM}) = \Bigg( \begin{pmatrix}
 		\cos(\alpha)\\\sin(\alpha)
 	\end{pmatrix}, \lambda \begin{pmatrix}
 	-\sin(\alpha)\\\cos(\alpha)
-	\end{pmatrix} \right) $$
+	\end{pmatrix} \Bigg) $$
 	Übergangsfunktionen: $\id_\R$
 \end{rem*}
 
