@@ -1,0 +1,121 @@
+\chapter{Differentialformen}\lecture
+
+Erinnerung an Kapitel \ref{4}:
+
+\begin{defn*}[$k$-Form, $k$-Differentialform]\index{k@$k$-Form}\index{Differentialform}
+	Ein Schnitt im Bündel der alternierenden (total anti-symmetrischen) kovarianten $k$-Tensoren über einer $n$-dimensionalen differenzierbaren Mannigfaltigkeit $M$,
+	\[ \alpha: M \to \Lambda^k T^*M := \bigcup_{p \in M} \underbrace{\Lambda^k(T_p^*M)}_{\text{äußere Algebra}}, \]
+	heißt \emph{$k$-Form}, ein glatter Schnitt heißt \emph{$k$-Differentialform} und $k$ heißt \emph{Grad}.
+\end{defn*}
+
+Den Vektorraum der $k$-Differentialformen bezeichnet man mit $\Omega^k(M)$. Das Dachprodukt wird punktweise definiert, also $ \bound{(\omega \wedge \eta)}{p} = \bound{\omega}{p} \wedge \bound{\eta}{p} $. Versehen mit $\wedge$ wird dann
+	\[ \qquad \Omega^*(M) := \bigoplus_{k=0}^n \Omega^k(M) \qquad (\Omega^0(M) = C^\infty(M)) \]
+zu einer Algebra.
+
+\begin{rem*}
+	In Koordinaten lässt sich $\omega \in \Omega^k(M)$ schreiben als
+	\[ \omega = \sum_{i_1 < i_2 < \dots} \omega_{i_1\dots i_k} dx^{i_1} \wedge \dots \wedge dx^{i_k}. \]
+\end{rem*}
+
+\begin{lem}
+	Es gilt
+	\[ dx^{i_1} \wedge dx^{i_k} (\del{j_1}, \dotsc, \del{j_k}) = \delta_{j_1\dots j_k}^{i_1 \dots i_k} \]
+	\[ \text{mit } \delta_{j_1\dots j_k}^{i_1 \dots i_k} = \det \begin{pmatrix}
+		\delta_{j_1}^{i_1} & \dots & \delta_{j_k}^{i_1}\\
+		\vdots & & \vdots\\
+		\delta_{j_1}^{i_k} & \dots & \delta_{j_k}^{i_k}
+	\end{pmatrix} \]
+\end{lem}
+
+\begin{cor*}
+	$ \omega_{i_1 \dots i_k} = \omega(\del{i_1}, \dotsc, \del{i_k}) $
+\end{cor*}
+
+\begin{exmp*}
+	\begin{itemize}
+		\item[]
+		\item $ \omega = \cos(x) dy \wedge dz + \sin(xy) dx \wedge dz \in \Omega^2(\R^3) $\\
+			$ \omega_{23}(x,y,z) = \cos(x),\ \omega_{13}(x,y,z) = \sin(xy) $
+			\begin{align*}
+				\omega \wedge dy &= 0 +\sin(xy) dx \wedge dz \wedge dy\\
+				&= -\sin(xy) dx \wedge dy \wedge dz\\
+				\omega \wedge \omega &= 0
+			\end{align*}
+		
+		\item $ \Omega^n(\R^n) = \big\{ f(x_1,\dotsc,x_n) dx^1 \wedge \dots \wedge dx^n \mid f \in C^\infty (\R^n) \big\} $
+	\end{itemize}
+\end{exmp*}
+
+\begin{lem}
+	Ist $ f: M \to N $ glatt, so gilt für den pullback einer Differentialform auf $N$ entlang $f$
+	\[ \bound{f^*\omega}{p} (v_1,\dotsc,v_k) = \bound{\omega}{f(p)} (df_p(v_1),\dots, df_p(v_k)) \quad (p \in M, v_j \in T_pM) \]
+	\begin{enumerate}[label={\roman*})]
+		\item $ f^*: \Omega^k(N) \to \Omega^k(M) $ linear
+		\item $ f^*(\omega \wedge \eta) = f^*\omega \wedge f^*\eta $
+		\item $ f^*\left(\sum\limits_{i_1 < i_2<\dots} \omega_{i_1\dots i_k} dx^{i_1} \wedge \dots \wedge dx^{i_k}\right) = \sum\limits_{i_1<i_2<\dots} ( \omega_{i_1\dots i_k} \circ f) d(x^{i_1} \circ f) \wedge \dots \wedge d(x^{i_k} \circ f) ) $
+	\end{enumerate}
+\end{lem}
+
+\begin{exmp*}
+	$ f: \R^2 \to \R^3, f(u,v) = (u,v,u^2), \omega = y dy \wedge dz \in \Omega^2(\R^3) $
+	\begin{align*}
+		\bound{f^*\omega}{(u,v)} &= \big(\underbrace{y \circ f}_{=v}(u,v) \big) d(\underbrace{y \circ f}_{v} )|_{(u,v)} \wedge \underbrace{d(\underbrace{z \circ f}_{u^2})|_{(u,v)}}_{2udu}\\
+		&= -2uv\, du \wedge dv
+	\end{align*}
+\end{exmp*}
+
+\begin{exmp*}
+	Kartenwechsel ($ f = \id $, aber im Urbild und Bild werden verschiedene Koordinaten verwendet)
+	\begin{align*}
+		\omega &= dx \wedge dy \qquad \begin{pmatrix}
+			x\\y
+		\end{pmatrix} = \begin{pmatrix}
+		r\cos\theta\\r\sin\theta
+	\end{pmatrix}\\
+			&= d(r\cos\theta) \wedge d(r\sin\theta) \\
+			&= (\cos\theta dr - r\sin \theta d \theta) \wedge (\sin\theta dr + r\cos\theta d \theta)\\
+			&= rdr \wedge d\theta
+	\end{align*}
+\end{exmp*}
+
+Das ist kein Zufall:
+
+\begin{lem}
+	Sei $ f: M \to N $ glatt, $ \dim M = \dim N = n $. Seien $ x_1,\dotsc,x_n $ Koordinaten bei $p \in M$ und $ y_1,\dotsc,y_n $ Koordinaten bei $ f(p) \in N $. Dann gilt für $ \omega \in \Omega^n(N),\ \omega = u dy^1 \wedge \dots \wedge dy^n $ ($u \in C^\infty(N)$):
+	\[ f^*\omega = (u \circ f)(\det \vertarrowbox[1ex]{Df}{Jacobimatrix von $f$}) dx^1 \wedge \dots \wedge dx^n \]
+	auf $ U \cap f^{-1}(V) $ ($U$ Koordinaten bei $p$, $V$ Koordinaten bei $f(p)$).
+\end{lem}
+
+\begin{cor*}
+	Sind $ (x_1,\dotsc,x_n) $ und $ (y_1,\dotsc,y_n) $ Koordinaten, so gilt auf dem Überlappungsbereich
+	\[ dy^1 \wedge \dots \wedge dy^n = \det \frac{\del{y_j}}{\del{x_i}} dx^1 \wedge dx^n \]
+\end{cor*}
+
+\begin{exmp*}
+	$ \begin{pmatrix}
+		x\\y
+	\end{pmatrix} = \begin{pmatrix}
+		r\cos\theta\\r\sin\theta
+	\end{pmatrix} $
+	\begin{align*}
+		dy \wedge dy &= \det \begin{pmatrix}
+			\del{r}(r\cos\theta) & \del{\theta}(r\cos\theta)\\
+			\del{r}(r\sin\theta) & \del{\theta}(r\sin\theta)
+		\end{pmatrix} dr \wedge d\theta\\
+		&= r\big(\cos\theta^2 + \sin\theta^2\big) dr \wedge d\theta
+	\end{align*}
+\end{exmp*}
+
+\begin{defn*}
+	Sei $ \omega \in \Omega^k(M), X \in \Xfrak(M) $. Man definiert punktweise eine $(k-1)$-Form durch
+	\[ \bound{(X \lrcorner \omega)}{p} := X_p \lrcorner \omega_p := \iota_{X_p} \omega_p, \]
+	wobei $ \iota_v \alpha (v_1, \dotsc,v_{k-1}) := \alpha(v,v_1,\dotsc,v_{k-1}) $ für $v,v_j \in V, \alpha \in \Lambda^kV^*$ das \emph{innere Produkt von $\alpha$ mit $v$} bzw. \emph{$\omega$ mit $X$} oder die \emph{Einsetzung von $X$ in $\omega$} ist.
+\end{defn*}
+
+\begin{rem}
+	\begin{enumerate}[label={\roman*})]
+		\item $ \iota_X \omega \in \Omega^{k-1}(M), \omega \in \Omega^k $
+		\item $ \iota_v \circ \iota_v = 0 $
+		\item $ \iota_v(\omega \wedge \eta) = \iota_v(\omega) \wedge \eta + (-1)^k \omega \wedge (\iota_v \eta) $ wenn $ \omega \in \Omega^k(M) $
+	\end{enumerate}
+\end{rem}
