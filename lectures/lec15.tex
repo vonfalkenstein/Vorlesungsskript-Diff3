@@ -1,0 +1,54 @@
+Erinnerung: \lecture $ \omega \in \Omega^1(M) $ heißt geschlossen, falls $ \del{i}\omega_j . \del{j} \omega_i = 0 $ lokal in jeder Karte.\\
+Idee: Definiere eine Abbildung $ d: \Omega^1 \to \Omega^2 $, die in Koordinaten gegeben ist als
+\[ d\omega = d \big( \sum \omega_j dx^j \big) = \sum_{i < j} (\del{i} \omega_j - \del{j} \omega i) dx^i \wedge dx^j \]
+Geschlossenheit wäre dann gleichbedeutend mit $d\omega = 0$.
+
+\begin{defn}[äußere Ableitung, Cartan-Ableitung]\index{äußere Ableitung} \index{Cartan-Ableitung} \label{7.5}
+	Sei $ V \subset \R^n $ offen. Sei $ \omega \in \Omega^k(V) $, also 
+	\[ \omega = \sum_{i_1 < \dots < i_k} \omega_{i_1 \dots i_k} dx^{i_1} \wedge \dots \wedge dx^{i_k}. \]
+	Dann definieren wir die \emph{äußere Ableitung} oder \emph{Cartan-Ableitung} $d\omega$ \emph{von $\omega$} vermöge
+	\[ d\omega := \sum_{i_1 < \dots < i_k} \sum_j \del{j} \omega_{i_1 \dots i_k} dx^j \wedge dx^{i_1} \wedge \dots \wedge dx^{i_k}. \]
+\end{defn}
+
+\begin{rem*}
+	\begin{enumerate}[label={\roman*})]
+		\item $ \omega = f \in C^\infty(M) = \Omega^0(M) $\\
+			$ df = \sum_j \del{j} f dx^j = df $ im Sinne der Definition
+		\item $ \omega \in \Omega^1(M) $
+			\begin{align*}
+				d\omega &= \sum_j \sum_i \del{j}\omega_i dx^j \wedge dx^i = \sum_{j<i} \dotsc + \sum_{j > i} \dots\\
+				&= \sum{j<i} (\del{j} \omega_i - \del{i}\omega_j) dx^j \wedge dx^i
+			\end{align*}
+	\end{enumerate}
+\end{rem*}
+
+\begin{lem}
+	Es gilt für $ V,W \subset \R^n $ offen
+	\begin{enumerate}[label={\roman*})]
+		\item $ d: \Omega^k(V) \to \Omega^{k+1}(V) $ linear
+		\item $ d(\omega \wedge \eta) = d\omega \wedge \eta + (-1)^k \omega \wedge d\eta $ für $ \omega \in \Omega^k(V), \eta \in \Omega^l(V). $
+		\item $d \circ d = 0$
+		\item $ f: V \to W $ glatt, $\omega \in \Omega^k(W): f^*(d\omega) = d(f^*\omega)$
+	\end{enumerate}
+\end{lem}
+
+\begin{thm}
+	Ist $M$ eine differenzierbare Mannigfaltigkeit, so gibt es eine eindeutige lineare Abbildung $ d: \Omega^k(M) \to \Omega^{k+1}(M) $, sodass
+	\begin{gather*}
+		d(\omega \wedge \eta) = d\omega \wedge \eta + (-1)^k \omega \wedge d \eta \qquad \foralll \omega \in \Omega^k, \eta \in \Omega^l\\
+		d \circ d = 0.
+	\end{gather*}
+	Für $ f \in \Omega^0 = C^\infty $ gilt:
+	\begin{gather*}
+		df \ \text{ist das Differential von $f$, also}\\
+		df(X) = X(f) \qquad \foralll X \in \Xfrak^1(M)
+	\end{gather*}
+	In lokalen Koordinaten ist $d\omega$ gegeben wie in \ref{7.5}.
+\end{thm}
+
+\addtocounter{thm}{-1}
+
+\begin{lem}
+	$ f: M \to N $ glatt mit differenzierbaren Mannigfaltigkeiten $M,N$. Dann gilt
+	\[ f^*(d\omega) = d(f^*\omega) \qquad \foralll \omega \in \Omega^k(N). \]
+\end{lem}
