@@ -17,13 +17,13 @@ Geschlossenheit wäre dann gleichbedeutend mit $d\omega = 0$.
 		\item $ \omega \in \Omega^1(M) $
 			\begin{align*}
 				d\omega &= \sum_j \sum_i \del{j}\omega_i dx^j \wedge dx^i = \sum_{j<i} \dotsc + \sum_{j > i} \dots\\
-				&= \sum{j<i} (\del{j} \omega_i - \del{i}\omega_j) dx^j \wedge dx^i
+				&= \sum_{j<i} (\del{j} \omega_i - \del{i}\omega_j) dx^j \wedge dx^i
 			\end{align*}
 	\end{enumerate}
 \end{rem*}
 
 \begin{lem}
-	Es gilt für $ V,W \subset \R^n $ offen
+	Es gilt für $ V \subset \R^n, W \in \R^m $ offen
 	\begin{enumerate}[label={\roman*})]
 		\item $ d: \Omega^k(V) \to \Omega^{k+1}(V) $ linear
 		\item $ d(\omega \wedge \eta) = d\omega \wedge \eta + (-1)^k \omega \wedge d\eta $ für $ \omega \in \Omega^k(V), \eta \in \Omega^l(V). $
@@ -50,3 +50,68 @@ Geschlossenheit wäre dann gleichbedeutend mit $d\omega = 0$.
 	$ f: M \to N $ glatt mit differenzierbaren Mannigfaltigkeiten $M,N$. Dann gilt
 	\[ f^*(d\omega) = d(f^*\omega) \qquad \foralll \omega \in \Omega^k(N). \]
 \end{lem}
+
+\begin{lem}[Koordinaten-unabhängige Definition von $d$]
+	Sei $M$ eine differenzierbare Mannigfaltigkeit, $\omega \in \Omega^k(M), X_1, \dotsc, X_{k+1} \in \Xfrak(M)$. Dann ist
+	\begin{align*}
+		d\omega (X_1, \dots, X_{k+1}) =& \sum_{i=1}^{k+1} (-1)^{i-1} X_i \Big( \omega \big(X_1, \dotsc, \hat{X}_i, \dotsc, X_{k+1}\big) \Big) \\
+			&+ \sum_{1 \leq i < j \leq k+1} (-1)^{i+j} \omega \big([X_i,X_j], X_1, \dotsc, \hat{X}_i, \dotsc, \hat{X}_j, \dotsc, X_{k+1} \big),
+	\end{align*}
+	wobei die Notation $\hat{X}_i$ bedeutet, dass dieser Faktor ausgelassen wird.
+\end{lem}
+
+\begin{rem*}
+	Wegen $ [X_i,X_j] $ in der Formel genügt es nicht, $d\omega$ in $v_1, \dotsc, v_{k+1} \in T_pM$ auszuwerten, sondern man muss sie erst zu Vektorfeldern bei $p$ fortsetzen.
+\end{rem*}
+
+\begin{exmp}
+	\begin{itemize}
+		\item $ \omega \in \Omega^1(\R^3) $, also $ \omega = udx + vdy + wdz $
+			\begin{align*}
+				d\omega &= du \wedge dx + dv \wedge dy + dw \wedge dz\\
+				\noalign{\centering\footnotesize $(du \wedge dx = \del{x}u dx + \del{y}u dy + \del{z}z dz) \wedge dx$}
+				&= (\del{x}v - \del{y}u) dx \wedge dy + (\del{x}w - \del{z}u) dx \wedge dz + (\del{y}w - \del{z}v) dy \wedge dz
+			\end{align*}
+		\item $ \omega \in \Omega^1(\R^3) $, also $ \omega = u dx \wedge dy + v dx \wedge dz + w dy \wedge dz $\\
+			$ d\omega = (\del{z}u - \del{y}v + \del{x}w) dx \wedge dy \wedge dz $
+	\end{itemize}
+\end{exmp}
+
+\begin{rem}
+	Vektor-Kalkül im $\R^3$\\
+	\[ \grad f = \begin{pmatrix}
+		\del{x}f \\ \del{y}f \\ \del{z}f
+		\end{pmatrix} \quad \text{"Gradient"} \qquad (f \in C^\infty(\R^3)) \]
+	\[ div X = \sum_{i=1}^3 \del{i} X^i \quad \text{"Divergenz"} \qquad (X \in \Xfrak^1(\R^3)) \]
+	\begin{align*}
+		rot X =& (\del{y}X^3 - \del{z}X^2) \del{x} \quad \text{"Rotation"} \qquad (X \in \Xfrak^1(\R^3))\\
+		&+ (\del{z}X^1 - \del{x}X^3) \del{y}\\
+		&+ (\del{x}X^2 - \del{y}X^1) \del{z}
+	\end{align*}
+	Betrachte nun $\bar{g}$, die Standard-Metrik auf $\R^3$.
+	\begin{itemize}
+		\item Sei $b$ die Abbildung
+			\begin{align*}
+				b&: \Xfrak(\R^3) \to \Omega^1(R^3)\\
+				b(X) &= \hat{\bar{g}}(X) = \bar{g}(X,\cdot)\\
+				&= \sum_{i,j} \bar{g}_{ij} X^j dx^i = \sum X_i dx^i
+			\end{align*}
+			$B$ ist eine Bündel-Isomorphismus.
+		
+		\item Sei $ \beta: \Xfrak(\R^3) \to \Omega^2(\R^3) $ die Abbildung
+			\[ \beta(X):= X \lrcorner (dx \wedge dy \wedge dz). \]
+			$\beta$ ist ein Bündel-Homomorphismus und sogar ein Isomorphismus: denn $\beta$ ist injektiv und da $\dim T_p\R^3 = 3 = \binom{3}{2} = \dim \Lambda^2 T_p\R^3$ auch surjektiv.
+		
+		\item Sei der "Hodge"-Stern die Abbildung
+			\begin{align*}
+				*: C^\infty(\R^3) &\to \Omega^3(\R^3)\\
+				f &\mapsto f dx \wedge dy \wedge dz
+			\end{align*}
+			$*$ ist ein Bündel-Homomorphismus und sogar ein Isomorphismus, denn $*$ ist injektiv und $\dim \Lambda^0 T_p^*\R^3 = \binom{3}{0} = 1 = \binom{3}{3} = \dim \Lambda^3 T_p^*\R^3$. Dann kommutiert
+			\[ \begin{tikzcd}
+				C^\infty(\R^3) \arrow{r}{\grad} \arrow{d}{\id} & \Xfrak(\R^3) \arrow{r}{rot} \arrow{d}{b} & \Xfrak(\R^3) \arrow{r}{div} \arrow{d}{\beta} & C^\infty \arrow{d}{*}\\
+				\Omega^0(\R^3) \arrow{r}{d} & \Omega^1(\R^3) \arrow{r}{d} & \Omega^2(\R^3) \arrow{r}{d} & \Omega^3(\R^3)
+			\end{tikzcd} \]
+			Wegen $ d \circ d = 0 $ folgt $rot \circ \grad = 0$.
+	\end{itemize}
+\end{rem}
