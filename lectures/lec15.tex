@@ -90,13 +90,13 @@ Geschlossenheit wäre dann gleichbedeutend mit $d\omega = 0$.
 	\end{align*}
 	Betrachte nun $\bar{g}$, die Standard-Metrik auf $\R^3$.
 	\begin{itemize}
-		\item Sei $b$ die Abbildung
+		\item Sei $\flat$ die Abbildung
 			\begin{align*}
-				b&: \Xfrak(\R^3) \to \Omega^1(R^3)\\
-				b(X) &= \hat{\bar{g}}(X) = \bar{g}(X,\cdot)\\
+				\flat&: \Xfrak(\R^3) \to \Omega^1(R^3)\\
+				\flat(X) &= \hat{\bar{g}}(X) = \bar{g}(X,\cdot)\\
 				&= \sum_{i,j} \bar{g}_{ij} X^j dx^i = \sum X_i dx^i
 			\end{align*}
-			$B$ ist eine Bündel-Isomorphismus.
+			$\flat$ ist ein Bündel-Isomorphismus.
 		
 		\item Sei $ \beta: \Xfrak(\R^3) \to \Omega^2(\R^3) $ die Abbildung
 			\[ \beta(X):= X \lrcorner (dx \wedge dy \wedge dz). \]
@@ -109,7 +109,7 @@ Geschlossenheit wäre dann gleichbedeutend mit $d\omega = 0$.
 			\end{align*}
 			$*$ ist ein Bündel-Homomorphismus und sogar ein Isomorphismus, denn $*$ ist injektiv und $\dim \Lambda^0 T_p^*\R^3 = \binom{3}{0} = 1 = \binom{3}{3} = \dim \Lambda^3 T_p^*\R^3$. Dann kommutiert
 			\[ \begin{tikzcd}
-				C^\infty(\R^3) \arrow{r}{\grad} \arrow{d}{\id} & \Xfrak(\R^3) \arrow{r}{rot} \arrow{d}{b} & \Xfrak(\R^3) \arrow{r}{div} \arrow{d}{\beta} & C^\infty \arrow{d}{*}\\
+				C^\infty(\R^3) \arrow{r}{\grad} \arrow{d}{\id} & \Xfrak(\R^3) \arrow{r}{rot} \arrow{d}{\flat} & \Xfrak(\R^3) \arrow{r}{div} \arrow{d}{\beta} & C^\infty \arrow{d}{*}\\
 				\Omega^0(\R^3) \arrow{r}{d} & \Omega^1(\R^3) \arrow{r}{d} & \Omega^2(\R^3) \arrow{r}{d} & \Omega^3(\R^3)
 			\end{tikzcd} \]
 			Wegen $ d \circ d = 0 $ folgt $rot \circ \grad = 0$.
