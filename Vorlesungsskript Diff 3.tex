@@ -11,7 +11,7 @@
 \renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
 \renewcommand{\thethm}{\arabic{chapter}.\arabic{thm}}
  
-%\includeonly{./lectures/cpt07 }
+%\includeonly{./lectures/cpt07}
 
 \hypersetup{
 	colorlinks=true,
@@ -55,7 +55,9 @@ Dieses Skript stellt keinen Ersatz für die Vorlesungsnotizen von Prof. Bahns da
 	
 	
 	
-
+	\appendix
+	\renewcommand{\appendixtocname}{Anhang}
+	\addappheadtotoc
 	\printindex
 	\printindex[lecture]
 \end{document}
