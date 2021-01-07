@@ -8,7 +8,7 @@ Erinnerung (Diff 2): Sei $ M \subset \R^n $ eine Untermannigfaltigkeit, $p \in M
 
 \begin{exmp*}
 	$ \Sbb^2 \subset \R^3,\ T_pM = p^\bot $, denn $ f: \R^n \to \R, f(x) = 1-\|x\|^2 $ für $ p \in \Sbb^2 $, sodass $p_i > 0$ oder $<0$ beschreibt $ \Sbb^2 \cap U_i \ni p, U_i = \{x \in \R^3 \mid x_i > 0 $ oder $ < 0\} $ als Nullstellengebilde und $ Df(p) = -2p. $
-	\image{2.png}{14cm}
+	\incfig{2}{14cm}
 \end{exmp*}
 
 Zur Verallgemeinerung auf Mannigfaltigkeiten\footnote{von nun an betrachten wir nur noch differenzierbare Mannigfaltigkeiten} überlegen wir zunächst, dass 2 Kurven zum selben Tangentialvektor führen, wenn sie in einer Umgebung von $p$ Übereinstimmen. Formalisiert und verallgemeinert führen wir daher ein:
@@ -25,7 +25,7 @@ Zur Verallgemeinerung auf Mannigfaltigkeiten\footnote{von nun an betrachten wir 
 		\item Ist $ \bar{f}: (M,p)\to N $ ein $C^1$/glatter Keim bei $p \in M$, so definiert er einen Homomorphismus von Algebren \big($\Ecal(f(p))$ Keime $(N,f(p)) \to \R$\big)
 		\[ f^*: \Ecal^{1/\infty} (f(p)) \to \Ecal^{1/\infty} (p) \ \text{vermöge } f^* \big( \bar{h} \big) = \bar{h} \circ \bar{f} \quad \text{"pullback", "Zurückziehung"} \]
 		Offensichtlich ist das unabhängig von der Wahl des Repräsentanten.
-		\image{2_2.png}{14cm}
+		\incfig{2_2}{14cm}
 		Es gilt $\id^* = \id$ und $(f \circ g)^* = g^* \circ f^*$. Insbesondere induziert ein bezüglich Komposition invertierbarer Keim $\bar{f}$ ($ \bar{f} \circ \bar{f}^{-1} = \bar{f} \circ \overbar{f^{-1}} = \id $) einen Isomorphismus $f^*, f^{-1 *} \circ f^* = \id$.
 		\item Spezialfall: Ist $\varphi$ eine um $p \in M$ zentrierte Karte, so definiert $\varphi$ einen invertierbaren Keim $ \overbar{\varphi}: (M,p) \to \R^n $ mit $\varphi(p)=0$ und somit einen Isomorphismus $ \varphi^*: \Ecal^{1/\infty}_n \to \Ecal^{1/\infty} (p) $, wobei $ \Ecal_n = \{$Funktionskeime bei $0 \}, $ das heißt man kann sich auf Keime aus $\Ecal_n$ beschränken.
 	\end{enumerate}
@@ -83,7 +83,7 @@ $T_0\R^n$ hat eine besonders einfache Beschreibung:
 	\begin{minipage}{\linewidth}
 		\begin{wrapfigure}{R}{0.3\textwidth}
 %			\centering
-			\includegraphics[width=0.1\textwidth]{2_5_1.png}
+			\includegraphics[width=0.1\textwidth]{2_5_1}
 		\end{wrapfigure}
 		$ M = \Sbb^1, p = (0,1,0)^T, \begin{aligned}[t]
 			&\varphi: U_2^+ \cap \Sbb^2 \to \R^2, \\&\varphi(x) = (x_1,x_3)

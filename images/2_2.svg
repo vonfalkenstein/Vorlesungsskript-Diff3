@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg3592"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="2_2.svg">
+  <defs
+     id="defs3586">
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path883" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="485.4382"
+     inkscape:cy="236.52092"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:object-paths="true"
+     inkscape:window-width="2560"
+     inkscape:window-height="1387"
+     inkscape:window-x="8"
+     inkscape:window-y="1912"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3589">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 14.833459,59.734738 c 7.194154,-10.468814 12.617104,-22.394617 19.911579,-32.606882 9.929072,-1.771839 19.733146,0.338908 29.666918,1.202714 3.972313,0.345418 8.645725,-0.108753 12.561668,-0.668174 3.156141,-0.450877 6.264385,0.400904 9.354433,0.400904 C 79.607262,33.327938 74.851729,41.329912 72.029138,49.444863 70.919537,52.634964 70.864257,56.833422 69.089173,59.2002 51.2887,61.783552 32.852099,56.237919 15.367998,59.734739"
+       id="path4157" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+       d="M 86.862596,43.030393 C 97.539803,40.198082 109.227,39.111012 120.13765,41.293142"
+       id="path4159" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 127.22029,41.560411 c 0.036,-10.561598 10.46737,-13.234715 18.84251,-14.165284 5.32908,-0.592121 11.29818,0.116369 16.70434,0.400902 3.83306,0.201742 6.67675,1.989654 9.88897,3.741775 15.49216,8.450267 11.9283,20.355724 -2.93996,26.860587 -8.17727,3.577553 -31.2627,1.477817 -38.08591,-5.345391 -0.84296,-0.842959 -0.95541,-2.502196 -1.60362,-3.474502 -1.4912,-2.236804 -3.33338,-5.382819 -2.80633,-8.018087 z"
+       id="path4163" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 143.3901,43.030393 c 5.97198,1.2445 15.6228,5.304999 21.9161,3.207235 1.14174,-0.38058 1.93929,-1.417162 3.0736,-1.870888"
+       id="path4165" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 148.09969,44.252501 c 4.85473,-3.933346 10.53,-4.424114 14.53381,-0.420298 0.97917,0.979159 1.90715,1.08155 2.32631,2.513745"
+       id="path4167" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 154.08088,30.468726 c -2.2155,0.266747 -5.02007,0.301011 -6.81537,1.737251 -13.38196,10.705563 31.98046,9.308492 11.22532,-1.069078 -1.30856,-0.654277 -2.94958,-0.3761 -4.40995,-0.668173 z"
+       id="path4169" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 49.578498,35.947752 c -3.190645,-0.602163 -6.797342,-0.704236 -8.418992,2.53906 -4.472786,8.945571 10.650231,13.492319 15.768902,7.349911 6.011061,-7.213269 -5.558033,-11.23288 -7.34991,-9.888971 z"
+       id="path4173" />
+    <circle
+       style="fill:#000000;fill-opacity:0.988235;stroke:#000000;stroke-width:0.499999"
+       id="path4179"
+       cx="148.93594"
+       cy="33.275055"
+       r="0.13363476" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
+       x="150.87366"
+       y="36.88319"
+       id="text4183"><tspan
+         sodipodi:role="line"
+         id="tspan4181"
+         x="150.87366"
+         y="36.88319"
+         style="stroke-width:0.264583">$f(p)$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
+       x="165.2394"
+       y="39.221806"
+       id="text4187"><tspan
+         sodipodi:role="line"
+         id="tspan4185"
+         x="165.2394"
+         y="39.221806"
+         style="stroke-width:0.264583">$V$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
+       x="100.69379"
+       y="37.751823"
+       id="text4191"><tspan
+         sodipodi:role="line"
+         id="tspan4189"
+         x="100.69379"
+         y="37.751823"
+         style="stroke-width:0.264583">$f$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
+       x="48.175331"
+       y="42.963573"
+       id="text4195"><tspan
+         sodipodi:role="line"
+         id="tspan4193"
+         x="48.175331"
+         y="42.963573"
+         style="stroke-width:0.264583">$p$</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.110477px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 45.334041,41.102199 c -0.04717,-0.110194 -0.370502,0.122637 -0.412197,0.17284 -0.190191,0.228911 0.01239,0.489497 0.28479,0.467378 0.07001,-0.0056 0.185435,-0.07168 0.217353,-0.133892 0.04998,-0.0974 -0.0073,-0.425824 -0.08994,-0.506326 z"
+       id="path864" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
+       x="26.36384"
+       y="68.035713"
+       id="text868"><tspan
+         sodipodi:role="line"
+         id="tspan866"
+         x="26.36384"
+         y="68.035713"
+         style="stroke-width:0.264583">$\bound{g \circ f}{\tilde{V}} = \bound{h \circ f}{\tilde{V}}$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
+       x="130.49629"
+       y="66.523811"
+       id="text872"><tspan
+         sodipodi:role="line"
+         id="tspan870"
+         x="130.49629"
+         y="66.523811"
+         style="stroke-width:0.264583">$\bound{g}{V} = \bound{h}{V},\ f(p) \in V$</tspan></text>
+  </g>
+</svg>

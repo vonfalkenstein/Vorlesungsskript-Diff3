@@ -22,6 +22,15 @@
 \lofoot{Prof. Dr. Dorothea Bahns}
 \ohead{Vorlesung \arabic{lecture}}
 
+%==============BILDER============================================================
+
+\newcommand{\incfig}[2]{%
+	\begin{center}
+		\def\svgwidth{#2}
+		\import{./images/}{#1.pdf_tex}
+	\end{center}
+}
+
 %==========================NEWTHM================================================
 
 \declaretheorem[
