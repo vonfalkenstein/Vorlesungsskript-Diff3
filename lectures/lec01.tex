@@ -8,7 +8,9 @@
 			\incfig{1_1 homoeo}{12cm}
 			\begin{rem*}
 				$\varphi$ und auch $\varphi^{-1}$ sind offene Abbildungen, denn Bilder offener Mengen $ \tilde{U} \subset U $ (bezüglich $\varphi$), also $ \varphi(\tilde{U}) \subset \varphi(U) = \im(\varphi) $, sind Urbilder (bezüglich $\varphi^{-1}$) offener Mengen $\tilde{U}$ und somit offen (wegen der Stetigkeit von $\varphi^{-1}$)
-				\incfig{1_1 offen}{8cm}
+				\[ \begin{tikzcd}
+					\tilde{U} \arrow[bend left=50]{rrr}{\varphi} & & & \varphi\big(\tilde{U}\big) \arrow[bend left=50]{lll}{\varphi^{-1}}
+				\end{tikzcd} \]
 				Das heißt $U$ und $\varphi(U)$ sind als topologische Räume äquivalent (weil ihre offenen Mengen in $1-1$-Beziehung zueinander stehen).
 			\end{rem*}
 		\item Hausdorff-Raum:\\

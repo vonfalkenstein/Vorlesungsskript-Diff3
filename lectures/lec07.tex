@@ -11,14 +11,15 @@
 
 \begin{rem*}
 	Wie in der Diff 2 überlegt man sich, dass $df$ eine lineare Approximation von $f$ ist.
-	\image{3_26a}{14cm}
+	\incfig{3_26a}{8cm}
+	\[ \Delta f \approx \bound{\del{i}}{p} f \cdot \vertarrowbox[1ex]{v_i}{$\R^n$} = \bound{\del{i}}{p} f \cdot \bound{dx_i}{p} \vertarrowbox[1ex]{(v)}{$T_{\hat{p}}\R^n$} = df_p(v) \]
 \end{rem*}
 
 \begin{defn}[Ableitung entlang einer Kurve]\index{Ableitung entlang einer Kurve}
 	Sei $ \gamma: I \to M $ eine glatte Kurve in $M$ ($M$ differenzierbar, $I \subset \R$ Intervall). Sei $f \in C^\infty(M)$. Dann ist
 	\[ (f \circ \gamma)'(t) = df_{\gamma(t)}(\gamma'(t)) \]
 	die "\emph{Ableitung von $f$ entlang der Kurve $\gamma$}".
-	\image{3_26b}{14cm}
+	\incfig{3_26b}{14cm}
 \end{defn}
 
 \begin{rem*}

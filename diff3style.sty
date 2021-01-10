@@ -24,10 +24,14 @@
 
 %==============BILDER============================================================
 
-\newcommand{\incfig}[2]{%
-	\begin{center}
+\newcommand{\wrapincfig}[2]{%
 		\def\svgwidth{#2}
 		\import{./images/}{#1.pdf_tex}
+}
+
+\newcommand{\incfig}[2]{%
+	\begin{center}
+		\wrapincfig{#1}{#2}
 	\end{center}
 }
 

@@ -1,6 +1,6 @@
 \chapter{Vektorraumbündel}\lecture 
 
-\image{3}{14cm}
+\incfig{3}{14cm}
 
 \begin{defn}[Vektorraumbündel]\index{Vektorraumbündel}
 	Ein (reelles topologisches) \emph{Vektor(raum)bündel} von Rang $n$ über $B$ ist ein Tripel $(E,\pi,B)$, wobei $E$ ("Totalraum") und $B$ ("Basis") topologische Räume sind und $\pi: E \to B$ stetig, surjektiv und so ist, dass gilt:
@@ -13,7 +13,8 @@
 \begin{minipage}{\linewidth}
 	\begin{wrapfigure}{R}{8cm}
 		\centering
-		\includegraphics[width=8cm]{3_1 kart}
+%		\includegraphics[width=8cm]{3_1 kart}
+		\wrapincfig{3_1 kart}{8cm}
 	\end{wrapfigure}
 
 	Das heißt lokal lässt sich ein Bündel auffassen als karthesisches Produkt. Gibt es eine globale Trivialisierung (also $(\psi,U)$ Bündelkarte mit $U = B$), so heißt das Bündel \emph{trivial}.
@@ -22,16 +23,16 @@
 \begin{exmp*}
 	\begin{enumerate}[label = {\roman*})]
 		\item 	Zylinder: $ \Sbb^1 \times \R \to \Sbb^1 $ ist trivial
-			\image{3_1 zylinder}{2cm}
+			\incfig{3_1 zylinder}{2cm}
 		\item "Unendlich ausgedehntes" Möbiusband  $ \pi: E \to \Sbb^1 $ von Rang 1, ein nicht triviales Bündel über $\Sbb^1$ mit Faser $\cong \R$ (später mehr)
-			\image{3_1 moebius}{8cm}
+			\incfig{3_1 moebius}{8cm}
 		\item $ N = \{(p,v) \in \Sbb^2 \times \R^3 \mid v \| p\}\ (\Sbb^2 \subset \R^3) $
-			\image{3_1 buendel}{12cm}
+			\incfig{3_1 buendel}{12cm}
 			Das Normalenbündel ist trivial.
 		\item \begin{minipage}{\linewidth}
 				\begin{wrapfigure}{R}{5cm}
 					\centering
-					\includegraphics[width=5cm]{3_1 moebius2}
+					\wrapincfig{3_1 moebius2}{5cm}
 				\end{wrapfigure}
 				(vgl. Diff 2)
 			\end{minipage} \\
@@ -44,12 +45,12 @@
 
 \begin{defn}[Schnitt]\index{Vektorraumbündel!Schnitt}
 	Ein \emph{Schnitt} eines Vektorraumbündels $ (E,\pi,B) $ ist eine stetige Abbildung $ z: B \to E $ mit $z(x) \in E_x\ \foralll x \in B$.
-	\image{3_2}{8cm}
+	\incfig{3_2}{8cm}
 \end{defn}
 	
 \begin{exmp*}
 	Nullschnitt: $ B \to E,\ x \mapsto 0 \in E_x $
-	\image{3_2 nullschnitt}{12cm}
+	\incfig{3_2 nullschnitt}{12cm}
 \end{exmp*}
 
 \begin{rem*}
@@ -66,14 +67,14 @@
 
 \begin{rem*}
 	$\Phi_{\alpha \beta}$ nehmen tatsächlich Werte in $GL(n,\R)$ an:
-	\image{3_3}{12cm}
+	\incfig{3_3}{12cm}
 	$$ \bound{\varphi_\beta}{E_x} \circ \big( \bound{\varphi_\alpha}{E_x} \big)^{-1}: \underset{\cong \R^n}{\{x \times \R^n\}} \to \underset{\cong \R^n}{\{x \times \R^n\}} $$
 	ist ein Vektorraumisomorphismus für jedes $x$. (nach Definition Bündelkarte)
 \end{rem*}
 
 \begin{rem*}
 	Es gilt die sogenannte \emph{Kozykelbedingung}:
-	\image{3_3 kozykel}{14cm}
+	\incfig{3_3 kozykel}{14cm}
 \end{rem*}
 
 \begin{exmp*}
@@ -81,7 +82,8 @@
 	\begin{minipage}{\linewidth}
 		\begin{wrapfigure}{R}{4cm}
 			\centering
-			\includegraphics[width=4cm]{3_3 circ}
+%			\includegraphics[width=4cm]{3_3 circ}
+			\wrapincfig{3_3 circ}{4cm}
 		\end{wrapfigure}
 		$ U_1 = \Sbb^1 \setminus \{p_1\},\ U_2 = \Sbb^1 \setminus \{p_2\} $ (offen in $\Sbb^1$)\\
 		überdeckt $\Sbb^1$: $ U_1 \cap U_2 = \bigg\{ \underset{V_+}{\bigcap}, \overset{V_-}{\bigcup} \bigg\} $\\
@@ -93,7 +95,7 @@
 		\end{alignat*}
 		erhält man das "Möbiusband" (unendlich ausgedehnt)
 	\end{minipage}
-	\image{3_3 geom}{15cm}
+	\incfig{3_3 geom}{15cm}
 \end{exmp*}
 
 \begin{defn*}
@@ -136,7 +138,8 @@
 	\begin{minipage}{\linewidth}
 		\begin{wrapfigure}{R}{4cm}
 			\centering
-			\includegraphics[width=4cm]{3_6}
+%			\includegraphics[width=4cm]{3_6}
+			\wrapincfig{3_6}{4cm}
 		\end{wrapfigure}
 		$ \pi: T\Sbb^1 \to \Sbb^1,\ \pi(x,v) = x $\\
 		globale Trivialisierung: $ T\Sbb^1 \to \Sbb^1 \times \R,\ (x,v) \mapsto (x,\lambda) $, wobei $\lambda v = \begin{pmatrix}
@@ -179,5 +182,5 @@
 \begin{defn}[Differential]\index{Differential}
 	Ist $ f: M \to N $ glatt, so ist durch $ T_pf: T_pM \to T_{f(p)}N $ eine differenzierbare Abbildung
 	\[ Tf: TM \to TN \] gegeben. $Tf$ nennt man das \emph{Differential}.
-	\image{3_8}{14cm}
+	\incfig{3_8}{14cm}
 \end{defn}
