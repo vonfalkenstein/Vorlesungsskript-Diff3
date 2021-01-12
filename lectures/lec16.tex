@@ -15,31 +15,31 @@ Das heißt wir erfahren etwas über den zugrunde liegenden Raum, wenn wir Formen
 
 \begin{defn}[geschlossene und exakte $k$-Formen]
 	\begin{align*}
-		Z^k(M) &:= \ker \left( d: \Omega^k(M) \to \Omega^{k+1}(M) \right)\\
+		\Zcal^k(M) &:= \ker \left( d: \Omega^k(M) \to \Omega^{k+1}(M) \right)\\
 			&= \{ \text{"geschlossene $k$-Formen"} \}\\
-		B^k(M) &:= \im \left( d: \Omega^{k-1}(M) \to \Omega^k(M) \right)\\
+		\Bcal^k(M) &:= \im \left( d: \Omega^{k-1}(M) \to \Omega^k(M) \right)\\
 			&= \{ \text{"exakte $k$-Formen"} \}
 	\end{align*}
 \end{defn}
 
 \begin{rem*}
 	\begin{enumerate}[label={\roman*})]
-		\item Für $k<0$ und $k>\dim M = n$: $ \Omega^k(M) = \{0\} $, also z.B. $ Z^n(M) = \Omega^n(M) $ und $ B^0(M) = \{0\}. $
+		\item Für $k<0$ und $k>\dim M = n$: $ \Omega^k(M) = \{0\} $, also z.B. $ \Zcal^n(M) = \Omega^n(M) $ und $ \Bcal^0(M) = \{0\}. $
 		\item Für $k=1$ stimmt die Definition von Geschlossenheit mit unserer bisherigen überein.
 	\end{enumerate}
 \end{rem*}
 
 \begin{defn}[de-Rham-Kohomologie-Gruppe]\index{de-Rham-Kohomologie-Gruppe}
 	Man nennt den Quotienten-Vektorraum
-	\[ \drco{k}{M} = \frac{Z^k(M)}{B^k(M)} \]
+	\[ \drco{k}{M} = \frac{\Zcal^k(M)}{\Bcal^k(M)} \]
 	die \emph{$k$-te de-Rham-Kohomologie-Gruppe}.
 \end{defn}
 
 \begin{rem*}
 	\begin{itemize}
-		\item Der Quotient kann gebildet werden, da wegen $d \circ d = 0$ gilt: $B^k(M) \subseteq Z^k(M)$
-		\item Sei $\omega \in Z^k(M)$, dann ist $[\omega] \in \drco{k}{M}$:
-			\[ [\omega] = \{ \eta \in Z^k(M) \mid \omega - \eta \in B^k(M) \} \]
+		\item Der Quotient kann gebildet werden, da wegen $d \circ d = 0$ gilt: $\Bcal^k(M) \subseteq \Zcal^k(M)$
+		\item Sei $\omega \in \Zcal^k(M)$, dann ist $[\omega] \in \drco{k}{M}$:
+			\[ [\omega] = \big\{ \eta \in \Zcal^k(M) \mid \omega - \eta \in \Bcal^k(M) \big\} \]
 			Ist $[\omega] = [\tilde{\omega}]$, so nennt man $\omega$ \emph{kohomolog} zu $\tilde{\omega}$.
 		\item Die Gruppenoperation ist die Addition.
 		\item $ \drco{k}{M} = 0 $ für $k<0, k > \dim M$
@@ -62,8 +62,8 @@ Das heißt wir erfahren etwas über den zugrunde liegenden Raum, wenn wir Formen
 \begin{lem}[Verhalten unter Pullback]
 	Sei $ f: M \to N $ glatt. Dann gilt
 	\begin{align*}
-		f^*\big(Z^k(N)\big) &\subset Z^k(M) \quad \text{und}\\
-		f^*\big(B^k(N)\big) &\subset B^k(M).
+		f^*\big(\Zcal^k(N)\big) &\subset \Zcal^k(M) \quad \text{und}\\
+		f^*\big(\Bcal^k(N)\big) &\subset \Bcal^k(M).
 	\end{align*}
 	Somit induziert $f^*$ auf $\drco{}{N}$ eine wohldefinierte Abbildung
 	\begin{align*}
@@ -143,12 +143,12 @@ Um \ref{7.16} zu verstehen müssen wir etwas weiter\footnote{Achtung! Folgende A
 
 Zum Beweis von \ref{7.21} benötigen wir einige Lemmata. Die Grundidee ist, dass zueinander homotope Abbildungen den selben Pullback auf der de-Rham-Kohomologie-Gruppe induzieren. Doch was heißt \( f^* = g^* \) auf \( \drco{k}{N} \)?
 
-Seien $f,g: M \to N$ zwei glatte Abbildungen und $\omega \in Z^k(N)$. Zu zeigen wäre, dass ein $\eta \in \Omega^{k-1}(M)$ existiert, sodass
+Seien $f,g: M \to N$ zwei glatte Abbildungen und $\omega \in \Zcal^k(N)$. Zu zeigen wäre, dass ein $\eta \in \Omega^{k-1}(M)$ existiert, sodass
 \begin{equation}\label{eins}
 	f^*\omega - g^*\omega = d\eta
 \end{equation}
 (denn dann würde \( f^*[\omega] - g^*[\omega] = [d\eta] = 0 \) gelten).\\
-Ansatz: \( \eta = h_k(\omega) \) mit \( h_k: Z^(N) \to \Omega^{k-1}(M) \)\\
+Ansatz: \( \eta = h_k(\omega) \) mit \( h_k: \Zcal^(N) \to \Omega^{k-1}(M) \)\\
 Einfacher: Finde \( h_k: \Omega^(N) \to \Omega^{k-1}(M), k \in \N, \) sodass
 \begin{equation}\label{zwei}
 	d(h_k(\omega)) + h_{k+1}(d\omega) = f^*\omega - g^*\omega.
