@@ -1,5 +1,210 @@
 \lecture
 
+Erinnerung: \begin{enumerate}[label={\roman*})]
+	\item $ d: \Omega^k(M) \to \Omega^{k+1}(M) $ Cartan Ableitung (Satz \ref{7.7})
+	\item Satz \ref{3.40} (Lemma von Poincaré):\\
+		Auf sternförmigen Gebieten sind geschlossene Formen $\omega \in \Omega^1(M)$ exakt, das heißt $\existss \alpha$, sodass $\omega = d\alpha$.
+	\item \label{erinnerung} $ \omega = \frac{1}{x^2+y^2}(xdy - ydx) $ ist auf
+		\begin{itemize}
+			\item $\R^2 \setminus \{0\}$ geschlossen, aber nicht exakt
+			\item auf $\{(x,y) \mid x>0\}$ exakt (und immer noch geschlossen) (mit $\alpha = \arctan \frac{y}{x}$)
+		\end{itemize}
+\end{enumerate}
+
+Das heißt wir erfahren etwas über den zugrunde liegenden Raum, wenn wir Formen auf Exaktheit/Geschlossenheit untersuchen.
+
+\begin{defn}[geschlossene und exakte $k$-Formen]
+	\begin{align*}
+		Z^k(M) &:= \ker \left( d: \Omega^k(M) \to \Omega^{k+1}(M) \right)\\
+			&= \{ \text{"geschlossene $k$-Formen"} \}\\
+		B^k(M) &:= \im \left( d: \Omega^{k-1}(M) \to \Omega^k(M) \right)\\
+			&= \{ \text{"exakte $k$-Formen"} \}
+	\end{align*}
+\end{defn}
+
+\begin{rem*}
+	\begin{enumerate}[label={\roman*})]
+		\item Für $k<0$ und $k>\dim M = n$: $ \Omega^k(M) = \{0\} $, also z.B. $ Z^n(M) = \Omega^n(M) $ und $ B^0(M) = \{0\}. $
+		\item Für $k=1$ stimmt die Definition von Geschlossenheit mit unserer bisherigen überein.
+	\end{enumerate}
+\end{rem*}
+
+\begin{defn}[de-Rham-Kohomologie-Gruppe]\index{de-Rham-Kohomologie-Gruppe}
+	Man nennt den Quotienten-Vektorraum
+	\[ \drco{k}{M} = \frac{Z^k(M)}{B^k(M)} \]
+	die \emph{$k$-te de-Rham-Kohomologie-Gruppe}.
+\end{defn}
+
+\begin{rem*}
+	\begin{itemize}
+		\item Der Quotient kann gebildet werden, da wegen $d \circ d = 0$ gilt: $B^k(M) \subseteq Z^k(M)$
+		\item Sei $\omega \in Z^k(M)$, dann ist $[\omega] \in \drco{k}{M}$:
+			\[ [\omega] = \{ \eta \in Z^k(M) \mid \omega - \eta \in B^k(M) \} \]
+			Ist $[\omega] = [\tilde{\omega}]$, so nennt man $\omega$ \emph{kohomolog} zu $\tilde{\omega}$.
+		\item Die Gruppenoperation ist die Addition.
+		\item $ \drco{k}{M} = 0 $ für $k<0, k > \dim M$
+		\item Für $ 0 \leq k \leq \dim M $ gilt $ \drco{k}{M} = 0 $ genau dann, wenn jede geschlossene $k$-Form exakt ist.
+	\end{itemize}
+\end{rem*}
+
+\begin{exmp*}
+	$ \drco{1}{U} = 0 $ für jedes sternförmige Gebiet $U \subseteq \R^n$\\
+	$ \drco{1}{\R^2 \setminus \{0\}} \neq 0 $ (siehe \ref{erinnerung})
+\end{exmp*}
+
+\begin{lem}\label{7.14}
+	Sind $M$ und $N$ zueinander diffeomorphe differenzierbare Mannigfaltigkeiten, so sind ihre Kohomologie-Gruppen isomorph, das heißt
+	\[ \drco{k}{M} \cong \drco{k}{N}. \]
+\end{lem}
+
+\noindent Dies folgt direkt aus
+
+\begin{lem}[Verhalten unter Pullback]
+	Sei $ f: M \to N $ glatt. Dann gilt
+	\begin{align*}
+		f^*\big(Z^k(N)\big) &\subset Z^k(M) \quad \text{und}\\
+		f^*\big(B^k(N)\big) &\subset B^k(M).
+	\end{align*}
+	Somit induziert $f^*$ auf $\drco{}{N}$ eine wohldefinierte Abbildung
+	\begin{align*}
+		f^*: \drco{k}{N} &\to \drco{k}{M}\\
+		f^*[\omega] &:= [f^*\omega].
+	\end{align*}
+	Zudem gilt:
+	\begin{enumerate}[label={\roman*})]
+		\item Ist $g: N \to P$ eine weitere glatte Abbildung, so ist
+			\[ (g \circ f)^* = f^* \circ g^*: \drco{k}{P} \to \drco{k}{M}. \]
+		\item Ist $\id: M \to M$ die Identität, so ist $ \id^*: \drco{k}{M} \to \drco{k}{M} $ die Identität.
+	\end{enumerate}
+\end{lem}
+
+Die Aussage aus \ref{7.14} folgt in der Tat sofort, weil in dem Fall $ f^*: \drco{k}{N} \to \drco{k}{M} $ ein Isomorphismus ist.
+
+\begin{rem}\label{7.16}
+	Tatsächlich gilt etwas viel Allgemeineres:\\
+	Die de-Rham-Kohomologie ist von der differenzierbaren Struktur unabhängig, tatsächlich eine topologische Invariante, das heißt wenn es einen Homöomorphismus $M \to N$ (glatte Mannigfaltigkeiten) gibt, so gilt schon $ \drco{k}{M} \cong \drco{k}{N} $.
+\end{rem}
+
+\noindent Eine elementare Berechnung:
+
+\begin{lem}\label{7.17}
+	Betrachte $ M = \bigsqcup_{j \in J} M_j $ disjunkte Vereinigung, $J$ endlich, $M_j$ differenzierbare Mannigfaltigkeiten. Dann ist 
+	\[ \drco{k}{M} \cong \bigoplus_{j \in J} \drco{p}{M_j}. \]
+\end{lem}
+
+\begin{cor*}
+	Es genügt, zusammenhängende Mannigfaltigkeiten $M$ zu betrachten.
+\end{cor*}
+
+\begin{lem}
+	$M$ zusammenhängend $\implies \drco{0}{M} = \{  f $ konstant$\}$ 
+\end{lem}
+
+\begin{cor}\label{7.19}
+	Sei $ M = \{ p_1, \dotsc, p_k \} $ eine Mannigfaltigkeit der Dimension 0. Dann ist $ \drco{0}{M} = \bigoplus_{j=1}^k V_j $, wobei $V_j$ eindimensionale Vektorräume sind, und $\drco{k}{M} = 0$ für $k \geq 1$.
+\end{cor}
+
+\begin{rem*}
+	\ref{7.17} und \ref{7.19} gelten auch im abzählbaren Fall.
+\end{rem*}
+
+Um \ref{7.16} zu verstehen müssen wir etwas weiter\footnote{Achtung! Folgende Ausführungen zu Homotopie sind \emph{Extrastoff} für besonders Interessierte und damit \emph{nicht klausurrelevant}. Allerdings sind sie als gute Übung im Rechnen mit $d$ und $\Omega^k$ zu betrachten.} ausholen:
+
+\begin{defn}[Homotopie-Äquivalenz]\index{Homotopie-Äquivalenz}
+	Eine stetige Abbildung $f: X \to Y$ zwischen topologischen Räumen heißt \emph{Homotopie-Äquivalenz}, falls es eine stetige Abbildung $g: Y \to X$ gibt, sodass $f \circ g$ homotop zu $\id_Y$ ist und $g \circ f$ homotop zu $\id_X$.\\
+	Hierbei heißen zwei stetige Abbildungen $ \varphi_0, \varphi_1: X_1 \to X_2 $ \emph{homotop} zueinander, falls es eine stetige Abbildung $ H: X_1 \times [0,1] \to X_2 $ gibt mit
+	\[ H(x,0) = \varphi_0(x),\quad H(x,1) = \varphi_1(x). \] Man schreibt dann $ \varphi_0 \cong \varphi_1 $. Tatsächlich ist Homotopie symmetrisch:
+	\[ \tilde{H}(x,0) = \varphi_1(x), \quad \tilde{H}(x,1) = \varphi_0(x) \]
+	für \( \tilde{H} = H \circ (\id \times \psi),\ \psi(t) = 1-t \).
+\end{defn}
+
+\begin{rem*}
+	Man kann also die Abbildungen \( \varphi_0 \) und \( \varphi_1 \) (wenn sie homotop\footnote{$\underbrace{homo}_{"gleich"}\underbrace{top}_{"Ort"}$} zueinander sind) stetig ineinander Überführen (deformieren).
+\end{rem*}
+
 \begin{exmp*}%das mit dem Link
+	
+	\incfig{7_20a}{8cm}
+	\( \Sbb^1 \times \Sbb^1 \) kann auch anders eingebettet werden, und zwar z.B. so:
+	\incfig{7_20b}{12cm}
+	Homotopie zwischen diesen Einbettungen:
 	\href{https://en.wikipedia.org/wiki/Homotopy#/media/File:Mug_and_Torus_morph.gif}{GIF}
 \end{exmp*}
+
+\noindent Warum ist Homotopie-Äquivalenz hier wichtig?
+
+\begin{thm}\label{7.21}
+	Gibt es eine Homotopie-Äquivalenz zwischen zwei glatten Mannigfaltigkeiten $N$ und $M$, so gilt \( \drco{k}{M} \cong \drco{k}{N}. \)
+\end{thm}
+
+\begin{cor*}
+	Sind $N$ und $M$ homöomorph, so gilt \( \drco{k}{M} \cong \drco{k}{N}. \)
+\end{cor*}
+
+Zum Beweis von \ref{7.21} benötigen wir einige Lemmata. Die Grundidee ist, dass zueinander homotope Abbildungen den selben Pullback auf der de-Rham-Kohomologie-Gruppe induzieren. Doch was heißt \( f^* = g^* \) auf \( \drco{k}{N} \)?
+
+Seien $f,g: M \to N$ zwei glatte Abbildungen und $\omega \in Z^k(N)$. Zu zeigen wäre, dass ein $\eta \in \Omega^{k-1}(M)$ existiert, sodass
+\begin{equation}\label{eins}
+	f^*\omega - g^*\omega = d\eta
+\end{equation}
+(denn dann würde \( f^*[\omega] - g^*[\omega] = [d\eta] = 0 \) gelten).\\
+Ansatz: \( \eta = h_k(\omega) \) mit \( h_k: Z^(N) \to \Omega^{k-1}(M) \)\\
+Einfacher: Finde \( h_k: \Omega^(N) \to \Omega^{k-1}(M), k \in \N, \) sodass
+\begin{equation}\label{zwei}
+	d(h_k(\omega)) + h_{k+1}(d\omega) = f^*\omega - g^*\omega.
+\end{equation}
+Im Fall $d\omega = 0$ ist das Formel \ref{eins}.
+
+\begin{notat*}
+	Man schreibt wie beim Cartan-Differential nur $h$ und versteht darunter jeweils das zum jeweiligen Grad gehörige Element der Familie \( \{h_k\}_{k \in \N}. \)
+\end{notat*}
+
+\begin{defn*}[Homotopie-Operator] \index{Homotopie-Operator}
+	Eine Familie linearer Abbildungen \( h: \Omega^k \to \Omega^{k-1} \) mit \ref{zwei} heißt \emph{(Ko-Ketten-) Homotopie-Operator} zwischen $f^*$ und $g^*$. 
+\end{defn*}
+
+\noindent Aus der Definition unmittelbar klar ist dann:
+
+\begin{lem}
+	Seien \( f,g: M \to N \) glatt und es gebe einen Homotopie-Operator zwischen $f^*$ und $g^*$. Dann sind die induzierten Abbildungen \( f^*,g^*: \drco{k}{N} \to \drco{k}{M} \) gleich.
+\end{lem}
+
+\subsection*{Existenz von Homotopie-Operatoren:}
+
+\begin{lem}
+	Sei \( \iota_0: M \to M \times [0,1], \iota_0(p) = (p,0) \) und \( \iota_1: M \to M \times [0,1], \iota_1(p) = (p,1). \) Dann gibt es einen Homotopie-Operator $h$ zwischen $\iota_0^*,\iota_1^*: \Omega^k(M \times [0,1]) \to  \Omega^k(M)$.
+\end{lem}
+
+\begin{prop*}
+	\( h(d\omega) + d h(\omega) = \iota_1^*(\omega) - \iota_0^*(\omega) \)
+\end{prop*}
+
+\begin{lem}\label{7.24}
+	Seien \( f,g: M \to N \) glatt und homotop zueinander mit einer \emph{glatten} Homotopie-Funktion \( H: M \times [0,1] \to N \) mit \( H(\cdot,0) = f, H(\cdot,1)=g \). Dann gilt 
+	\[ f^*=g^*: \drco{k}{N} \to \drco{k}{M}. \]
+\end{lem}
+
+\begin{thm}[Whitney]
+	Ist $f: M \to N$ stetig, so ist $f$ homotop zu einer glatten Abbildung.
+	\incfig{7_25}{10cm}
+\end{thm}
+
+\begin{cor*}
+	Sind \( f,g: M \to N \) glatt und homotop zueinander, so sind sie glatt homotop zueinander, also homotop mit einer glatten Homotopie-Funktion.
+\end{cor*}
+
+Insbesondere konnten wir also in \ref{7.24} o.B.d.A. annehmen, dass die Homotopie glatt ist. Damit folgen Satz \ref{7.21} und die Folgerung daraus.
+
+Man kann diesen abstrakten Zugang anwenden, um \( \drco{k}{M} \) zu berechnen:
+
+\begin{lem}
+	Ist $M$ zusammensetzbar, ist also $\id_M$ homotop zu einer konstanten Abbildung, so ist \( \drco{k}{M} = 0 \ \foralll k \geq 1 \).
+\end{lem}
+
+\begin{thm}[Poincaré-Lemma]
+	Ist $U \subseteq \R^n$ sternförmig, so ist \( \drco{k}{U} = 0 \ \foralll k \geq 1. \)
+\end{thm}
+
+\begin{cor*}
+	Jeder Punkt $p \in M$ besitzt eine Umgebung auf der jede geschlossene Form ($k \geq 1$) exakt ist.
+\end{cor*}

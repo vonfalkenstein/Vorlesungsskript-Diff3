@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="7_25.svg">
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path848" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="406.27001"
+     inkscape:cy="139.95091"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 28.33057,38.887717 51.716654,20.847023 70.158251,37.01683 88.867118,21.381562"
+       id="path10" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+       d="M 92.475255,30.067821 H 120.80582"
+       id="path12" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.466;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 128.32477,38.346546 c 0.82443,-7.262914 10.33871,-19.740467 17.22279,-16.833161 8.28073,3.49714 12.13385,18.912373 22.79972,16.209711 7.5611,-4.216475 9.82551,-10.887651 13.77823,-17.664427"
+       id="path14"
+       sodipodi:nodetypes="cscc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="31.938707"
+       y="44.767643"
+       id="text1135"><tspan
+         sodipodi:role="line"
+         id="tspan1133"
+         x="31.938707"
+         y="44.767643"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583">$\varphi_0 = H(\cdot,0)$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
+       x="80.319939"
+       y="44.79018"
+       id="text1139"><tspan
+         sodipodi:role="line"
+         x="80.319939"
+         y="44.79018"
+         style="stroke-width:0.264583"
+         id="tspan1147">$H: M \times [0,1] \to N$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
+       x="99.21875"
+       y="51.782738"
+       id="text1159"><tspan
+         sodipodi:role="line"
+         id="tspan1157"
+         x="99.21875"
+         y="51.782738"
+         style="stroke-width:0.264583">stetig</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.53414px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.220884"
+       x="172.17412"
+       y="37.392525"
+       id="text1163"
+       transform="scale(0.83483764,1.1978377)"><tspan
+         sodipodi:role="line"
+         id="tspan1161"
+         x="172.17412"
+         y="37.392525"
+         style="stroke-width:0.220884">$\varphi_1 = H(\cdot,1)$</tspan></text>
+  </g>
+</svg>

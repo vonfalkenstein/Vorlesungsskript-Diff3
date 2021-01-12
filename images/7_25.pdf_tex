@@ -1,6 +1,6 @@
 %% Creator: Inkscape 1.0.1 (3bc2e813f5, 2020-09-07), www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file '1_2 sphere.pdf' (pdf, eps, ps)
+%% Accompanies image file '7_25.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{190.04300363bp}%
+    \setlength{\unitlength}{436.92723056bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,11 +50,13 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,1.56179921)%
+  \begin{picture}(1,0.21229016)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{1_2 sphere.pdf}}%
-    \put(-0.01310349,1.44186374){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$n=2$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{1_2 sphere.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{7_25.pdf}}%
+    \put(0.02432978,0.05122455){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\varphi_0 = H(\cdot,0)$\end{tabular}}}}%
+    \put(0.33821191,0.05107833){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$H: M \times [0,1] \to N$\end{tabular}}}}%
+    \put(0.46082142,0.00571283){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}stetig\end{tabular}}}}%
+    \put(0.74964456,0.05107836){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\varphi_1 = H(\cdot,1)$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

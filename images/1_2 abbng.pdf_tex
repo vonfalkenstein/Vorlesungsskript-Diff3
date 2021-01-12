@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{375.40074496bp}%
+    \setlength{\unitlength}{375.40054853bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,17 +50,18 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.46993404)%
+  \begin{picture}(1,0.46993429)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{1_2 abbng.pdf}}%
-    \put(0.14916606,0.18564461){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\varphi_3^+$\end{tabular}}}}%
-    \put(0.21536127,0.4340147){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$U_3^+ \cap \Sbb^2$\end{tabular}}}}%
-    \put(0.69499102,0.25954612){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\varphi_2^-$\end{tabular}}}}%
-    \put(0.60207257,0.35883324){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$U_2^- \cap \Sbb^2$\end{tabular}}}}%
+    \put(0.14916561,0.1856447){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\varphi_3^+$\end{tabular}}}}%
+    \put(0.21536086,0.43401493){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$U_3^+ \cap \Sbb^2$\end{tabular}}}}%
+    \put(0.69499086,0.25954626){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\varphi_2^-$\end{tabular}}}}%
+    \put(0.60207236,0.35883343){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$U_2^- \cap \Sbb^2$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{1_2 abbng.pdf}}%
-    \put(0.06455976,0.26769927){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
-    \put(0.18193431,0.30587279){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$2$\end{tabular}}}}%
-    \put(0.13056064,0.38079273){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$3$\end{tabular}}}}%
+    \put(0.06455927,0.26769941){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
+    \put(0.18193388,0.30587295){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$2$\end{tabular}}}}%
+    \put(0.13056019,0.38079293){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$3$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{1_2 abbng.pdf}}%
   \end{picture}%
 \endgroup%

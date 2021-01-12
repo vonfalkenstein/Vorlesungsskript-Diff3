@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{424.53217508bp}%
+    \setlength{\unitlength}{424.53217647bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -54,8 +54,9 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{3_1 buendel.pdf}}%
-    \put(0.24402978,0.21800861){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p$\end{tabular}}}}%
+    \put(0.24402979,0.21800862){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p$\end{tabular}}}}%
     \put(0.28504129,0.35050741){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$v$\end{tabular}}}}%
-    \put(0.64468088,0.1555449){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Normalenbündel an $\Sbb^2$\end{tabular}}}}%
+    \put(0.64468088,0.15554491){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Normalenbündel an $\Sbb^2$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{3_1 buendel.pdf}}%
   \end{picture}%
 \endgroup%
