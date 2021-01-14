@@ -1,0 +1,77 @@
+\chapter{Orientierung und Orientierbarkeit}
+
+\lecture
+Hauptthema für den Rest der Vorlesung: Integration, zunächst für \emph{orientierbare} Mannigfaltigkeiten. Als Referenz dazu ist Kapitel 15 im Lee hilfreich.
+
+\incfig{8}{14cm}
+
+\begin{defn}[Orientierung]\index{Orientierung}	
+	Zwei geordnete Basen \( (v_1, \dotsc, v_2) \) und \( (w_1, \dotsc, w_n) \) eines Vektorraums $V$ heißen \emph{gleich orientiert}, wenn \( S \in \GL(n,\R), v_i = \sum_j S_{ij} w_j, \) eine positive Determinante hat.
+\end{defn}
+
+\begin{rem*}
+	Gleich orientiert zu sein definiert eine Äquivalenzrelation.
+\end{rem*}
+
+Für einen Vektorraum $V$ mit $\dim V = n \geq 1$ ist die Orientierung also eine Äquivalenzklasse gleich orientierter Basen. Einen Vektorraum mit Wahl einer Orientierung nennen wir \emph{orientierten Vektorraum}, \( (v_1, \dotsc, v_n) \in \) Orientierung heißt \emph{(positiv) orientiert}, sonst \emph{negativ orientiert}. Für \( \dim V = 0 \) ist die Orientierung eine Wahl $\pm1$.
+
+\begin{exmp*}
+	\( [(e_1, \dotsc, e_n)] \) \emph{Standardorientierung}
+\end{exmp*}
+
+\begin{lem}
+	Sei $V$ ein Vektorraum, $\dim V = n$. Dann bestimmt \( \alpha \in \Lambda^n(V^*), \alpha \neq 0 \) eine Orientierung:
+	\[ \Ocal_\alpha = \{ (v_1,\dotsc, v_n) \ \text{geordnete Basis} \mid \alpha(v_1, \dotsc, v_n) > 0 \} \]
+	(ist $n = 0$: $\Ocal_\alpha = $Vorzeichen von $\alpha$). Für \( \alpha, \tilde{\alpha} \in \Lambda^n(V^*) \) gilt
+	\[ \Ocal_\alpha = \Ocal_{\tilde{\alpha}} \iff \alpha = \lambda \tilde{\alpha},\quad \lambda > 0. \]
+\end{lem}
+
+\begin{rem*}
+	Ist $V$ ein orientierter Vektorraum und \( \alpha \in \Lambda^n(V^*), \alpha \neq 0 \), so heißt $\alpha$ positiv orientiert, falls \( \Ocal_V = \Ocal_\alpha \) ($\Ocal_V$ ist die Orientierung von $V$).
+\end{rem*}
+
+\begin{exmp*}
+	\( e^1 \wedge \dots \wedge e^n \) ist positiv orientiert bezüglich der Standardorientierung.
+\end{exmp*}
+
+\begin{defn}[Orientierung auf Mannigfaltigkeiten]\index{Mannigfaltigkeit!Orientierung}
+	Sei $M$ eine differenzierbare Mannigfaltigkeit, versehen mit einer \emph{punktweisen Orientierung} (d.h. jeder Tangentialraum ist mit einer Orientierung versehen). Ein lokales $n$-Bein \( (E_1, \dotsc E_n) \) für $TM$ heißt \emph{(positiv) orientiert}, falls \( \left( \bound{E_1}{p}, \dotsc, \bound{E_n}{p} \right) \) eine positiv orientierte Basis des $T_pM$ ist $\foralll p \in U \subset M$, \emph{negativ orientiert}, falls \( \left( \bound{E_1}{p}, \dotsc, \bound{E_n}{p} \right) \) eine negativ orientierte Basis ist $\foralll p \in U$. Eine punktweise Orientierung heißt \emph{stetig}, falls jedes $p \in ;$ im Definitionsbereich eines lokalen positiv orientierten $n$-Beins liegt.\\
+	Eine \emph{Orientierung} von $M$ ist eine punktweise, stetige Orientierung. $M$ heißt \emph{orientierbar}, falls $M$ eine Orientierung besitzt. Eine \emph{orientierte Mannigfaltigkeit} ist eine Manngifaltigkeit mit einer Orientierung.
+	\incfig{8_3}{10cm}
+\end{defn}
+
+\begin{rem}
+	\begin{enumerate}[label={\roman*})]
+		\item Ist \( \dim M = 0 \), so besitzt $M$ stets eine Orientierung. Dabei wird jedem Punkt 1 oder $-1$ zugeordnet, die Stetigkeitsbedingung ist leer.
+		\item Ist $\dim M = n \geq 1$, $M$ orientiert, so gilt:\\
+			Jedes $n$-Bein mit zusammenhängendem Definitionsbereich ist entweder positiv oder negativ orientiert.
+	\end{enumerate}
+\end{rem}
+
+\begin{lem}
+	Sei $M$ eine differenzierbare Mannigfaltigkeit, $\dim M = n$. Jedes $\omega \in \Lambda^n(T^*M), \bound{\omega}{p} \neq 0 \ \foralll p$, legt eine eindeutige Orientierung auf $M$ fest durch die Forderung, dass \( \bound{\omega}{p} \) positiv orientiert ist $\foralll p$. Ist umgekehrt $M$ orientiert, so gibt es eine Form $\omega \in \Lambda^n(T^*M)$, sodass \( \bound{\omega}{p} \) positiv orientiert ist $\foralll p$.
+\end{lem}
+
+\begin{rem*}
+	Eine Form \( \omega \in \Lambda^n(T^*M)\) mit \( \bound{\omega}{p} \neq 0 \) heißt daher \emph{Orientierungs-$n$-Form}.
+\end{rem*}
+
+Ist $M$ orientiert und $\omega, \tilde{\omega}$ positiv definiert, so gibt es eine glatte Funktion \( f, f > 0, \), sodass \( \tilde{\omega} = \omega \).
+
+\begin{defn*}[Orientierung von Karten]
+	Eine Karte \( (\varphi,U) \) heißt \emph{positiv orientiert}, wenn \( (\del{x_1}, \dotsc \del{x_n}) \) positiv orientiert ist. Ein Atlas \( \{(\varphi_\alpha, U_\alpha) \mid \alpha \in A\} \) heißt \emph{konsistent orientiert}, falls die Jacobi-Matrizen von \( \varphi_\alpha \circ \varphi_\beta^{-1} \) positive Determinante hat auf \( \varphi_\beta(U_\alpha \cap U_\beta) \).
+	\incfig{8_5}{10cm}
+\end{defn*}
+
+\begin{lem}
+	Sei $M$ eine differenzierbare Mannigfaltigkeit, $\dim M \geq 1$. Ist $\Acal$ ein konsistent orientierter Atlas, so gibt es eine eindeutig bestimmte Orientierung auf $M$, sodass alle Karten des Atlas positiv orientiert sind.\\
+	Umgekehrt: Ist $M$ orientiert, so ergeben alle positiv orientierten Karten einen konsistent orientierten Atlas.
+\end{lem}
+
+\begin{lem}
+	Sind \( M_1, \dotsc, M_k \) orientierbar, so gibt es auf \( M_1 \times \dots \times M_k \) eine eindeutig bestimmte Orientierung $\Ocal$ mit der Eigenschaft: Ist $\omega_j$ eine Orientierungsform für $M_j$, so ist \( \pi_1^*\omega_1 \wedge \dots \wedge \pi_k^*\omega_k \) eine Orientierungs-Form für $\Ocal$.
+\end{lem}
+
+\begin{lem}
+	Ist $M$ zusammenhängend und orientierbar, so hat $M$ genau zwei Orientierungen. Wenn zwei Orientierungen in einem Punkt übereinstimmen, so stimmen sie überall überein.
+\end{lem}
