@@ -20,7 +20,7 @@ Für einen Vektorraum $V$ mit $\dim V = n \geq 1$ ist die Orientierung also eine
 \end{exmp*}
 
 \begin{lem}
-	Sei $V$ ein Vektorraum, $\dim V = n$. Dann bestimmt \( \alpha \in \Lambda^n(V^*), \alpha \neq 0 \) eine Orientierung:
+	Sei $V$ ein Vektorraum, $\dim V = n$. Dann bestimmt \( \alpha \in \Lambda^n(V^*), \alpha \neq 0, \) eine Orientierung:
 	\[ \Ocal_\alpha = \{ (v_1,\dotsc, v_n) \ \text{geordnete Basis} \mid \alpha(v_1, \dotsc, v_n) > 0 \} \]
 	(ist $n = 0$: $\Ocal_\alpha = $Vorzeichen von $\alpha$). Für \( \alpha, \tilde{\alpha} \in \Lambda^n(V^*) \) gilt
 	\[ \Ocal_\alpha = \Ocal_{\tilde{\alpha}} \iff \alpha = \lambda \tilde{\alpha},\quad \lambda > 0. \]
@@ -35,7 +35,7 @@ Für einen Vektorraum $V$ mit $\dim V = n \geq 1$ ist die Orientierung also eine
 \end{exmp*}
 
 \begin{defn}[Orientierung auf Mannigfaltigkeiten]\index{Mannigfaltigkeit!Orientierung}
-	Sei $M$ eine differenzierbare Mannigfaltigkeit, versehen mit einer \emph{punktweisen Orientierung} (d.h. jeder Tangentialraum ist mit einer Orientierung versehen). Ein lokales $n$-Bein \( (E_1, \dotsc E_n) \) für $TM$ heißt \emph{(positiv) orientiert}, falls \( \left( \bound{E_1}{p}, \dotsc, \bound{E_n}{p} \right) \) eine positiv orientierte Basis des $T_pM$ ist $\foralll p \in U \subset M$, \emph{negativ orientiert}, falls \( \left( \bound{E_1}{p}, \dotsc, \bound{E_n}{p} \right) \) eine negativ orientierte Basis ist $\foralll p \in U$. Eine punktweise Orientierung heißt \emph{stetig}, falls jedes $p \in ;$ im Definitionsbereich eines lokalen positiv orientierten $n$-Beins liegt.\\
+	Sei $M$ eine differenzierbare Mannigfaltigkeit, versehen mit einer \emph{punktweisen Orientierung} (d.h. jeder Tangentialraum ist mit einer Orientierung versehen). Ein lokales $n$-Bein \( (E_1, \dotsc, E_n) \) für $TM$ heißt \emph{(positiv) orientiert}, falls \( \left( \bound{E_1}{p}, \dotsc, \bound{E_n}{p} \right) \) eine positiv orientierte Basis des $T_pM$ ist $\foralll p \in U \subset M$, \emph{negativ orientiert}, falls \( \left( \bound{E_1}{p}, \dotsc, \bound{E_n}{p} \right) \) eine negativ orientierte Basis ist $\foralll p \in U$. Eine punktweise Orientierung heißt \emph{stetig}, falls jedes $p \in M$ im Definitionsbereich eines lokalen positiv orientierten $n$-Beins liegt.\\
 	Eine \emph{Orientierung} von $M$ ist eine punktweise, stetige Orientierung. $M$ heißt \emph{orientierbar}, falls $M$ eine Orientierung besitzt. Eine \emph{orientierte Mannigfaltigkeit} ist eine Manngifaltigkeit mit einer Orientierung.
 	\incfig{8_3}{10cm}
 \end{defn}
@@ -69,7 +69,7 @@ Ist $M$ orientiert und $\omega, \tilde{\omega}$ positiv definiert, so gibt es ei
 \end{lem}
 
 \begin{lem}
-	Sind \( M_1, \dotsc, M_k \) orientierbar, so gibt es auf \( M_1 \times \dots \times M_k \) eine eindeutig bestimmte Orientierung $\Ocal$ mit der Eigenschaft: Ist $\omega_j$ eine Orientierungsform für $M_j$, so ist \( \pi_1^*\omega_1 \wedge \dots \wedge \pi_k^*\omega_k \) eine Orientierungs-Form für $\Ocal$.
+	Sind \( M_1, \dotsc, M_k \) orientierbar, so gibt es auf \( M_1 \times \dots \times M_k \) eine eindeutig bestimmte Orientierung $\Ocal$ mit der Eigenschaft: Ist $\omega_j$ eine Orientierung-Form für $\Ocal_{M_j}$, so ist \( \pi_1^*\omega_1 \wedge \dots \wedge \pi_k^*\omega_k \) eine Orientierungs-Form für $\Ocal$.
 \end{lem}
 
 \begin{lem}

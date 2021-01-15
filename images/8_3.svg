@@ -170,9 +170,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="344.26325"
-     inkscape:cy="303.6096"
+     inkscape:zoom="2.8"
+     inkscape:cx="555.5186"
+     inkscape:cy="320.91057"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -244,16 +244,18 @@
        id="path2050" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#00ff00;stroke-width:0.583669;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2332);stop-color:#000000;stop-opacity:1"
-       d="m 27.528761,76.92443 h 7.082641"
-       id="path2052" />
+       d="m 27.528761,76.92443 5.523489,1.937127"
+       id="path2052"
+       sodipodi:nodetypes="cc" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.583668;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2422);stop-color:#000000;stop-opacity:1"
        d="M 55.191157,80.630472 V 74.24784"
        id="path2406" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#00ff00;stroke-width:0.583669;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2412);stop-color:#000000;stop-opacity:1"
-       d="m 55.191157,80.630472 h 7.082641"
-       id="path2408" />
+       d="m 55.191157,80.630472 6.610171,-1.417411"
+       id="path2408"
+       sodipodi:nodetypes="cc" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.483729;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2502);stop-color:#000000;stop-opacity:1"
        d="m 150.42678,92.189338 -1.778,-5.026069"
@@ -264,20 +266,22 @@
        id="path2488" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.463857;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2598);stop-color:#000000;stop-opacity:1"
-       d="m 180.16855,75.359466 1.90797,-4.854836"
+       d="m 182.8332,76.924609 -2.53812,-4.557158"
        id="path2582" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#00ff00;stroke-width:0.463857;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2588);stop-color:#000000;stop-opacity:1"
-       d="m 180.16855,75.359466 5.38728,1.256445"
+       d="m 182.8332,76.924609 4.39208,-3.363192"
        id="path2584" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.583668;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2734);stop-color:#000000;stop-opacity:1"
-       d="m 107.18035,60.136629 3.36892,5.831181"
-       id="path2718" />
+       d="m 107.18035,60.136629 4.17073,5.029372"
+       id="path2718"
+       sodipodi:nodetypes="cc" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#00ff00;stroke-width:0.583669;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2724);stop-color:#000000;stop-opacity:1"
-       d="m 107.18035,60.136629 -6.47071,2.21852"
-       id="path2720" />
+       d="m 107.18035,60.136629 -4.80028,3.822137"
+       id="path2720"
+       sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
        style="font-size:3.09631px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.232223"
