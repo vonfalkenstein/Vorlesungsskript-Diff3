@@ -1,0 +1,98 @@
+\section*{Orientierung von Untermannigfaltigkeiten}\lecture
+
+Für die Integralsätze (Stokes, Green, etc.) ist es wichtig, auf Untermannigfaltigkeiten induzierte Orientierungen zu verstehen. Der einfachste Fall:
+
+\begin{lem}
+	Sei $M$ eine differenzierbare Mannigfaltigkeit, $U \subset M$ eine Untermannigfaltigkeit der selben Dimension. Ist $M$ orientiert, so erbt $U$ durch Einschränkung eine Orientierung. Ist $\omega$ eine Orientierungs-Form für die Orientierung auf $M$, so ist \( \iota_U^*\omega \) eine Orientierungs-Form für die induzierte Orientierung von $U$.
+\end{lem}
+
+Allgemeiner betrachten wir lokale Diffeomorphismen \( f: M \to N \) und nennen $f$ (wenn $M$ und $N$ orientiert sind, $\dim M \geq 1$) \emph{orientierungserhaltend}, falls \( \bound{df}{p} \) orientierte Basen von $T_pM$ auf orientierte Basen von \( T_{f(p)}N \) abbildet, und \emph{orientierungsumkehrend}, falls orientierte Basen von $T_pM$ auf negativ orientierte Basen von \( T_{f(p)}N \) abbildet werden.
+
+\begin{exmp*}
+	\( f: \R^2 \to \R^2, f(x) = \begin{pmatrix}
+		0&1\\1&0	\end{pmatrix} \cdot x \), $\R^2$ jeweils mit der Standardorientierung $(e_1,e_2)$ auf \( T_p\R^2 \). $f$ ist orientierungsumkehrend:
+	\[ \bound{df}{p} = \begin{pmatrix}
+		0&1\\1&0	\end{pmatrix}: \R^2 \cong T_p\R^2 \to T_{\binom{p_2}{p_1}}\R^2 \cong \R^2 \]
+\end{exmp*}
+
+\begin{rem}
+	\( f:M \to N \) ist genau dann orientierungserhaltend, wenn 
+	\begin{itemize}
+		\item für jede orientierte Karte \( (\varphi,U) \) von $M$ und für jede orientierte Karte \( (\psi,V) \) von $N$ \( D(\psi \circ f \circ \varphi^{-1}) \) (die Jacobi-Matrix auf \( \varphi(U \cap f^{-1}(V)) \)) positive Determinante hat,
+			\incfig{8_10}{10cm}
+		\item für jede Orientierungsform $\omega$ für $N$ $f^*\omega$ eine Orientierungsform für $M$ ist.
+	\end{itemize}
+\end{rem}
+
+\begin{rem*}
+	Ist \( f: M \to N \) orientierungserhaltend und \( g: N \to P \), so ist \( g \circ f: M \to P \) orientierungserhaltend.
+\end{rem*}
+
+\begin{lem}
+	Ist \( f:M \to N \) ein lokaler Diffeomorphismus zwischen differenzierbaren Mannigfaltigkeiten und ist $N$ orientiert (mit Orientierung $\Ocal$), so trägt $M$ eine induzierte Orientierung ("pullback Orientierung", $f^*\Ocal$), sodass $f$ orientierungserhaltend ist.
+\end{lem}
+
+\begin{rem}
+	Sind $f:M \to N$ und $g: N \to P$ lokale Diffeomorphismen und $\Ocal$ eine Orientierungs auf $P$, dann gilt
+	\[ (g\circ f) ^* \Ocal = f^*(g^*\Ocal). \]
+\end{rem}
+
+\begin{lem}
+	Besitzt $M$ ein globales $n$-Bein ($n = \dim M$) (man sagt dann, $M$ ist parallelisierbar), so ist $M$ orientierbar.
+\end{lem}
+
+\noindent Hyperflächen: \( S \subset M \) Untermannigfaltigkeit\\
+Vektorfeld entlang $S$: Schnitt \( Y: S \to TM \), also glatt mit \( \bound{Y}{p} \in T_pM \) (ist im Allgemeinen natürlich kein Vektorfeld auf $S$)
+
+\begin{lem}\label{8.14}
+	Sei $M$ orientiert, \( S \subset M \) eine Untermannigfaltigkeit, \( \dim S = \dim M - 1 \) (Hyperfläche). Sei \( Y \) ein Vektorfeld entlang $S$ mit \( \bound{Y}{p} \in T_pS\ \foralll p \in S \). Dann hat $S$ eine eindeutige Orientierung, die dadurch festgelegt wird, dass \( (v_1, \dotsc, v_{n-1}) \) genau dann orientierte Basis von $T_pS$ ist, wenn \( (\bound{Y}{p},v_1,\dotsc,v_{n-1}) \) orientierte Basis von $T_pM$ ist.\\
+	Ist $\eta$ eine Orientierungsform für die Orientierung auf $M$, so ist \( \iota_S^*(Y \lrcorner \eta) \) eine Orientierungsform für die so gegebene Orientierung auf $S$.
+\end{lem}
+
+\begin{exmp*}
+	\incfig{8_14a}{10cm}
+\end{exmp*}
+
+\begin{exmp*}
+	\( M = \R^{n+1} \ (\text{Standardorientierung}), S = \Sbb^n. \) \( Y = \sum x_j \del{x_j} \) (Standardkoordinaten von $\R^{n+1}$) ist nirgends tangential an $S$.\\
+	\( ( T_p\Sbb^n = \ker Df, f(x_1,\dotsc,x_{n+1}) = \|x\|^2-1) \)\\
+	$\implies$ alle Sphären sind orientierbar. Man nennt die durch $Y$ gegebene Orientierung die Standardorientierung.
+	\incfig{8_14b}{5cm}
+\end{exmp*}
+
+\begin{rem*}
+	Es gibt nicht immer ein nirgend tangentiales Vektorfeld (z.B. beim Möbiusband, siehe unten)
+\end{rem*}
+
+\noindent Hinreichendes Kriterium:
+
+\begin{lem}
+	Sei \( f:M \to \R \) glatt, \( S = \{p \in M \mid f(p) = c\} \subset M \) für $c \in \R$ und \( \bound{df}{p}: T_pM \to T_{f(p)}\R \cong \R \) nicht 0 $\foralll p \in S$. Dann ist $S$ orientierbar (wie in \ref{8.14}).
+\end{lem}
+
+\noindent Wir definieren nun die sogenannte Riemannsche Volumenform.
+
+\begin{lem}\index{Riemannsche Volumenform}
+	Sei \( (M,g) \) eine Riemannsche Mannigfaltigkeit, $\dim M = n \geq 1$. Dann gibt es eine Orientierungsform \( \omega_g \in \Omega^n(M) \), die
+	\[ \omega_g(E_1, \dotsc,E_n) = 1 \]
+	erfüllt für alle lokalen, orientierten, orthonormalen $n$-Beine \( (E_1,\dotsc,E_n) \). Sie ist durch diese Bedingung eindeutig festgelegt und wird \emph{Riemannsche Volumenform} genannt.
+\end{lem}
+
+\begin{rem*}
+	Lokal existieren stets $n$-Beine, die mit Gram-Schmidt zu orthonormalen $n$-Beinen gemacht werden können. Ist \( (E_1,\dotsc,E_n) \) ein solches orthonormales $n$-Bein, so kann man nötigenfalls durch ersetzen \( E_1 \to -E_1 \) stets ein orientiertes $n$-Bein daraus erzeugen.
+\end{rem*}
+
+\begin{rem*}
+	Ist \( f: M \to N \) eine lokale Isometrie (\( (M,g),(N,\tilde{g}) \) Riemannsche Mannigfaltigkeiten), so ist \( f^*\omega_{\tilde{g}} = \omega_g \).
+\end{rem*}
+
+\begin{lem}
+	Sei \( (M,g) \) eine orientierte Riemannsche Mannigfaltigkeit. In lokalen orientierten Koordinaten gilt
+	\[ \omega_g = \sqrt{\det(g_{ij})}\ dx^1 \wedge \dots \wedge dx^n, \]
+	wobei $g_{ij}$ die Komponenten von $g$ in diesen Koordinaten sind.
+\end{lem}
+
+\begin{lem}
+	Sei \( (M,g) \) eine orientierte Riemannsche Mannigfaltigkeit, \( S \subset M \) eine Hyperfläche. Sei $N$ ein Einheitsnormalenvektorfeld an $S$, das heißt \( \langle N_p,N_p \rangle_g = 1 \) und \( \langle N_p,v \rangle = 0 \ \foralll v \in T_pS \subset T_pM \). Wir versehen $S$ mit der durch $N$ gegebenen Orientierung (\ref{8.14}) und mit der von \( \iota_S \) induzierten Metrik \( \tilde{g} = \iota_S^*g \). Dann gilt:
+	\[ \omega_{\tilde{g}} = \iota_S^*(N \lrcorner \omega_g). \]
+\end{lem}
