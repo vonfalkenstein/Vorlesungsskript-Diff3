@@ -18,14 +18,14 @@ Allgemeiner betrachten wir lokale Diffeomorphismen \( f: M \to N \) und nennen $
 \begin{rem}
 	\( f:M \to N \) ist genau dann orientierungserhaltend, wenn 
 	\begin{itemize}
-		\item für jede orientierte Karte \( (\varphi,U) \) von $M$ und für jede orientierte Karte \( (\psi,V) \) von $N$ \( D(\psi \circ f \circ \varphi^{-1}) \) (die Jacobi-Matrix auf \( \varphi(U \cap f^{-1}(V)) \)) positive Determinante hat,
+		\item für jede orientierte Karte \( (\varphi,U) \) von $M$ und für jede orientierte Karte \( (\psi,V) \) von $N$ \( D(\psi \circ f \circ \varphi^{-1}) \) \big(die Jacobi-Matrix auf \( \varphi\big(U \cap f^{-1}(V)\big) \)\big) positive Determinante hat,
 			\incfig{8_10}{10cm}
 		\item für jede Orientierungsform $\omega$ für $N$ $f^*\omega$ eine Orientierungsform für $M$ ist.
 	\end{itemize}
 \end{rem}
 
 \begin{rem*}
-	Ist \( f: M \to N \) orientierungserhaltend und \( g: N \to P \), so ist \( g \circ f: M \to P \) orientierungserhaltend.
+	Sind \( f: M \to N \) und \( g: N \to P \) orientierungserhaltend, so ist \( g \circ f: M \to P \) orientierungserhaltend.
 \end{rem*}
 
 \begin{lem}
@@ -45,7 +45,7 @@ Allgemeiner betrachten wir lokale Diffeomorphismen \( f: M \to N \) und nennen $
 Vektorfeld entlang $S$: Schnitt \( Y: S \to TM \), also glatt mit \( \bound{Y}{p} \in T_pM \) (ist im Allgemeinen natürlich kein Vektorfeld auf $S$)
 
 \begin{lem}\label{8.14}
-	Sei $M$ orientiert, \( S \subset M \) eine Untermannigfaltigkeit, \( \dim S = \dim M - 1 \) (Hyperfläche). Sei \( Y \) ein Vektorfeld entlang $S$ mit \( \bound{Y}{p} \in T_pS\ \foralll p \in S \). Dann hat $S$ eine eindeutige Orientierung, die dadurch festgelegt wird, dass \( (v_1, \dotsc, v_{n-1}) \) genau dann orientierte Basis von $T_pS$ ist, wenn \( (\bound{Y}{p},v_1,\dotsc,v_{n-1}) \) orientierte Basis von $T_pM$ ist.\\
+	Sei $M$ orientiert, \( S \subset M \) eine Untermannigfaltigkeit, \( \dim S = \dim M - 1 \) (Hyperfläche). Sei \( Y \) ein Vektorfeld entlang $S$ mit \( \bound{Y}{p} \notin T_pS\ \foralll p \in S \). Dann hat $S$ eine eindeutige Orientierung, die dadurch festgelegt wird, dass \( (v_1, \dotsc, v_{n-1}) \) genau dann orientierte Basis von $T_pS$ ist, wenn \( (\bound{Y}{p},v_1,\dotsc,v_{n-1}) \) orientierte Basis von $T_pM$ ist.\\
 	Ist $\eta$ eine Orientierungsform für die Orientierung auf $M$, so ist \( \iota_S^*(Y \lrcorner \eta) \) eine Orientierungsform für die so gegebene Orientierung auf $S$.
 \end{lem}
 

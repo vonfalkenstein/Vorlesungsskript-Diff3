@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1450"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="5_4.svg">
+  <defs
+     id="defs1444" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="363.42337"
+     inkscape:cy="255.4018"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="2560"
+     inkscape:window-height="1387"
+     inkscape:window-x="8"
+     inkscape:window-y="1912"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata1447">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.665001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       d="M 68.020093,63.342876 C 88.783086,62.698771 86.862965,48.105779 94.747046,47.707609 108.03669,47.036441 110.51775,46.816923 126.55212,47.039436 138.02271,47.198617 125.6853,64.006376 159.159,64.01105"
+       id="path2015"
+       sodipodi:nodetypes="cssc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.665001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       d="m 19.377041,63.476512 c 26.568794,-0.390149 20.576131,-14.765725 30.33509,-15.367998 9.743526,-0.60132 8.78692,-1.222947 29.533282,-0.668173 8.579496,0.229422 8.975859,14.590173 23.786987,15.501632"
+       id="path2017"
+       sodipodi:nodetypes="cssc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.665001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       d="m 118.93494,63.342876 c 16.68422,-0.982862 16.13619,-16.282062 25.25697,-16.57071 14.2789,-0.451889 16.29773,-0.381009 34.74504,-0.26727 14.17492,0.0874 8.33748,16.781217 25.92514,16.837981"
+       id="path2019"
+       sodipodi:nodetypes="cssc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
+       x="55.057522"
+       y="63.877415"
+       id="text2023"><tspan
+         sodipodi:role="line"
+         id="tspan2021"
+         x="55.057522"
+         y="63.877415"
+         style="stroke-width:0.264583">$\dots$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
+       x="107.30872"
+       y="64.011047"
+       id="text2027"><tspan
+         sodipodi:role="line"
+         id="tspan2025"
+         x="107.30872"
+         y="64.011047"
+         style="stroke-width:0.264583">$\dots$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
+       x="163.56895"
+       y="63.342876"
+       id="text2031"><tspan
+         sodipodi:role="line"
+         id="tspan2029"
+         x="163.56895"
+         y="63.342876"
+         style="stroke-width:0.264583">$\dots$</tspan></text>
+  </g>
+</svg>

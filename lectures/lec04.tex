@@ -61,12 +61,12 @@
 \begin{defn}[Bündelatlas, Übergangsfunktion]\index{Vektorraumbündel!Bündelatlas} \index{Vektorraumbündel!Übergangsfunktion}
 	Sei $ (E,\pi,B) $ ein Vektorraumbündel von Rang $n$. Eine Menge von Bündelkarten $ \{(\varphi_\alpha, U_\alpha) \mid \alpha \in A\} $ heißt \emph{Bündelatlas} von $E$, wenn $ \bigcup_{\alpha \in A} U_\alpha = B. $
 	Die auf Überlappungen $ U_\alpha \cap U_\beta $ gegebenen stetigen Abbildungen 
-	$$ \Phi_{\alpha \beta}: U_\alpha \cap U_\beta \to GL(n,\R),\ x \mapsto \bound{\varphi_\beta}{E_x} \circ \big( \bound{ \varphi_\alpha}{E_x} \big)^{-1} $$
+	$$ \Phi_{\alpha \beta}: U_\alpha \cap U_\beta \to \GL(n,\R),\ x \mapsto \bound{\varphi_\beta}{E_x} \circ \big( \bound{ \varphi_\alpha}{E_x} \big)^{-1} $$
 	heißen \emph{Übergangsfunktionen}.
 \end{defn}
 
 \begin{rem*}
-	$\Phi_{\alpha \beta}$ nehmen tatsächlich Werte in $GL(n,\R)$ an:
+	$\Phi_{\alpha \beta}$ nehmen tatsächlich Werte in $\GL(n,\R)$ an:
 	\incfig{3_3}{12cm}
 	$$ \bound{\varphi_\beta}{E_x} \circ \big( \bound{\varphi_\alpha}{E_x} \big)^{-1}: \underset{\cong \R^n}{\{x \times \R^n\}} \to \underset{\cong \R^n}{\{x \times \R^n\}} $$
 	ist ein Vektorraumisomorphismus für jedes $x$. (nach Definition Bündelkarte)
@@ -106,7 +106,7 @@
 \begin{defn}[Prä-Vektorraumbündel, Prä-Bündelatlas] \index{Vektorraumbündel!Prä-Vektorraumbündel} \index{Vektorraumbündel!Prä-Bündelatlas}
 	Ein \emph{Prä-Vektorraumbündel} ist ein Quadrupel $ (E,\pi,B,\Acal) $, wobei $E$ eine Menge ist, $B$ ein topologischer Raum, $\pi: E \to B$ surjektiv, sodass $E_x = \pi^{-1}(x)$ ein Vektorraum ist, und mit einem \emph{Prä-Bündelatlas} $\Acal$, das heißt einer Menge $ \{(\varphi_\alpha,U_\alpha) \mid \alpha \in A\} $, sodass $U_\alpha \subset B$ offen, $ B = \bigcup_{\alpha \in A} U_\alpha $ und $ \varphi_\alpha: \pi^{-1}(U) \to U \times \R^n $ bijektiv für alle $\alpha$, sodass $ \bound{\varphi_\alpha}{E_y}: E_y \to \{y\} \times \R^n $ ein Vektorraum-Isomorphismus ist und so, dass die Übergangsfunktionen 
 	$ \begin{aligned}[t]
-		\Phi_{\alpha \beta}: &U_\alpha \cap U_\beta \to GL(n,\R),\\
+		\Phi_{\alpha \beta}: &U_\alpha \cap U_\beta \to \GL(n,\R),\\
 		 &x \mapsto \bound{\varphi_\beta}{E_x} \circ \big( \bound{\varphi_\alpha}{E_x} \big)^{-1}
 	\end{aligned} $ stetig sind.
 \end{defn}

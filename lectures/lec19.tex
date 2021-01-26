@@ -1,0 +1,186 @@
+\chapter{Integration}
+\lecture
+
+Erinnerung: 
+	\[ \intd{\R^n}{}{\chi_A(x)}{x} = \int_A dx = \vol(A), \]
+	wobei $dx$ das Lebesgue-Maß auf $\R^n$ und $\chi_A$ die charakteristische Funktion für $A \subset \R^n, \chi_A = \begin{cases}
+		1 &, x \in A \\ 0  &, \text{sonst}
+	\end{cases}$ beschreibt. Dieses Konzept ist nicht unabhängig von der Wahl der Koordinaten:
+
+\begin{exmp*}
+	\( A = (0,1) \subset \R \). Wählt man Koordinaten \( \varphi: p \mapsto \lambda p, \lambda \neq 0, \lambda \neq 1 \), so müsste man berechnen
+	\[ \int_A d\lambda x = \lambda \int_A dx \neq \int_A dx. \]
+\end{exmp*}
+
+Die Transformationsformel sagt uns, wie es richtig geht:
+\begin{align*}
+	\intd{}{}{\chi_A(x)}{x} &= \intd{}{}{\chi_A \circ \Phi(y) |\det D\Phi(y)|}{y},\\
+	\text{also im Beispiel oben } &= \intd{}{}{\chi_{(0,1)} (\lambda y) |\lambda|}{y} = 1
+\end{align*}
+Das wollen wir besser versehen.
+
+Wir haben schon gesehen, dass Einsformen entlang von Kurven integriert werden konnten und dass das resultierende Integral (gerade wegen der Transformationsformel!) bis auf ein Vorzeichen (bei Orientierungsumkehr) unabhängig von der Wahl der Parametrisierung war (Definition \ref{3.30}, Lemma \ref{3.33}):
+
+\[ \int_\gamma \omega = \int_{[a,b]} \gamma^*\omega \]
+
+Wir haben also einen guten Integralbegriff für 1-dimensionale Untermannigfaltigkeiten. Wie können wir diesen besser verstehen und für höher-dimensionale Mannigfaltigkeiten verallgemeinern?
+
+\begin{align*}
+	\omega \in \Omega^1(M) \implies &\omega_p: \underbrace{v}_{\in T_pM} \mapsto \omega_p(v) \in \R\\
+	\text{und } &\omega_p (\lambda v) = \lambda \omega_p(v)
+\end{align*}
+
+In diesem Sinn kann man $\omega$ auffassen als eine Abbildung, die jedem 1-dimensionalen Untervektorraum in jedem Tangentialraum auf Koordinaten-unabhängige Weise ein Längenmaß zuordnet (und zwar gerichtet). In Koordinaten sieht das wie folgt aus:
+
+\( \omega = \sum \omega_i dx^i,\ \gamma^*\omega = \sum \omega_i(\gamma(t)) d(x^i \circ \gamma) \) und \( \bound{d(x^i \circ \gamma)}{\gamma(t)} = ( \underbrace{x^i \circ \gamma}_{=\gamma_i})'(t) dt \), also
+\[ \int_\gamma \omega = \intd{[a,b]}{}{\underbrace{\sum_{i=1}^{n} \omega_i \big(\gamma(t)\big) \gamma_i'(t)}_{= \omega_{\gamma(t)} (\gamma'(t))}}{t} \]
+
+Wie sieht das nun in höheren Dimensionen aus? Vom Blatt 10 der Hausaufgaben wissen wir
+\[ \det(v_1,\dotsc,v_n) = \vol(v_1,\dotsc,v_n). \]
+Eigenschaften:
+\begin{itemize}
+	\item alternierend (sodass $\vol=0$ falls die \( v_1,\dotsc,v_n \) linear abhängig sind)
+	\item multilinear:
+		\[ \vol(v_1,\dotsc,\lambda v_i,\dotsc,v_n) = \lambda \vol(v_1,\dotsc,v_n) \]
+		\[ \vol(v_1,\dotsc,v_i + v_i',\dotsc,v_n) = \vol(v_1,\dotsc,v_i,\dotsc,v_n) + \vol(v_1,\dotsc,v_i',\dotsc,v_n) \]
+		\incfig{9}{10cm}
+\end{itemize}
+
+\begin{defn}\label{9.1}
+	Auf \( D \subset \R^n \) beschränkt, mit Rand von Maß 0 ("Integrationsbereich") betrachte \( \omega = f dx^1 \wedge \dots \wedge dx^n,\ f:D \to \R \) stetig und setze 
+	\[ \int_D \omega = \intd{D}{}{f}{^n x} \]
+	Als das "\emph{Integral von $\omega$ über $D$}". Ist \( U \subset \R^n \) offen, \( \omega = f dx^1 \wedge \dots \wedge dx^n,\ f:U \to \R \) stetig und kompakt getragen, setze
+	\[ \int_U \omega = \int_D \omega \]
+	für $D$ Integrationsbereich und $\supp \omega  := \supp f \subset D$ als das "\emph{Integral von $\omega$ über $U$}".
+\end{defn}
+
+\begin{rem*}
+	Dies ist unabhängig von der Wahl von $D$, da \( \bound{f}{D \setminus \supp f} = 0 = \bound{f}{\tilde{D} \setminus \supp f} \)
+	\incfig{9b}{8cm}
+\end{rem*}
+
+Die Definition in \ref{9.1} ist (bis auf das Vorzeichen) unabhängig von der Wahl der Koordinaten. Präziser:
+
+\begin{lem}
+	Sind $D_1$ und $D_2$ offene Integrationsbereiche in $\R^n$ und \( \Phi: \bar{D}_1 \to \bar{D}_2 \) glatt, sodass \( \Phi: D_1 \to D_2 \) ein Diffeomorphismus ist. Dann gilt:
+	\[ \int_{D_1} \Phi^*\omega = \begin{cases}
+		&\int_{D_2} \omega \quad , \Phi \text{orientierungserhaltend} \\ -&\int_{D_2} \omega \quad , \Phi \text{orientierungsumkehrend}
+	\end{cases} \]
+	für jede (stetige) $n$-Form auf $\bar{D}_2$.
+\end{lem}
+
+Die Aussage gilt auch allgemeiner für offene Mengen und kompakt getragene (stetige) $n$-Formen. Wir benötigen dafür allerdings ein Hilfslemma:
+
+\begin{lem}\autolabel
+	Sei \( U \subset \R^n \) offen, sei $K \subset U$ kompakt. Dann existiert ein offener Integrationsbereich $D$, sodass $K \subset D \subset \bar{D} \subset U$.
+\end{lem}
+
+\begin{rem*}
+	Das Vorzeichen \emph{muss} vorkommen, sonst wäre die Definition nicht konsistent! Denn es ist \( dx^1 \wedge dx^2 = -dx^2 \wedge dx^1 \), aber unter den vorliegenden Umständen \( dx_1dx_2 = dx_2dx_1 \) (Fubini!). Implizit ist in die Definition also die Standardorientierung des $\R^n$ eingegangen.
+\end{rem*}
+
+\begin{lem}\autolabel
+	Seien \( U,V \subset \R^n \) offen, \( \Phi: U \to V \) ein Diffeomorphismus. Ist $\omega$ eine kompakt getragene (stetige) $n$-Form auf $V$ so gilt
+	\[ \int_V \omega = \pm \int_U \Phi^*\omega.\quad \text{($+$ wenn $\Phi$ orientierungserh.)} \]
+\end{lem}
+
+Wie üblich ziehen wir nun mit Hilfe von Karten diese Definitionen auf zunächst orientierte Mannigfaltigkeiten. Dabei betrachten wir zunächst den Fall, in dem $\supp \omega$ in einem einzigen Koordinatenbereich enthalten ist:
+
+\begin{defn}\autolabel
+	Sei $\omega$ eine (stetige) kompakt getragene $n$-Form auf einer differenzierbaren orientierten Mannigfaltigkeit $M$, derart, dass $\supp \omega \subset U$, wobei \( (\varphi,U) \) eine lokale Karte von $M$ ist. Dann setzen wir 
+	\[ \int_M \omega := \pm \int_{\varphi(U)} \big(\varphi^{-1}\big)^* \omega, \]
+	wie üblich mit $+$ falls $\varphi$ positiv orientiert ist und $-$ sonst.
+	\incfig{9_5}{\textwidth}
+\end{defn}
+
+\begin{exmp*}
+	\( \gamma: [a,b] \to \R^n \) glatte Kurve, \( \gamma' \neq 0, \varphi= \gamma^{-1}: (Spur \gamma)^\circ \to (a,b), U = (Spur \gamma)^\circ, \omega =  \) kompakt getragene 1-Form auf $\R^n$ mit $\supp \omega \cap Spur \gamma \subset (Spur \gamma)^\circ$
+	\begin{align*}
+		\int_U \bound{\omega}{U} &= \int_{(A,B)} \bound{\varphi^*\omega}{U} \quad ((A,B) \supset [a,b])\\
+		&= \int \sum f_i \circ \gamma(t) dx^i \circ \gamma\\
+		&= \intd{}{}{\sum f_i(\gamma(t)) \gamma_i' (t)}{t},
+	\end{align*}
+	stimmt also mit unserer alten Definition überein.
+\end{exmp*}
+
+Auch im allgemeinen, höher-dimensionalen Fall gilt:
+
+\begin{lem}\autolabel
+	Die Definition von $\int_M \omega$ hängt nicht von der Wahl der Karte ab:\\
+	Ist \( \psi,V \) eine weitere Karte mit $\supp \omega \subset V$, so ist
+	\[ \int_U \varphi^*\omega = \pm \int_V \psi^*\omega. \]
+\end{lem}
+
+Nun betrachten wir den Fall, in dem $\supp \omega$ nicht in einem einzigen Koordinatenbereich enthalten ist:
+
+\begin{defn}\autolabel
+	Sei $\omega$ eine kompakt getragene (stetige) $n$-Form auf einer orientierten Mannigfaltigkeit $M$ ($n = \dim M \geq 1$). Bezeichne \( U_1, \dotsc, U_N \) eine Überdeckung von $\supp \omega$ durch Koordinatenbereiche von positiv oder negativ orientierten lokalen Karten von $M$. Sei \( \{\psi_1, \dotsc, \psi_N\} \) eine dieser Überdeckung untergeordnete Zerlegung der Eins. Dann setzt man
+	\[ \int_M \omega := \sum_{i=1}^{N} \int_M \psi_i \omega \]
+\end{defn}
+
+\begin{lem}\autolabel
+	Definition \ref{9.7} hängt nicht von der Wahl der Überdeckung und nicht von der Wahl der Teilung der Eins ab.
+\end{lem}
+
+\begin{rem*}
+	\( n=0: \)\[ \int_M f = \sum_{p \in M} (\pm f(p)) \]
+	(endliche Summe, da $\supp f$ genau dann kompakt ist, wenn $f$ nur auf endlich vielen Punkten ungleich 0 ist.)
+\end{rem*}
+
+\begin{rem}\autolabel
+	\( S \hookrightarrow M \) Untermannigfaltigkeit:
+	\[ \int_S \omega = \int_M \iota_S^*\omega \]
+	($S$ mit der induzierten Orientierung versehen). Das haben wir schon implizit in den Beispielen oben verwendet.
+\end{rem}
+
+\begin{lem}\autolabel
+	Sei $M$ eine orientierte Mannigfaltigkeit, $\dim M = n$. Dann gilt:
+	\begin{enumerate}[label={\roman*})]
+		\item \[ \int_M (\lambda\omega + \mu \eta) = \lambda \int_M \omega + \mu \int_M \eta \]
+			\( \foralll \omega,\eta \) kompakt getragene (stetige) $n$-Formen auf $M$, $\foralll \lambda, \mu \in \R$
+		\item \[ \int_{-M} \omega = -\int_M \omega, \]
+			wenn $-M$ die Mannigfaltigkeit $M$ mit umgekehrter Orientierung bezeichnet.
+		\item \( \int_M \omega > 0, \) wenn $\omega$ eine positiv orientierte Orientierungsform ist.
+		\item Ist $N$ eine weitere orientierte Mannigfaltigkeit und \( F: N \to M \) ein Diffeomorphismus, so ist
+			\[ \int_M \omega = \begin{cases}
+				&\int_N F^*\omega\quad \text{orientierungserhaltend} \\ -&\int_N F^*\omega\quad \text{orientierungsumkehrend}
+			\end{cases} \]
+	\end{enumerate}
+\end{lem}
+
+\begin{rem}\autolabel
+	\begin{enumerate}[label={\roman*})]
+		\item Zur konkreten Berechnung ist eine Teilung der Eins sehr unpraktisch. Es ist viel einfacher, die Mannigfaltigkeit in Bildbereiche $U_j$ von orientierungserhaltenden Parametrisierungen \( \rho_j: D_j \overset{\sim}{\longrightarrow} U_j \) aufzuteilen, sodass \( \supp \omega \subset \bar{U}_1 \cup \bar{U}_2 \cup \dots \cup \bar{U}_k \) und \( U_i \cap U_j = \emptyset \) für $i \neq j$.\\
+			 Weiß man, dass die $\rho_j$ zu $\rho_j: \bar{D}_j \to M$ glatt fortgesetzt werden können, kann man setzen 
+			 \[ \int_M \omega = \sum_j \int_{D_j} \rho_j^* \omega, \]
+			 denn in dem Fall sind die Ränder der \( U_j = \rho_j(D_j) \) wieder Nullmengen und \( \rho_j^*\omega \) (was \( (\varphi^{-1})^*\omega\) in Definition \ref{9.5} ersetzt) stetig auf \( \bar{D}_j \).
+		\item Tatsächlich gilt die Aussage noch allgemeiner, auch wenn 
+			\[ \supp\omega \subset U_1 \cup U_2 \cup \dots \cup U_k \cup N, \]
+			$N$ Nullmenge, und \( \rho_j \) nicht stetig auf \( \bar{D}_j \) fortsetzbar ist.
+	\end{enumerate}
+\end{rem}
+
+\begin{exmp*}
+	\incfig{9_11a}{10cm}
+	\( \rho_\pm = \varphi_\pm^{-1}: \Dbb_1 \to \R^3, (u_1,u_2) \mapsto \big(u_1,u_2,\pm\sqrt{1-u_1^2-u_2^2}\big) \)
+\end{exmp*}
+
+%\begin{exmp*}
+%	Für \ref{9.11} i)
+%\end{exmp*}
+
+\begin{exmp*}
+	\( M = \Sbb^2 \subset \R^3 \) mit der Standardorientierung.\\
+	\( \omega = xdy \wedge dz + y dz \wedge dx + z dx \wedge dy \)\\
+	\( \rho: (0,\pi) \times (0,2\pi) \to \R^3, (\theta,\alpha) \mapsto (\cos\alpha\sin\theta,\sin\alpha\sin\theta,\cos\theta)^T \)
+	\incfig{9_11b}{12cm}
+	\begin{align*}
+		\rho^*dx =& d(\cos\alpha\sin\theta) = \cos\theta\cos\alpha\ d \theta - \sin\theta\sin\alpha d\alpha\\
+		\rho^*dy =& \cos\alpha\sin\theta\ d\alpha + \sin\alpha\cos\theta\ d\theta\\
+		\rho^*dz =& -\sin\theta\ d\theta\\
+		\implies \int_{\Sbb^2} \omega =& \int_{(0,\pi)\times(0,2\pi)} (-\sin^3\theta \cos^2\alpha\ d\alpha \wedge d\theta + \sin^2\alpha\sin^3\theta\ d\theta \wedge d\alpha \\
+			&+ \cos^2\theta\sin\theta\cos^2\alpha\ d\theta \wedge d\alpha -\cos^2\theta\sin\theta\sin^2\alpha\ d\alpha \wedge d\theta)\\
+		=& \int_{(0,\pi)\times(0,2\pi)} \sin\theta\ d\theta \wedge d\alpha = \intd{0}{2\pi}{\intd{0}{\pi}{\sin\theta}{\theta}}{\alpha}\\
+		=& 4\pi
+	\end{align*}
+\end{exmp*}
