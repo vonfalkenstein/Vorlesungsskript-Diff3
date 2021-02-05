@@ -1,0 +1,80 @@
+\chapter{Mannigfaltigkeiten mit Rand}\lecture
+
+Dies wird ein kurzes Zwischenkapitel, denn eigentlich ist, außer der Orientierung, nicht viel zu Mannigfaltigkeiten mit Rand zu sagen, weil die Beweise der Sätze, die wir bisher behandelt haben, im Wesentlichen unverändert bleiben. Nur die Topologie erfordert etwas Erklärung:
+
+\begin{defn}[Mannigfaltigkeit mit Rand, innere Punkte, Randpunkte]\autolabel\index{Mannigfaltigkeit!mit Rand}
+	\begin{enumerate}[label={\roman*})]
+		\item[]
+		\item Eine \emph{$\emph{n}$-dimensionale berandete Mannigfaltigkeit} ist ein Hausdorff-Raum $M$ mit abzählbarer Basis der Topologie, lokal homöomorph zu offenen Mengen \( \subset \R^n \) oder \( \subset \Hbb^n = \{(x_1,\dotsc,x_n) \mid x_n \geq 0\} \). Eine \emph{Karte} bei $p \in M$ ist ein Homöomorphismus \( \varphi: U \to V \) mit $U \subset M, V \subset \R^n$ oder $\Hbb^n$ offen (bzgl. der Teilraumtopologie), $p \in U$.\\
+			\incfig{10_1}{14cm}
+			\emph{Erinnerung:} \( V \subset \Hbb^n \) ist offen bezüglich der Teilraumtopologie, wenn es ein offenes \( \tilde{V} \subset \R^n \) gibt, sodass \( V = \tilde{V} \cap \Hbb^n \). Der Rand $\partial \Hbb^n$ kann also gemeinsame Punkte mit einer offenen Menge $\subset \Hbb^n$ besitzen!
+		\item Ein \emph{innerer Punkt} von $M$ ist ein Punkt, der im Koordinatenbereich einer \emph{inneren Karte} liegt, das heißt einer Karte $(\varphi,U)$ mit $\varphi(U)$ offen in $\R^n$. Die Menge der inneren Punkte bezeichnet man mit $\overset{\circ}{M}$. Ein \emph{Randpunkt} von $M$ ist ein Punkt, der im Koordinatenbereich der \emph{Rand-Karte} liegt, das heißt einer Karte $(\varphi,U)$ mit $\varphi(U)$ offen in $\Hbb^n$ und $\varphi(U) \cap \partial\Hbb^n \neq \emptyset$, \( \partial\Hbb^n = \{(x_1,\dotsc,x_{n-1},0)\} \), und für den gilt $\varphi(p) \in \partial \Hbb^n$. $\partial M$ bezeichnet die Menge der Randpunkte
+		\incfig{10_1b}{10cm}
+	\end{enumerate}
+\end{defn}
+
+\begin{thm}\autolabel
+	\[ M = \overset{\circ}{M} \sqcup \partial M \]
+\end{thm}
+
+\begin{rem*}
+	Was man sofort sieht:\\
+	Wenn $p \in M$ nicht Randpunkt ist, so ist $p$ ein innerer Punkt: Entweder $p$ liegt dann schon im Koordinatenbereich einer inneren Karte oder $p$ liegt im Koordinatenbereich einer Randkarte $(\varphi,U)$, aber $\varphi(p) \notin \partial\Hbb^n$. In dem Fall ist \( (\varphi, U \cap \varphi^{-1}(\overset{\circ}{\Hbb^n})) \) Karte bei $p$. Sie ist eine innere Karte, weil $\overset{\circ}{\Hbb^n}$ offen in $\R^n$ ist.
+\end{rem*}
+
+Was man für den Satz nun noch beweisen muss ist, dass ein Punkt nicht gleichzeitig bezüglich einer Karte innerer Punkt und bezüglich einer anderen Randpunkt sein kann.
+
+\begin{rem*}
+	\emph{Achtung!} Im Allgemeinen ist $\partial M$ nicht der topologische Rand von $M$.
+\end{rem*}
+
+\begin{exmp*}
+	\( (0,1] \subset \R \) ist eine Mannigfaltigkeit mit Rand:\\
+	Karte für die inneren Punkte, z.B. \( \varphi = \id: (0,1) \to \R \) (oder \( \varphi(p) = -p+1 \))\\
+	Randkarte: \( \varphi: (0,1] \to \Hbb = \R_{\geq 0}, p \mapsto -p+1,\ \varphi((0,1]) = [0,1) \)
+\end{exmp*}
+
+Aus den obigen Überlegungen verallgemeinert man unmittelbar:
+
+\begin{lem}\autolabel
+	Sei $M$ eine $n$-dimensionale Mannigfaltigkeit mit Rand. Dann gilt
+	\begin{enumerate}[label={\roman*})]
+		\item $\overset{\circ}{M}$ ist eine $n$-dimensionale Mannigfaltigkeit (und $\overset{\circ}{M} \subset M$ offen)
+		\item $\partial M$ ist eine ($n-1$)-dimensionale Mannigfaltigkeit (und $\partial M \subset M$ abgeschlossen)
+		\item $M$ ist eine $n$-dimensionale Mannigfaltigkeit $\iff  \partial M = \emptyset$
+		\item Ist $n=0$, so ist $\partial M = \emptyset$.
+	\end{enumerate}
+\end{lem}
+
+Genauso wie im Fall von Mannigfaltigkeiten zeigt man:
+
+\begin{thm}\autolabel
+	Sei $M$ eine Mannigfaltigkeit mit Rand. Dann gilt:
+	\begin{enumerate}[label={\roman*})]
+		\item $M$ hat einen abzählbaren Atlas mit Koordinatenbereichen $U$, die auf Bälle oder Halb-Bälle abgebildet werden, sodass die Koordinatenbereiche eine Basis der Topologie bilden.
+		\item $M$ ist lokal kompakt und parakompakt (also existiert eine abzählbare Basis der Topologie aus präkompakten Mengen und jede offene Überdeckung von $M$ besitzt eine endliche Verfeinerung).
+		\item $M$ ist lokal zusammenhängend (das heißt es gibt eine Basis der Topologie aus wegzusammenhängenden Mengen).
+		\item $M$ ist eine höchstens abzählbare Vereinigung von Zusammenhangskomponenten.
+	\end{enumerate}
+\end{thm}
+
+Das werden wir benutzen, um zu schlussfolgern, dass auch für Mannigfaltigkeit mit Rand eine (glatte) Teilung der Eins existiert. Zunächst Glattheit:
+
+\begin{rem}\autolabel
+	Erinnerung: Glattheit von Mannigfaltigkeiten hatten wir über einen maximalen, glatten Atlas definiert und Glattheit von Karten über Glattheit von Kartenwechseln. Wir müssen also nur noch überlegen, was Glattheit von Abbildungen \( \Phi: V \to \R^k, V \subset \Hbb^n \) offen, bedeutet.\\
+	In $\R^n$ könnte $V$ nicht offen sein. Wir verwenden also unsere Definition von Glattheit (die wir für abgeschlossene Mengen einführten):\\
+	\( \Phi: V \to \R^k \) ist glatt ($V \subset \R^n$ beliebige Menge), falls es für jedes $x \in V$ eine offene Umgebung $\tilde{V}_x \subset \R^n$ (offen in $\R^n$) gibt und eine lokale Fortsetzung $\tilde{\Phi}: \tilde{V}_x \to \R^k$, die glatt ist.
+%	\incfig{10_5}{6cm}
+	Wegen der Stetigkeit der partiellen Ableitungen hängt der Wert von \( \partial^\alpha \Phi(x) \) mit $x \in \partial\Hbb \cap V$ nicht von der Fortsetzung ab (für $x \in \overset{\circ}{\Hbb} \cap V$ schon gar nicht!)
+\end{rem}
+
+\begin{exmp*}
+	\( \Dbb \subset\R^2 \) offene Einheitsscheibe. Sei \( V = \Dbb \cap \Hbb^2\), \(\Phi: V \to \R, (x,y) \mapsto \sqrt{1-x^2-y^2} \) ist glatt ($\tilde{\Phi} = \sqrt{1-x^2-y^2}$ ist auf ganz $\Dbb$ definiert und glatt).\\
+	\( \psi: (x,y) \mapsto \sqrt{x} \) hat keine glatte Fortsetzung bei $(x,y) = (0,0)$, denn \( \del{x}\psi(x,y) \to \infty \) für $x \to \infty$.
+\end{exmp*}
+
+\begin{thm}\autolabel
+	Sei $M$ eine glatte Mannigfaltigkeit mit Rand, $p \in M$. Gibt es eine glatte Karte $(\varphi,U)$ bei $p$, sodass $\varphi(p) \in \partial\Hbb$, so gilt es für jede glatte Karte.
+\end{thm}
+
+\noindent Hiermit folgt direkt Satz \ref{10.2}.

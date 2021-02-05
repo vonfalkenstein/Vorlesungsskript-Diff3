@@ -45,7 +45,7 @@ Allgemeiner betrachten wir lokale Diffeomorphismen \( f: M \to N \) und nennen $
 Vektorfeld entlang $S$: Schnitt \( Y: S \to TM \), also glatt mit \( \bound{Y}{p} \in T_pM \) (ist im Allgemeinen natürlich kein Vektorfeld auf $S$)
 
 \begin{lem}\label{8.14}
-	Sei $M$ orientiert, \( S \subset M \) eine Untermannigfaltigkeit, \( \dim S = \dim M - 1 \) (Hyperfläche). Sei \( Y \) ein Vektorfeld entlang $S$ mit \( \bound{Y}{p} \notin T_pS\ \foralll p \in S \). Dann hat $S$ eine eindeutige Orientierung, die dadurch festgelegt wird, dass \( (v_1, \dotsc, v_{n-1}) \) genau dann orientierte Basis von $T_pS$ ist, wenn \( (\bound{Y}{p},v_1,\dotsc,v_{n-1}) \) orientierte Basis von $T_pM$ ist.\\
+	Sei $M$ orientiert, \( S \subset M \) eine Untermannigfaltigkeit, \( \dim S = \dim M - 1 \) (Hyperfläche). Sei \( Y \) ein Vektorfeld entlang $S$ mit \( \bound{Y}{p} \notin T_pS\ \foralll p \in S \). Dann hat $S$ eine eindeutige Orientierung, die dadurch festgelegt wird, dass \( (v_1, \dotsc, v_{n-1}) \) genau dann eine orientierte Basis von $T_pS$ ist, wenn \( \big(\bound{Y}{p},v_1,\dotsc,v_{n-1}\big) \) orientierte Basis von $T_pM$ ist.\\
 	Ist $\eta$ eine Orientierungsform für die Orientierung auf $M$, so ist \( \iota_S^*(Y \lrcorner \eta) \) eine Orientierungsform für die so gegebene Orientierung auf $S$.
 \end{lem}
 
@@ -72,7 +72,7 @@ Vektorfeld entlang $S$: Schnitt \( Y: S \to TM \), also glatt mit \( \bound{Y}{p
 
 \noindent Wir definieren nun die sogenannte Riemannsche Volumenform.
 
-\begin{lem}\index{Riemannsche Volumenform}
+\begin{lem}\index{Riemannsche Volumenform}\autolabel
 	Sei \( (M,g) \) eine Riemannsche Mannigfaltigkeit, $\dim M = n \geq 1$. Dann gibt es eine Orientierungsform \( \omega_g \in \Omega^n(M) \), die
 	\[ \omega_g(E_1, \dotsc,E_n) = 1 \]
 	erfüllt für alle lokalen, orientierten, orthonormalen $n$-Beine \( (E_1,\dotsc,E_n) \). Sie ist durch diese Bedingung eindeutig festgelegt und wird \emph{Riemannsche Volumenform} genannt.
@@ -86,13 +86,13 @@ Vektorfeld entlang $S$: Schnitt \( Y: S \to TM \), also glatt mit \( \bound{Y}{p
 	Ist \( f: M \to N \) eine lokale Isometrie (\( (M,g),(N,\tilde{g}) \) Riemannsche Mannigfaltigkeiten), so ist \( f^*\omega_{\tilde{g}} = \omega_g \).
 \end{rem*}
 
-\begin{lem}
+\begin{lem}\autolabel
 	Sei \( (M,g) \) eine orientierte Riemannsche Mannigfaltigkeit. In lokalen orientierten Koordinaten gilt
 	\[ \omega_g = \sqrt{\det(g_{ij})}\ dx^1 \wedge \dots \wedge dx^n, \]
 	wobei $g_{ij}$ die Komponenten von $g$ in diesen Koordinaten sind.
 \end{lem}
 
-\begin{lem}
+\begin{lem}\autolabel
 	Sei \( (M,g) \) eine orientierte Riemannsche Mannigfaltigkeit, \( S \subset M \) eine Hyperfläche. Sei $N$ ein Einheitsnormalenvektorfeld an $S$, das heißt \( \langle N_p,N_p \rangle_g = 1 \) und \( \langle N_p,v \rangle = 0 \ \foralll v \in T_pS \subset T_pM \). Wir versehen $S$ mit der durch $N$ gegebenen Orientierung (\ref{8.14}) und mit der von \( \iota_S \) induzierten Metrik \( \tilde{g} = \iota_S^*g \). Dann gilt:
 	\[ \omega_{\tilde{g}} = \iota_S^*(N \lrcorner \omega_g). \]
 \end{lem}

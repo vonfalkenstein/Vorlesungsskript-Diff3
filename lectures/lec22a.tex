@@ -1,0 +1,42 @@
+\begin{rem*}\lecture
+	Tangentialbündel, Formen, Tensoren, Untermannigfaltigkeiten, die Existenz einer Teilung der Eins, Orientierung und Integration werden auf Mannigfaltigkeiten mit Rand eingeführt. Die Aussagen werden dabei bewiesen wie auf Mannigfaltigkeiten ohne Rand. Etwas genauer befassen wir uns mit Orientierung:
+\end{rem*}
+
+Erinnerung: Eine $(n-1)$-dimensionale Untermannigfaltigkeit $S$ einer orientierbaren $n$-dimensionalen Mannigfaltigkeit ist genau dann orientierbar, wenn es ein Vektorfeld auf $S \subset M$ gibt, das nirgends tangential an $S$ ist.
+\incfig{10_6}{12cm}
+\[ X \ \text{nicht tangential an } S \implies v \in T_pS \ \text{linear unabhängig von } X_p \]
+\[\text{somit } \bound{\iota_S^*(X \lrcorner \omega)}{p} \neq 0.\]
+
+Wir werden sehen, dass der Rand einer berandeten orientierten Mannigfaltigkeit orientierbar ist. Zunächst eine Hilfskonstruktion:
+
+\begin{defn*}\index{Rand definierende Funktion}
+	Ist $M$ eine Mannigfaltigkeit mit Rand, so nennt man eine Funktion \( f: M \to \R_{\geq 0} \) mit $df_p \neq 0$ für alle $p \in \partial M$ und \( f^{-1}(0) = \partial M \) eine \emph{Rand definierende Funktion}.
+\end{defn*}
+
+\begin{exmp*}
+	\( f(x)  = 1 - \|x\|^2 \) für $M = \K_1(0)$ (Vollkugel von Radius 1)
+\end{exmp*}
+
+\begin{lem}\autolabel
+	Jede differenzierbare Mannigfaltigkeit mit Rand besitzt eine den Rand definierende Funktion.
+\end{lem}
+
+\begin{lem}\autolabel
+	Sei $M$ eine Mannigfaltigkeit mit Rand. Dann gibt es ein Vektorfeld auf $M$, dessen Einschränkung auf $\partial M$ überall nach innen zeigt und eines, dessen Einschränkung überall nach außen zeigt. Insbesondere gibt es eines, das nirgends tangential auf $\partial M$ ist.
+	\incfig{10_8}{8cm}
+\end{lem}
+
+\begin{lem}\autolabel
+	Sei $M$ orientiert, glatt, mit Rand und mit $\dim M = n \geq 1$. Dann ist $\partial M$ orientierbar und alle nach außen gerichteten Vektorfelder legen die selbe Orientierung auf $\partial M$ fest. Diese nennt man die \emph{kanonische Orientierung} auf $\partial M$.
+\end{lem}
+
+\begin{rem*}
+	\( \Sbb^n = \partial \K^n \) (Rand der Kugel)\\
+	Die kanonische Randorientierung stimmt mit der Standardorientierung auf $\Sbb^n \subset \R^{n+1}$ überein.
+\end{rem*}
+
+\begin{exmp*}
+	$M = \Hbb^n$. $-\del{x^n}$ zeigt nach außen\\
+	\( \implies\) Standardorientierung von \( \R^{n-1} (\cong \partial \Hbb^n) \) stimmt mit der kanonischen von $\partial \Hbb^n$ überein $\iff$ \( (-\del{x^n},\del{x^1},\dotsc,\del{x^{n-1}}) \) ist global orientiert zur Standardorientierung von $\R^n$ $\iff n$ ist gerade \big(denn \( e_1 \wedge \dotsc \wedge e_n (-\del{x^n},\del{x^1},\dotsc,\del{x^{n-1}}) = (-1)^n \)\big)
+	\incfig{10_9}{14cm}
+\end{exmp*}

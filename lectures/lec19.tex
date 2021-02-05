@@ -46,12 +46,12 @@ Eigenschaften:
 		\incfig{9}{10cm}
 \end{itemize}
 
-\begin{defn}\label{9.1}
+\begin{defn}[Integral einer $n$-Form]\label{9.1}\index{Integral einer $n$-Form}
 	Auf \( D \subset \R^n \) beschränkt, mit Rand von Maß 0 ("Integrationsbereich") betrachte \( \omega = f dx^1 \wedge \dots \wedge dx^n,\ f:D \to \R \) stetig und setze 
 	\[ \int_D \omega = \intd{D}{}{f}{^n x} \]
-	Als das "\emph{Integral von $\omega$ über $D$}". Ist \( U \subset \R^n \) offen, \( \omega = f dx^1 \wedge \dots \wedge dx^n,\ f:U \to \R \) stetig und kompakt getragen, setze
+	als das "\emph{Integral von $\omega$ über $\emph{D}$}". Ist \( U \subset \R^n \) offen, \( \omega = f dx^1 \wedge \dots \wedge dx^n,\ f:U \to \R \) stetig und kompakt getragen, setze
 	\[ \int_U \omega = \int_D \omega \]
-	für $D$ Integrationsbereich und $\supp \omega  := \supp f \subset D$ als das "\emph{Integral von $\omega$ über $U$}".
+	für $D$ Integrationsbereich und $\supp \omega  := \supp f \subset D$ als das "\emph{Integral von $\omega$ über $\emph{U}$}".
 \end{defn}
 
 \begin{rem*}
@@ -62,9 +62,9 @@ Eigenschaften:
 Die Definition in \ref{9.1} ist (bis auf das Vorzeichen) unabhängig von der Wahl der Koordinaten. Präziser:
 
 \begin{lem}
-	Sind $D_1$ und $D_2$ offene Integrationsbereiche in $\R^n$ und \( \Phi: \bar{D}_1 \to \bar{D}_2 \) glatt, sodass \( \Phi: D_1 \to D_2 \) ein Diffeomorphismus ist. Dann gilt:
+	Seien $D_1$ und $D_2$ offene Integrationsbereiche in $\R^n$ und \( \Phi: \bar{D}_1 \to \bar{D}_2 \) glatt, sodass \( \Phi: D_1 \to D_2 \) ein Diffeomorphismus ist. Dann gilt:
 	\[ \int_{D_1} \Phi^*\omega = \begin{cases}
-		&\int_{D_2} \omega \quad , \Phi \text{orientierungserhaltend} \\ -&\int_{D_2} \omega \quad , \Phi \text{orientierungsumkehrend}
+		&\int_{D_2} \omega \quad , \Phi\ \text{orientierungserhaltend} \\ -&\int_{D_2} \omega \quad , \Phi\ \text{orientierungsumkehrend}
 	\end{cases} \]
 	für jede (stetige) $n$-Form auf $\bar{D}_2$.
 \end{lem}
@@ -80,13 +80,13 @@ Die Aussage gilt auch allgemeiner für offene Mengen und kompakt getragene (stet
 \end{rem*}
 
 \begin{lem}\autolabel
-	Seien \( U,V \subset \R^n \) offen, \( \Phi: U \to V \) ein Diffeomorphismus. Ist $\omega$ eine kompakt getragene (stetige) $n$-Form auf $V$ so gilt
+	Seien \( U,V \subset \R^n \) offen, \( \Phi: U \to V \) ein Diffeomorphismus. Ist $\omega$ eine kompakt getragene (stetige) $n$-Form auf $V$, so gilt
 	\[ \int_V \omega = \pm \int_U \Phi^*\omega.\quad \text{($+$ wenn $\Phi$ orientierungserh.)} \]
 \end{lem}
 
 Wie üblich ziehen wir nun mit Hilfe von Karten diese Definitionen auf zunächst orientierte Mannigfaltigkeiten. Dabei betrachten wir zunächst den Fall, in dem $\supp \omega$ in einem einzigen Koordinatenbereich enthalten ist:
 
-\begin{defn}\autolabel
+\begin{defn}[Integral über einem Kartenbereich]\autolabel\index{Integral einer $n$-Form!über einem Kartenbereich}
 	Sei $\omega$ eine (stetige) kompakt getragene $n$-Form auf einer differenzierbaren orientierten Mannigfaltigkeit $M$, derart, dass $\supp \omega \subset U$, wobei \( (\varphi,U) \) eine lokale Karte von $M$ ist. Dann setzen wir 
 	\[ \int_M \omega := \pm \int_{\varphi(U)} \big(\varphi^{-1}\big)^* \omega, \]
 	wie üblich mit $+$ falls $\varphi$ positiv orientiert ist und $-$ sonst.
@@ -107,15 +107,15 @@ Auch im allgemeinen, höher-dimensionalen Fall gilt:
 
 \begin{lem}\autolabel
 	Die Definition von $\int_M \omega$ hängt nicht von der Wahl der Karte ab:\\
-	Ist \( \psi,V \) eine weitere Karte mit $\supp \omega \subset V$, so ist
+	Ist \( (\psi,V) \) eine weitere Karte mit $\supp \omega \subset V$, so ist
 	\[ \int_U \varphi^*\omega = \pm \int_V \psi^*\omega. \]
 \end{lem}
 
 Nun betrachten wir den Fall, in dem $\supp \omega$ nicht in einem einzigen Koordinatenbereich enthalten ist:
 
-\begin{defn}\autolabel
+\begin{defn}[Integral über mehreren Kartenbereichen]\index{Integral einer $n$-Form!über mehreren Kartenbereichen}\autolabel
 	Sei $\omega$ eine kompakt getragene (stetige) $n$-Form auf einer orientierten Mannigfaltigkeit $M$ ($n = \dim M \geq 1$). Bezeichne \( U_1, \dotsc, U_N \) eine Überdeckung von $\supp \omega$ durch Koordinatenbereiche von positiv oder negativ orientierten lokalen Karten von $M$. Sei \( \{\psi_1, \dotsc, \psi_N\} \) eine dieser Überdeckung untergeordnete Zerlegung der Eins. Dann setzt man
-	\[ \int_M \omega := \sum_{i=1}^{N} \int_M \psi_i \omega \]
+	\[ \int_M \omega := \sum_{i=1}^{N} \int_M \psi_i \omega. \]
 \end{defn}
 
 \begin{lem}\autolabel

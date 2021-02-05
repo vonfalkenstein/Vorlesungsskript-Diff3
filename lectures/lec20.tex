@@ -1,0 +1,140 @@
+\lecture
+
+\begin{defn}[Integral über einer Mannigfaltigkeit]\index{Integral einer $n$-Form!über einer Mannigfaltigkeit}\autolabel
+	Sei \( (M,g) \) eine orientierte Riemannsche Mannigfaltigkeit und \( \omega_g \) die Riemannsche Volumenform auf $M$ (vgl. \ref{8.16}). Dann nennt man \( \int f \omega_g \) für \( f \in C_c(M) \) (d.h. kompakt getragen) das \emph{Integral von $\emph{f}$ über \( \emph{M} \)}.
+	Man schreibt auch \( \intd{}{}{f}{\vol_g} \) (aber im Allgemeinen ist $\omega_g$ nicht exakt!) Ist $M$ kompakt, so nennt man \( \int d\vol_g =: \vol(M) \) das Volumen von $M$.
+\end{defn}
+
+\begin{lem*}
+	Ist $f \in C_c(M)$ nicht negativ, so gilt
+	\[ \intd{}{}{f}{\vol_g} \geq 0, \]
+	wobei die Gleichheit genau dann besteht, wenn \( f=0 \).
+\end{lem*}
+
+\begin{exmp*}
+	\begin{itemize}
+		\item $\R^n$, \( \intd{}{}{f}{\vol_g} = \int f \ dx^1 \dots dx^n \) (Standardmetrik \& -orientierung)
+		\item $\R^3$, in Kugelkoordinaten \( = \int fr^2\sin\theta \ dr d\theta d\varphi \), denn
+			\begin{align*}
+				g &= dx^2 + dy^2 + dz^2\\
+				&= d(r\sin\theta\cos\varphi)^2 + d(r\sin\theta\sin\varphi)^2 + d(r\cos\theta)^2\\
+				&= (\sin\theta\cos\varphi dr + r\cos\theta\cos\varphi\ d\theta - r\sin\varphi\sin\theta\ d\varphi)^2 + \dots\\
+				&= dr^2 + r^2\ d\theta^2 + r^2\sin^2\theta\ d\varphi^2\\
+				\text{also } (g_{ij}) &= \begin{pmatrix}
+					1 & &\\
+					& r^2 &\\
+					& & r^2\sin^2\theta
+				\end{pmatrix}
+			\end{align*}
+		\item \( \Sbb^2 \subset \R^3 \quad \sin\theta\ d\theta d\alpha \) (z.B. mit Hilfe von \ref{8.18})
+	\end{itemize}
+\end{exmp*}
+
+\begin{lem}\autolabel
+	Sei \( (M,g) \) eine orientierte Riemannsche Mannigfaltigkeit, $f \in C_c(M)$. Dann gilt
+	\begin{align*}
+		\left| \intd{M}{}{f}{\vol_g} \right| &\leq \intd{M}{}{|f|}{\vol_g}\\
+		\noalign{(denn $\supp f \subset U$, $(\varphi,U)$ Karte)}
+		\text{Dann } \left| \intd{}{}{f}{\vol_g} \right| &= \left| \int f \sqrt{\det(g_{ij})}\ dx^1 \dots dx^n \right|\\
+		&\leq \int |f| \sqrt{\det(g_{ij})}\ dx^1 \dots dx^n.
+	\end{align*}
+\end{lem}
+
+Bisher hatten wir stets vorausgesetzt, dass $M$ orientierbar ist. Was macht man, wenn $M$ nicht orientierbar ist? Wo war Orientierung überhaupt wichtig? Transformationsformel! Kartenwechsel \( \Phi^*\omega \) liefert \( \det D\Phi \), Transformationsformel \( |\det D\Phi| \).
+
+Wir wollen nun Schritte definieren, die sich unter Kartenwechseln mit \( |\det D\Phi| \) transformieren. Zunächst die lineare Algebra:
+
+\begin{defn*}[Dichte]\index{Dichte}
+	Sei $V$ ein $n$-dimensionaler $\R$-Vektorraum. Eine \emph{Dichte} ist eine Abbildung
+	\[ \mu: \underbrace{V \times \dots \times V}_{n-fach} \to \R. \]
+	sodass für \( A: V \to V \) linear gilt:
+	\[ \mu(Av_1,\dotsc,Av_n) = |\det A| \mu(v_1,\dotsc,v_n). \]
+\end{defn*}
+
+\begin{rem*}
+	$\mu$ kann also \emph{kein} Tensor sein.
+\end{rem*}
+
+\begin{lem}\autolabel
+	Sei $\Dcal(V)$ die Menge aller Dichten auf $V$.
+	\begin{enumerate}[label={\roman*})]
+		\item \( \Dcal(V) \) ist ein Vektorraum.
+		\item Gilt \( \mu_1(E_1,\dotsc,E_n) = \mu_2(E_1,\dotsc,E_n) \) für eine Basis von $V$, so gilt \( \mu_1 = \mu_2. \)
+		\item Ist $\omega \in \Lambda^n(V^*)$, so ist
+			\[ |\omega|: V \times \dots \times V \to \R, (v_1,\dotsc,v_n) \mapsto |\omega(v_1,\dotsc,v_n)| \]
+			eine Dichte.
+		\item \( \Dcal(V) = \Span\{|\omega|\} \) für ein \( \omega \neq 0\) aus \( \Lambda^n(V^*) \).
+	\end{enumerate}
+\end{lem}
+
+\begin{defn*}
+	Eine Dichte $\mu$ ist \emph{positiv}, falls \( \mu(v_1,\dotsc,v_n) > 0 \) für linear unabhängige \( v_1,\dotsc,v_n \), \emph{negativ} falls \( \mu(v_1,\dotsc,v_n)<0 \).
+\end{defn*}
+
+\begin{rem*}
+	$\omega \neq 0 \in \Lambda^n(V^*) \implies |\omega|$ ist positiv.
+\end{rem*}
+
+\begin{defn*}[Dichten-Bündel]\index{Dichten-Bündel}
+	Sei $M$ eine glatte Mannigfaltigkeit. Dann nennt man
+	\[ \Dcal M := \bigcup_{p \in M} \Dcal(T_pM) \]
+	das \emph{Dichten-Bündel} über $M$ mit der Projektion \( \pi: \Dcal M \to M, \Dcal(T_pM) \ni \mu \mapsto p \).
+\end{defn*}
+
+\begin{lem}\autolabel
+	\( \Dcal(M) \) ist tatsächlich ein Vektorbündel über $M$.
+\end{lem}
+
+Ein Schnitt in $\Dcal(M)$ heißt \emph{Dichte} auf $M$. Die Definition der Positivität und Negativität stimmt mit der obigen überein.
+
+\begin{lem}\autolabel
+	Es gibt stets eine \emph{glatte} positive Dichte auf $M$.
+\end{lem}
+
+\begin{lem}\autolabel
+	Seien \( F: M \to N, G: N \to P \) glatte Abbildungen. Dann gilt für eine Dichte $\mu$ auf $N$:
+	\begin{enumerate}[label={\roman*})]
+		\item \( F^*(f\mu) = (f \circ F)F^*\mu \quad \foralll f \in C^\infty(N) \)
+		\item \( \omega \in \Omega^n(N) \implies F^*|\omega| = |F^*\omega| \)
+		\item $\mu$ glatt $\implies F^*\mu$ ist glatt
+		\item \( (F \circ G)^* \mu = G^*(F^*\mu) \)
+	\end{enumerate}
+\end{lem}
+
+\begin{lem}\autolabel
+	Sei $F:M \to N$ glatt, \( \dim M = n = \dim N \). Dann gilt in Koordinaten
+	\[ F^*(f |dy^1 \wedge \dots \wedge dy^n|) = (f\circ F) |\det DF| |dx^1 \wedge \dots \wedge dx^n| \quad \foralll f \in C^\infty(V), \]
+	wobei $V \subset N$ der Koordinatenbereich der $y^i$ auf \( U \cap F^{-1}(V) \), \( U \subset M \) der Koordinatenbereich der $x^i$ sind.
+\end{lem}
+
+Somit ist folgende Definition sinnvoll:\\\index{Integral einer Dichte}
+Sei $D \subset \R^n$ eine Integrationsbereich, \( \mu \) eine Dichte auf $\overbar{D}$, \( \mu = f |dx^1 \wedge \dots \wedge dx^n| \) mit $f: \overbar{D} \to \R$ stetig. Dann setze
+\[ \int_D \mu := \int_D f \ dx_1 \dots dx_n \]
+und für \( \supp f \subset U \) setze
+\[ \int_U \mu := \int_D f \ dx_1 \dots dx_n, \quad D \supset \supp f. \]
+Dann gilt nämlich:
+
+\begin{lem}\autolabel
+	Seien \( U,V \subset \R^n \) offen, \( \Phi: U \to V \) ein Diffeomorphismus. Ist $\mu$ eine kompakt getragene Dichte auf $V$, so gilt
+	\[ \int_V \mu = \int_U \Phi^*\mu. \]
+\end{lem}
+
+Und wieder ziehen wir den Integralbegriff mit Hilfe von Karten auf die Mannigfaltigkeit.
+
+\begin{defn}[Integral über Kartenbereichen]\autolabel\index{Integral einer Dichte!über mehreren Kartenbereichen}\index{Integral einer Dichte!über einem Kartenbereich}
+	Ist $\mu$ eine kompakt getragene Dichte auf $M$ und \( \supp\mu \subset U \), wobei \( (\varphi,U) \) eine Karte von $M$ ist, so setzt man
+	\[ \int_M\mu = \int_{\varphi(U)} \left( \varphi^{-1} \right)^*\mu. \]
+	Sonst betrachtet man Kartenbereiche \( U_1,\dotsc,U_N \), die \( \supp \mu \) überdecken, wählt eine untergeordnete Zerlegung der Eins und setzt
+	\[ \int_M \mu = \sum_{i=1}^N \int_M \psi_i\mu. \]
+\end{defn}
+
+Aus den Eigenschaften des Lebesgue-Integrals folgt dann sofort:
+
+\begin{lem}\autolabel
+	\begin{enumerate}[label={\roman*})]
+		\item \( \int (a\mu + b\nu) = a\int \mu + b \int\nu \) für alle \( a,b \in \R, \mu,\nu \) Dichten (kompakt getragen)
+		\item Ist \( \mu > 0 \implies \int \mu > 0 \)
+		\item Ist \( \Phi: N \to M \) ein Diffeomorphismus, so gilt 
+			\[ \int_M \mu = \int_N \Phi^*\mu. \]
+	\end{enumerate}
+\end{lem}
