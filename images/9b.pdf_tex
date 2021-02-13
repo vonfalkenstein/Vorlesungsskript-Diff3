@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{301.35491602bp}%
+    \setlength{\unitlength}{298.73241499bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,11 +50,11 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.30265148)%
+  \begin{picture}(1,0.30630295)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{9b.pdf}}%
-    \put(0.34326658,0.13918262){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\supp f$\end{tabular}}}}%
+    \put(0.33866272,0.12867807){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\supp f$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{9b.pdf}}%
   \end{picture}%
 \endgroup%

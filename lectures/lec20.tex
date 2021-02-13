@@ -1,6 +1,4 @@
-\lecture
-
-\begin{defn}[Integral über einer Mannigfaltigkeit]\index{Integral einer $n$-Form!über einer Mannigfaltigkeit}\autolabel
+\begin{defn}[Integral über einer Mannigfaltigkeit]\index{Integral einer $n$-Form!über einer Mannigfaltigkeit}\autolabel\lecture
 	Sei \( (M,g) \) eine orientierte Riemannsche Mannigfaltigkeit und \( \omega_g \) die Riemannsche Volumenform auf $M$ (vgl. \ref{8.16}). Dann nennt man \( \int f \omega_g \) für \( f \in C_c(M) \) (d.h. kompakt getragen) das \emph{Integral von $\emph{f}$ über \( \emph{M} \)}.
 	Man schreibt auch \( \intd{}{}{f}{\vol_g} \) (aber im Allgemeinen ist $\omega_g$ nicht exakt!) Ist $M$ kompakt, so nennt man \( \int d\vol_g =: \vol(M) \) das Volumen von $M$.
 \end{defn}
@@ -82,10 +80,10 @@ Wir wollen nun Schritte definieren, die sich unter Kartenwechseln mit \( |\det D
 \end{defn*}
 
 \begin{lem}\autolabel
-	\( \Dcal(M) \) ist tatsächlich ein Vektorbündel über $M$.
+	\( \Dcal M \) ist tatsächlich ein Vektorbündel über $M$.
 \end{lem}
 
-Ein Schnitt in $\Dcal(M)$ heißt \emph{Dichte} auf $M$. Die Definition der Positivität und Negativität stimmt mit der obigen überein.
+Ein Schnitt in $\Dcal M$ heißt \emph{Dichte} auf $M$. Die Definition der Positivität und Negativität stimmt mit der obigen überein.
 
 \begin{lem}\autolabel
 	Es gibt stets eine \emph{glatte} positive Dichte auf $M$.
@@ -108,7 +106,7 @@ Ein Schnitt in $\Dcal(M)$ heißt \emph{Dichte} auf $M$. Die Definition der Posit
 \end{lem}
 
 Somit ist folgende Definition sinnvoll:\\\index{Integral einer Dichte}
-Sei $D \subset \R^n$ eine Integrationsbereich, \( \mu \) eine Dichte auf $\overbar{D}$, \( \mu = f |dx^1 \wedge \dots \wedge dx^n| \) mit $f: \overbar{D} \to \R$ stetig. Dann setze
+Sei $D \subset \R^n$ ein Integrationsbereich, \( \mu \) eine Dichte auf $\overbar{D}$, \( \mu = f |dx^1 \wedge \dots \wedge dx^n| \) mit $f: \overbar{D} \to \R$ stetig. Dann setze
 \[ \int_D \mu := \int_D f \ dx_1 \dots dx_n \]
 und für \( \supp f \subset U \) setze
 \[ \int_U \mu := \int_D f \ dx_1 \dots dx_n, \quad D \supset \supp f. \]

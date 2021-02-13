@@ -1,4 +1,4 @@
-\lecture\begin{lem} 
+\begin{lem}\lecture 
 	Sei $ f: M \to N $ glatt ($M,N$ differenzierbare Mannigfaltigkeiten), sei $g$ eine Riemannsche Metrik auf $N$. Dann ist das Tensorfeld $ f^*g $ genau dann eine Metrik auf $M$, wenn $f$ eine \emph{glatte Immersion} ist, also $df$ überall injektiv ist.
 \end{lem}
 
@@ -9,7 +9,7 @@
 			\wrapincfig{6_6}{0.1\textwidth}
 		\end{wrapfigure}
 		ist glatt und $ df(t) = (2\cos(2t),\cos(t)) $ hat Rang 1\\
-		$\implies f^g$ ist eine Riemannsche Metrik, wenn $g$ eine Metrik auf $\R^2$ ist, z.B. mit der euklidischen Metrik $\bar{g}$:\\
+		$\implies f^*g$ ist eine Riemannsche Metrik, wenn $g$ eine Metrik auf $\R^2$ ist, z.B. mit der euklidischen Metrik $\bar{g}$:\\
 		$\begin{aligned}
 			f^*\bar{g} &= d(\sin(2t))^2 + d(\sin(t))^2\\
 			&= (2\cos(2t)dt)^2 + (\cos(t)dt)^2\\
@@ -34,7 +34,7 @@
 	Ist $ (M,g) $ eine Riemannsche Mannigfaltigkeit und $S \subset M$ eine Untermannigfaltigkeit, dann ist $\iota^*g$ eine Metrik auf $S$, wobei $\iota: S \hookrightarrow M$ eine Einbettung von $S$ in $M$ ist (Homöomorphismus auf $\iota(S)$, $\bound{d\iota}{p}$ injektiv $\foralll p$). Denn es ist
 	\[ \iota \neq g_p(v,w) = g_p(d\iota(v),d\iota(w)) = g(v,w), \]
 	wobei $v,w \in T_pS$ mit ihrer Einbettung in $T_pM$ identifiziert werden und $p \in S$ mit $p \in M$.
-	\incfig{6_6 defn}{8cm}
+	\incfig{6_6 defn}{7cm}
 \end{defn*}
 
 \begin{exmp*}
@@ -52,7 +52,7 @@
 
 \begin{exmp*}
 	Sei $ H = \R_{\geq 0} \times \R,\ C \subset H $ eine 1-dimensionale Untermannigfaltigkeit und $ S_C $ die Rotationsfläche zu $C$,
-	\[ S_C = \{(x,y,z) \mid \left( \sqrt{x^2+y^2},z \right) \in C \} \subset \R^2 \]
+	\[ S_C = \left\{(x,y,z) \mid \left( \sqrt{x^2+y^2},z \right) \in C \right\} \subset \R^2 \]
 	\begin{minipage}{\linewidth}
 		\begin{wrapfigure}{l}{6cm}
 			%			\centering
@@ -118,7 +118,7 @@
 	Sei $C$ eine zusammenhängende 1-dimensionale Untermannigfaltigkeit, eingebettet in $ H = \{r,z \mid r<0\} $. Sei $S_C$ die zugehörige Rotationsfläche. Dann ist $ \iota^*\bar{g} $ genau dann flach, wenn $C$ ein (offenes) Streckenstück ist.
 \end{lem}
 
-\subsection*{Riemannsche Mannigfaltigkeit $\to$ metrischer Raum:}
+\subsubsection*{Riemannsche Mannigfaltigkeit $\to$ metrischer Raum:}
 
 Für Kurven $ \gamma: I \to \R^n $ kennen wir schon die Länge 
 \[ \int_I \|\gamma'(t)\|_E dt. \]

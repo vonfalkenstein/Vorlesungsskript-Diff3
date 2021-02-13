@@ -74,9 +74,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.0160961"
-     inkscape:cx="248.17983"
-     inkscape:cy="230.85577"
+     inkscape:zoom="4.265404"
+     inkscape:cx="594.37711"
+     inkscape:cy="203.14751"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -84,8 +84,8 @@
      inkscape:object-paths="true"
      inkscape:window-width="2560"
      inkscape:window-height="1387"
-     inkscape:window-x="1072"
-     inkscape:window-y="472"
+     inkscape:window-x="8"
+     inkscape:window-y="1912"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata2846">
@@ -130,7 +130,7 @@
        ry="21.916101" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 123.76167,27.666957 c 31.35631,-0.116003 32.24512,44.517073 0.31008,44.346561"
+       d="m 123.75091,27.935854 c 31.35631,-0.116003 32.07953,43.996104 0.14449,43.825592"
        id="path3428"
        sodipodi:nodetypes="cc" />
     <path
@@ -157,15 +157,36 @@
          style="stroke-width:0.264583">$T_pM$</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
-       x="167.04346"
-       y="31.67144"
-       id="text3440"><tspan
+       style="font-size:2.51642px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
+       x="119.15508"
+       y="42.554588"
+       id="text3440"
+       transform="scale(1.4018996,0.71331785)"><tspan
          sodipodi:role="line"
-         x="167.04346"
-         y="31.67144"
+         x="119.15508"
+         y="42.554588"
          style="stroke-width:0.264583"
-         id="tspan3448">affin gezeichnet</tspan></text>
+         id="tspan3448">affin gezeichnet</tspan><tspan
+         sodipodi:role="line"
+         x="119.15508"
+         y="45.700111"
+         style="stroke-width:0.264583"
+         id="tspan2320">tatsächlich handelt</tspan><tspan
+         sodipodi:role="line"
+         x="119.15508"
+         y="48.845638"
+         style="stroke-width:0.264583"
+         id="tspan2324">es sich um einen</tspan><tspan
+         sodipodi:role="line"
+         x="119.15508"
+         y="51.991161"
+         style="stroke-width:0.264583"
+         id="tspan2328">Untervektorraum</tspan><tspan
+         sodipodi:role="line"
+         x="119.15508"
+         y="55.136688"
+         style="stroke-width:0.264583"
+         id="tspan2330">des $\R^3$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
@@ -213,62 +234,18 @@
     <text
        xml:space="preserve"
        style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
-       x="58.532024"
-       y="46.638535"
+       x="58.575886"
+       y="48.261425"
        id="text3470"><tspan
          sodipodi:role="line"
          id="tspan3468"
-         x="58.532024"
-         y="46.638535"
+         x="58.575886"
+         y="48.261425"
          style="stroke-width:0.264583">2</tspan></text>
     <text
        xml:space="preserve"
        id="text3472"
        style="font-size:3.52778px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';white-space:pre;shape-inside:url(#rect3474);" />
-    <text
-       xml:space="preserve"
-       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
-       x="167.3586"
-       y="36.978527"
-       id="text3494"><tspan
-         sodipodi:role="line"
-         id="tspan3492"
-         x="167.3586"
-         y="36.978527"
-         style="stroke-width:0.264583">tatsächlich handelt</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
-       x="167.58757"
-       y="42.515003"
-       id="text3498"><tspan
-         sodipodi:role="line"
-         id="tspan3496"
-         x="167.58757"
-         y="42.515003"
-         style="stroke-width:0.264583">es sich um einen</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
-       x="167.34901"
-       y="47.946156"
-       id="text3502"><tspan
-         sodipodi:role="line"
-         id="tspan3500"
-         x="167.34901"
-         y="47.946156"
-         style="stroke-width:0.264583">Untervektorraum</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
-       x="167.37775"
-       y="52.862331"
-       id="text3506"><tspan
-         sodipodi:role="line"
-         id="tspan3504"
-         x="167.37775"
-         y="52.862331"
-         style="stroke-width:0.264583">des $\R^3$</tspan></text>
     <circle
        style="fill:#000000;fill-opacity:0.988235;stroke:#000000;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path3584"

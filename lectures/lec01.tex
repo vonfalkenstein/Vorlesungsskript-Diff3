@@ -44,7 +44,7 @@
 				Wird nichts anders explizit gesagt, werden wir Teilräume stets als mit der Teilraumtopologie versehen ansehen.
 			\end{rem*}
 		\item Da (vgl. Diff2) jede Untermannigfaltigkeit $N$ sich lokal als Graph schreiben lässt und da die von uns betrachteten offenen Mengen in $N$ gerade die durch die Teilraumtopologie gegebenen sind folgt, dass eine Untermannigfaltigkeit im Sinne der Diff 2 eine topologische Mannigfaltigkeit im Sinne von \ref{def1_1} ist, explizit zum Beispiel:
-		\item $\Sbb := \{ x \in \R^{n+1} \mid \|x\|_E = 1 \} $
+		\item $\Sbb^n := \{ x \in \R^{n+1} \mid \|x\|_E = 1 \} $
 			\incfig{1_2 sphere}{3cm}
 			Wir konstruieren $2n+2$ Karten:\\
 			Betrachte $ U_i^\pm = \{ x \in \R^{n+1} \mid x_i \gtrless 0 \} $. Sei $ \dot{\Bbb}^n = \{y \in \R^n \mid \|y\|_E < 1 \} $ und $ f: \dot{\Bbb}^n \to \R, f(y) = \sqrt{1-\|y\|_E^2}. $ Notiere für $ i = 1,\dotsc,n+1: x(\hat{i}) = (x_1,\dots, x_{i-1},x_{i+1},\dotsc,x_{n+1}) = (x_1,\dotsc,\hat{x_i},\dotsc,x_{n+1}) $.\\
@@ -95,7 +95,7 @@
 \end{rem*}
 
 \begin{defn}[Differenzierbare Struktur]\index{Mannigfaltigkeit!Differenzierbare Struktur}
-	Sei $\Acal$ ein differenzierbarer Atlas (von $M$), dann bezeichnet man $\Dcal = \Dcal(\Acal)$ die Menge \emph{aller} Karten von $M$, die mit allen Karten aus $\Acal$ glatte Kartenwechsel haben,
+	Sei $\Acal$ ein differenzierbarer Atlas (von $M$), dann bezeichnet man mit $\Dcal = \Dcal(\Acal)$ die Menge \emph{aller} Karten von $M$, die mit allen Karten aus $\Acal$ glatte Kartenwechsel haben,
 	\[ \Dcal(\Acal) = \Big\{ (\psi,U) \ \text{Karten} \mid \bound{\psi \circ \varphi^{-1}}{\varphi(V \cap U)}, \bound{\varphi \circ \psi^{-1}}{\psi(V \cap U)} \in C^\infty \ \text{für alle } (\varphi,V) \in \Acal \Big\}. \]
 	\begin{rem*}
 		$\Dcal(\Acal)$ ist \emph{maximal} in dem Sinn, dass es keine weiteren Karten gibt, die $C^\infty$-Kartenwechsel mit den Karten aus $\Acal$ hätten, die nicht schon in $\Dcal(\Acal)$ liegen. $\Dcal(\Acal)$ ist also der größte differenzierbare Atlas, der $\Acal$ enthält.

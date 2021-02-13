@@ -213,16 +213,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
-     inkscape:cx="438.99832"
-     inkscape:cy="258.2789"
+     inkscape:cx="191.13349"
+     inkscape:cy="271.53546"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
-     inkscape:window-width="2560"
-     inkscape:window-height="1387"
-     inkscape:window-x="8"
-     inkscape:window-y="1912"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata2785">
@@ -241,7 +241,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#9f9f9f;stroke:none;stroke-width:0.665001;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;fill-opacity:1"
+       style="fill:#000000;stroke:none;stroke-width:0.665001;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;fill-opacity:0.39215687"
        id="rect3351"
        width="64.411957"
        height="31.003265"
@@ -258,7 +258,11 @@
        id="path3357"
        sodipodi:nodetypes="cc" />
     <path
-       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#9f9f9f;fill-opacity:1;stroke:#000000;stroke-width:0.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:0.665001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker3417);stop-color:#000000;stop-opacity:1"
+       d="m 54.122078,81.91811 v 8.018087"
+       id="path3413" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:0.39117646;stroke:#000000;stroke-width:0.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="M 7.4835466,86.862596 21.448379,72.897764 H 74.167294 L 60.035418,87.02964 Z"
        id="path3363" />
     <text
@@ -295,10 +299,6 @@
          y="74.178421"
          style="stroke-width:0.264583">$\partial \Hbb^3$</tspan></text>
     <path
-       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:0.665001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker3417);stop-color:#000000;stop-opacity:1"
-       d="m 54.122078,81.91811 v 8.018087"
-       id="path3413" />
-    <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:0.665001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker3465);stop-color:#000000;stop-opacity:1"
        d="m 63.610146,50.246671 v 8.018087"
        id="path3461" />
@@ -307,8 +307,8 @@
        d="m 26.772808,77.582509 -5.479024,5.479026 h 7.216277"
        id="path3517" />
     <path
-       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#00ff00;stroke-width:0.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1;marker-end:url(#marker3619)"
-       d="M 42.763125,49.979402 H 50.51394"
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#00ff00;stroke-width:0.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker3619);stop-color:#000000;stop-opacity:1"
+       d="M 42.763125,50.129741 H 50.51394"
        id="path3615" />
     <text
        xml:space="preserve"

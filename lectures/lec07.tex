@@ -1,5 +1,4 @@
-\lecture
-\begin{rem*}[Eigenschaften des Differentials]
+\begin{rem*}[Eigenschaften des Differentials]\lecture
 	$ \lambda,\mu \in \R, f,g \in C^\infty(M) $. Dann gilt:
 	\begin{enumerate}[label={\roman*})]
 		\item $ d(\lambda f + \mu g)= \lambda df + \mu dg $
@@ -36,7 +35,7 @@
 \end{defn}
 
 \begin{prop}[Eigenschaften des pullback]
-	Ist $ f: M \to N $ glatt, $h \in C(N)$, dann ist
+	Ist $ f: M \to N $ glatt, $h \in C^\infty(N)$, dann ist
 	\[ f^*(h\omega) = (h \circ f) \cdot f^*\omega\quad \foralll \omega \in \Omega^1(N) \]
 	Ist $h \in C^\infty(N)$, so ist
 	\[ f^*dh = d(h \circ f) \]
@@ -50,11 +49,11 @@
 	$ f: \R^3 \to \R^2, f(x_1,x_2,x_3) = \begin{pmatrix}
 		x_1x_2^2\\ x_2 \cos(x_3)
 	\end{pmatrix} $\\
-	$ \omega \in \Omega^1(\R), \omega = y_1dy_2 + y_2dy_1 $
+	$ \omega \in \Omega^1(\R), \omega = y_1dy^2 + y_2dy^1 $
 	\begin{align*}
 		f^*\omega &= (y_1 \circ f)d(y_2 \circ f) + (y_2 \circ f)d(y_1 \circ f)\\
 		&=(x_1x_2^2)d(x_2\cos(x_3)) + (x_2\cos(x_3))d(x_1x_2^2)\\
-		&= x_2^3\cos(x_3)dx_1 + 3x_1x_2^2\cos(x_3)dx_2 - x_1x_2^3\sin(x_3)dx_3
+		&= x_2^3\cos(x_3)dx^1 + 3x_1x_2^2\cos(x_3)dx^2 - x_1x_2^3\sin(x_3)dx^3
 	\end{align*}
 \end{exmp*}
 
@@ -70,7 +69,7 @@
 	\end{align*}
 \end{exmp*}
 
-Es ist kein Zufall, dass wir Differentialformen $dx_i$ notieren (in Koordinaten). Betrachte etwa $ \omega \in \Omega^1(\R), \bound{\omega}{t} = \omega_1(t)dt. $ Man definiert $ \int_{[a,b]}\omega := \int_a^b \omega_1(t)dt $ als das \emph{"Integral über $\omega$"}.\\
+Es ist kein Zufall, dass wir Differentialformen $dx^i$ notieren (in Koordinaten). Betrachte etwa $ \omega \in \Omega^1(\R), \bound{\omega}{t} = \omega_1(t)dt. $ Man definiert $ \int_{[a,b]}\omega := \int_a^b \omega_1(t)dt $ als das \emph{"Integral über $\omega$"}.\\
 Diese Definition ist sinnvoll, wenn wir zeigen, dass sie nicht von der Wahl der Koordinaten abhängt:
 
 \begin{lem}
@@ -118,7 +117,7 @@ Das Kurvenintegral hängt nicht von der Parameter-Beschreibung der Kurve ab:
 \begin{rem*}
 	Es gilt $ \int_\gamma \omega = \int_a^b \omega_{\gamma(t)} (\gamma'(t))dt, $ denn wenn $\gamma$ ganz in einem Kartenbereich verläuft gilt (für $\gamma$ glatt):
 	\begin{align*}
-		\omega_{\gamma(t)} (\gamma'(t)) &= \sum \omega_i (\gamma(t)) dx_i (\gamma'(t))
+		\omega_{\gamma(t)} (\gamma'(t)) &= \sum \omega_i (\gamma(t)) dx^i (\gamma'(t))
 			= \sum \omega_i(\gamma(t)) \gamma_i' (t)\\
 		\implies \bound{(\gamma^*\omega)}{t} &= \sum \omega_i (\gamma(t)) \bound{d\gamma_i}{t}
 			= \underbrace{\sum \omega_i (\gamma(t)) \gamma_i'(t)}_{\omega_{\gamma (t)}} dt

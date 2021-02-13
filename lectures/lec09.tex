@@ -40,6 +40,7 @@
 
 \begin{defn}[Tensorbündel, Tensorfeld, $k$-Form]\index{Tensorbündel}\index{Tensorfeld}\index{Differentialform}
 	\begin{enumerate}[label= {\roman*})]
+		\item[]
 		\item Das \emph{Tensorbündel} von Grad $(k,l)$ über einer differenzierbaren Mannigfaltigkeit $M$ ist das Bündel
 			\[ T^{(k,l)} TM := \bigcup_{p \in M} \big(T_pM\big)^{\otimes k} \otimes \big(T_p^*M\big)^{\otimes l}, \]
 			mit $k,l \in \N_0$. $(T_pM)^{\otimes k}$ nennt man "kontravariante Tensoren" $k$-ter Stufe, $(T_p^*M)^{\otimes l}$ "kovariante Tensoren" $l$-ter Stufe.\hspace{\fill} $ (V^{\otimes 0} = \R, \R \otimes W = W) $\\
@@ -69,7 +70,7 @@
 \end{lem}
 
 Hierbei ist das Dachprodukt $\wedge$ wie folgt definiert:
-\[ \wedge: \Lambda^ V \times \Lambda^l V \to \Lambda^{k+l} V \]
+\[ \wedge: \Lambda^k V \times \Lambda^l V \to \Lambda^{k+l} V \]
 \[ a \wedge b = \frac{(k+l)!}{k!l!} Alt_{k+l} (a\otimes b),\ \text{wobei} \]
 \[ Alt_m (\underbrace{c_1 \otimes \dots \otimes c_m}_{\in T^mV}) = \frac{1}{m!} \sum_{\sigma \in \Sigma_m} \sgn(\sigma) (c_{\sigma(1)} \otimes \dots \otimes c_{\sigma(m)}) \]
 und lineare Fortsetzung auf beliebige $c \in T^m V$ ("Antisymmetrierungs-Abbildung")
@@ -79,7 +80,7 @@ und lineare Fortsetzung auf beliebige $c \in T^m V$ ("Antisymmetrierungs-Abbildu
 		\item Kovariante Tensoren $ \in T^l(T_p^*M) $ fassen wir auch als multilineare Abbildungen
 			\[ \underbrace{T_pM \times \dots \times T_pM}_{l\text{-fach}} \to \R \]
 			auf. Denn es gilt allgemein (für $\dim(V_j)<\infty$):
-			\[ V_1^* \otimes \dots \otimes V_l^* \cong \{ \text{Multilineare Abbildungen } V_1 \times \dots \times V_l \to \R \} =: \Lcal. \]
+			\[ V_1^* \otimes \dots \otimes V_l^* \cong \{ \text{Multilineare Abbildungen } V_1 \times \dots \times V_l \to \R \}. \]
 		\item Somit gilt (wegen $V^{**} = V$ kanonisch)
 			\[ V_1 \otimes \dots \otimes V_k \cong \{ \text{Multilineare Abbildungen } V_1^* \times \dots \times V_k^* \to \R \}. \]
 	\end{enumerate}

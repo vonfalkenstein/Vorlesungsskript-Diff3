@@ -3,7 +3,7 @@
 \begin{exmp}\label{3.18}
 	\begin{enumerate}[label={\roman*})]
 		\item Direkte Summe:\\
-			Seien $ (E,\pi,B),(\tilde{E},\tilde{\pi},\tilde{B}) $ Vektorbündel über $B$. Dann ist die \emph{direkte Summe}
+			Seien $ (E,\pi,B),(\tilde{E},\tilde{\pi},B) $ Vektorbündel über $B$. Dann ist die \emph{direkte Summe}
 			\[ E \oplus \tilde{E} := \bigcup_{x \in B} E_x \oplus \tilde{E}_x \]
 			auch wieder ein Vektorbündel (von Rang $n + \tilde{n}$)
 		\item Tensorprodukt:
@@ -131,7 +131,7 @@ In Koordinaten: Die Koeffizientenfunktion hängt glatt von $p \in M$ ab:
 
 \begin{lem}
 	Sei $ (\varphi,U) $ eine Karte von $M$ bei $p \in U$. Dann lässt sich jedes $ \alpha \in \Omega^1(M) $ schreiben als
-	\[ \alpha = \sum_{i=1}^n f_i d x_i, \]
+	\[ \alpha = \sum_{i=1}^n f_i d x^i, \]
 	$dx_i \in \Omega^1(U)$, mit $f_i \in C^\infty(U)$ eindeutig bestimmt.
 \end{lem}
 
@@ -144,7 +144,7 @@ In Koordinaten: Die Koeffizientenfunktion hängt glatt von $p \in M$ ab:
 	\[ \bound{\tilde{\alpha}}{p} = \sum_{i=1}^n \del{x_i} \Phi_j (\hat{p}) \bound{\alpha_i}{p}, \]
 	schneller geht es direkt:
 	\begin{align*}
-		dh &= \sum \del{y_j} h dy_i\\
+		dh &= \sum \del{y_j} h dy^i\\
 		d(r\cos\varphi) &= \cos\varphi dr - r \sin\varphi d\varphi\\
 		d(r\sin\varphi) &= \sin\varphi dr + r \cos\varphi d\varphi
 	\end{align*}

@@ -1,4 +1,4 @@
-Erinnerung: \lecture $ \omega \in \Omega^1(M) $ heißt geschlossen, falls $ \del{i}\omega_j . \del{j} \omega_i = 0 $ lokal in jeder Karte.\\
+Erinnerung: \lecture $ \omega \in \Omega^1(M) $ heißt geschlossen, falls $ \del{i}\omega_j - \del{j} \omega_i = 0 $ lokal in jeder Karte.\\
 Idee: Definiere eine Abbildung $ d: \Omega^1 \to \Omega^2 $, die in Koordinaten gegeben ist als
 \[ d\omega = d \big( \sum \omega_j dx^j \big) = \sum_{i < j} (\del{i} \omega_j - \del{j} \omega i) dx^i \wedge dx^j \]
 Geschlossenheit wäre dann gleichbedeutend mit $d\omega = 0$.
@@ -69,7 +69,7 @@ Geschlossenheit wäre dann gleichbedeutend mit $d\omega = 0$.
 		\item $ \omega \in \Omega^1(\R^3) $, also $ \omega = udx + vdy + wdz $
 			\begin{align*}
 				d\omega &= du \wedge dx + dv \wedge dy + dw \wedge dz\\
-				\noalign{\centering\footnotesize $(du \wedge dx = \del{x}u dx + \del{y}u dy + \del{z}z dz) \wedge dx$}
+				\noalign{\centering\footnotesize $du \wedge dx = (\del{x}u dx + \del{y}u dy + \del{z}z dz) \wedge dx$}
 				&= (\del{x}v - \del{y}u) dx \wedge dy + (\del{x}w - \del{z}u) dx \wedge dz + (\del{y}w - \del{z}v) dy \wedge dz
 			\end{align*}
 		\item $ \omega \in \Omega^1(\R^3) $, also $ \omega = u dx \wedge dy + v dx \wedge dz + w dy \wedge dz $\\

@@ -12,7 +12,8 @@ Allgemeiner betrachten wir lokale Diffeomorphismen \( f: M \to N \) und nennen $
 	\( f: \R^2 \to \R^2, f(x) = \begin{pmatrix}
 		0&1\\1&0	\end{pmatrix} \cdot x \), $\R^2$ jeweils mit der Standardorientierung $(e_1,e_2)$ auf \( T_p\R^2 \). $f$ ist orientierungsumkehrend:
 	\[ \bound{df}{p} = \begin{pmatrix}
-		0&1\\1&0	\end{pmatrix}: \R^2 \cong T_p\R^2 \to T_{\binom{p_2}{p_1}}\R^2 \cong \R^2 \]
+		0&1\\1&0	\end{pmatrix}:
+		\subsetbox{\cong}{\R^2}{T_p\R^2} \to \subsetbox{\cong}{\R^2}{T_{\binom{p_2}{p_1}}\R^2} \]
 \end{exmp*}
 
 \begin{rem}
@@ -41,11 +42,11 @@ Allgemeiner betrachten wir lokale Diffeomorphismen \( f: M \to N \) und nennen $
 	Besitzt $M$ ein globales $n$-Bein ($n = \dim M$) (man sagt dann, $M$ ist parallelisierbar), so ist $M$ orientierbar.
 \end{lem}
 
-\noindent Hyperflächen: \( S \subset M \) Untermannigfaltigkeit\\
+\noindent Hyperflächen: \( S \subset M \) Untermannigfaltigkeit mit $\dim S = \dim M -1$\\
 Vektorfeld entlang $S$: Schnitt \( Y: S \to TM \), also glatt mit \( \bound{Y}{p} \in T_pM \) (ist im Allgemeinen natürlich kein Vektorfeld auf $S$)
 
 \begin{lem}\label{8.14}
-	Sei $M$ orientiert, \( S \subset M \) eine Untermannigfaltigkeit, \( \dim S = \dim M - 1 \) (Hyperfläche). Sei \( Y \) ein Vektorfeld entlang $S$ mit \( \bound{Y}{p} \notin T_pS\ \foralll p \in S \). Dann hat $S$ eine eindeutige Orientierung, die dadurch festgelegt wird, dass \( (v_1, \dotsc, v_{n-1}) \) genau dann eine orientierte Basis von $T_pS$ ist, wenn \( \big(\bound{Y}{p},v_1,\dotsc,v_{n-1}\big) \) orientierte Basis von $T_pM$ ist.\\
+	Sei $M$ orientiert, \( S \subset M \) eine Hyperfläche. Sei \( Y \) ein Vektorfeld entlang $S$ mit \( \bound{Y}{p} \notin T_pS\ \foralll p \in S \). Dann hat $S$ eine eindeutige Orientierung, die dadurch festgelegt wird, dass \( (v_1, \dotsc, v_{n-1}) \) genau dann eine orientierte Basis von $T_pS$ ist, wenn \( \big(\bound{Y}{p},v_1,\dotsc,v_{n-1}\big) \) orientierte Basis von $T_pM$ ist.\\
 	Ist $\eta$ eine Orientierungsform für die Orientierung auf $M$, so ist \( \iota_S^*(Y \lrcorner \eta) \) eine Orientierungsform für die so gegebene Orientierung auf $S$.
 \end{lem}
 

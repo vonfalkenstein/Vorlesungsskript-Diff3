@@ -1,0 +1,29 @@
+\begin{exmp}\autolabel\lecture
+	$M$ glatt, \( \gamma: [a,b] \to M \), sodass \( S := \gamma([a,b]) \subset M\) glatte Untermannigfaltigkeit mit Rand. Wähle die Orientierung auf $S$ sodass $\gamma$ orientierungserhaltend ist. Dann
+	\[ \int_\gamma df = \int_{[a,b]} \gamma^*(df) = \int_S df = \int_{\partial S} f = f(\gamma(b))-f(\gamma(a)) \]
+	Die sind also unsere Aussagen über Kurvenintegrale von exakten Formen als Spezialfall.
+\end{exmp}
+
+\begin{cor}\autolabel
+	\begin{enumerate}[label={\roman*})]
+		\item Sei $M$ kompakt, orientiert und ohne Rand. Dann gilt
+			\[ \int_M d\omega = 0 \]
+			für alle $(n-1)$-Formen $\omega$.
+		\item Sei $M$ kompakt, orientiert und mit Rand. Dann gilt
+			\[ \int_{\partial M} \omega = 0 \]
+			für alle geschlossenen $(n-1)$-Formen $\omega$. ($d\omega =0$)
+	\end{enumerate}
+\end{cor}
+
+Es folgt sofort: Ist $N \subset M$ eine orientierte, kompakte, glatte $k$-dimensionale Untermannigfaltigkeit ohne Rand und $\omega$ eine geschlossene $k$-Form auf $M$ und $\int_N \omega \neq 0$, so gilt:
+\begin{enumerate}[label={\roman*})]
+	\item $\omega$ ist nicht exakt.
+	\item $N$ ist nicht der Rand einer orientierten kompakten Untermannigfaltigkeit mit Rand (in $M$).
+\end{enumerate}
+
+Erinnerung: \( \omega= \frac{1}{x^2 + y^2} (xdy - ydx) \) auf $\R^2 \setminus \{0\} = M$. $\int_{\Sbb^1} \omega \neq 0$. $\omega$ ist nicht exakt auf $M$. Jetzt wissen wir zudem, dass $\Sbb^1$ nicht der Rand einer kompakten 2-dimensionalen Untermannigfaltigkeit von $M$ ist.
+
+\begin{cor}[Satz von Green]\autolabel
+	Ist $D$ eine kompakte 2-dimensionale Untermannigfaltigkeit in $\R^2$ (mit oder ohne Rand), so gilt
+	\[ \int_D (\del{x}Q - \del{y} P)\ dxdy = \int_{\partial D} (Pdx + Qdy). \]
+\end{cor}

@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{448.34873809bp}%
+    \setlength{\unitlength}{448.4387608bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,17 +50,17 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.2724713)%
+  \begin{picture}(1,0.27241661)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{9.pdf}}%
-    \put(-0.00185141,0.07775973){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$w$\end{tabular}}}}%
-    \put(0.18547388,0.00835988){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$v$\end{tabular}}}}%
-    \put(0.31413897,0.0414293){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\lambda v$\end{tabular}}}}%
+    \put(-0.00185104,0.07774412){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$w$\end{tabular}}}}%
+    \put(0.18543665,0.0083582){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$v$\end{tabular}}}}%
+    \put(0.31407591,0.04142098){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\lambda v$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{9.pdf}}%
-    \put(0.64660476,0.11915954){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$w$\end{tabular}}}}%
-    \put(0.72771457,0.1060637){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$v$\end{tabular}}}}%
-    \put(0.86585489,0.15506756){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$v'$\end{tabular}}}}%
-    \put(0.81178165,0.06424144){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$v+v'$\end{tabular}}}}%
+    \put(0.64647494,0.09274921){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$w$\end{tabular}}}}%
+    \put(0.72756846,0.07703541){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$v$\end{tabular}}}}%
+    \put(0.8656811,0.13583551){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$v'$\end{tabular}}}}%
+    \put(0.81161866,0.02685256){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$v+v'$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
