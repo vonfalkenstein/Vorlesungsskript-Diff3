@@ -11,41 +11,25 @@
 \renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
 \renewcommand{\thethm}{\arabic{chapter}.\arabic{thm}}
 
-\usepackage{import}
-\usepackage{xifthen}
-\usepackage{pdfpages}
-\usepackage{transparent}
-
-%\includeonly{./lectures/cpt11}
+%\includeonly{./lectures/cpt01}
 
 \hypersetup{
-	colorlinks=true,
-	linkcolor=blue,
-	filecolor=blue,      
-	urlcolor=blue,
-	pdftitle={Vorlesungsskript Diff 3},
-	bookmarks=true,
-%	pdfpagemode=FullScreen,
-	bookmarksopen = true
+	pdftitle={Vorlesungsskript Diff 3}
 }
 
 \begin{document}
 	\frontmatter
 	\maketitle
 	
-%	\setcounter{page}{1}
 \tableofcontents
+\listoflectures
 \newpage
-%	\setcounter{page}{1}
 \thispagestyle{plain}
 Dieses Skript stellt keinen Ersatz für die Vorlesungsnotizen von Prof. Bahns dar und wird nicht nochmals von ihr durchgesehen, im Grunde sind das hier nur meine persönlichen Mitschriften. Beweise werde ich i.d.R. nicht übernehmen (weil das in \LaTeX{} einfach keinen Spaß macht). \hspace{\fill} glhf
-\newpage
+
+
+
 \mainmatter
-\setstretch{1.15}			%Zeilenabstand. Kann man auch später nochmal reinhämmern, falls man es ändern will
-	
-	
-	
-	
 	
 	\include{./lectures/cpt01}
 	\include{./lectures/cpt02}
@@ -68,5 +52,4 @@ Dieses Skript stellt keinen Ersatz für die Vorlesungsnotizen von Prof. Bahns da
 	\renewcommand{\appendixtocname}{Anhang}
 	\addappheadtotoc
 	\printindex
-	\printindex[lecture]
 \end{document}
